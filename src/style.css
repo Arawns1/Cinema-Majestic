@@ -1,0 +1,57 @@
+*{
+
+  margin: 0;
+  box-sizing: border-box;
+}
+#container{
+background-color: rgb(249, 249, 249);
+
+}
+#topo {
+  display: flex;
+  border: 1px solid #000;
+  height:100%;
+  background-color: #333333;
+  transition: filter 0.4s;
+  justify-content: space-between;
+}
+#etapas{
+  justify-content: space-between;
+  padding: 1% 1% ;
+  display: flex;
+  flex-direction: row;
+  
+}
+#corpo{
+  background-color: rgb(254, 254, 254);
+  
+}
+.produto {
+
+  font-size: 80%;
+  display: inline-block;
+  border: 1px solid black;
+  padding: 1%;
+  margin: 1%;
+  text-align: center;
+  width: 15%;
+}
+
+.produto img {
+
+  max-width: 100%;
+  height: 40%;
+  margin-bottom: 10px;
+
+}
+#extrato {
+  font-size: 80%;
+  display: inline-block;
+  border: 1px solid black;
+  padding: 1%;
+  margin: 1%;
+  text-align: center;
+  height: 30%;
+  width: 40%;
+ 
+}
