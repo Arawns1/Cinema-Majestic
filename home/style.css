@@ -14,6 +14,7 @@
   margin: 0;
   padding: 0;
   font-family: 'Roboto', sans-serif;
+
 }
 
 
@@ -21,7 +22,7 @@
 html,
 body {
   max-height: 100%;
-  background-color: #1d1d1f;
+  background-color: var(--dark-bg) !important;
 }
 
 header nav {
@@ -55,20 +56,46 @@ header nav li span {
   margin: 20px;
 }
 
-#carouselExampleAutoplaying img {
-  width: 100%;
-  height: 70vh;
+header #login {
+  margin-right: 30px;
+}
+
+header #login img {
+  width: 40px;
+  height: 40px;
   object-fit: cover;
 }
 
-.carousel-inner {
-  position: relative;
+header #login span {
+  margin-left: 10px;
 }
 
-#movieTitle {
+
+.carousel-inner {
+  position: relative;
+  width: 100%;
+  height: 70vh;
+
+}
+
+.carousel-item {
+
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  height: 100%;
+  object-fit: cover;
+}
+
+.carousel-item iframe {
+  filter: brightness(0.6);
+  height: 500px;
+}
+
+.movieTitle {
   position: absolute;
-  top: 130px;
-  left: 200px;
+  top: 20%;
+  left: 10%;
   color: #ffffff;
   width: 500px;
   display: flex;
@@ -78,7 +105,7 @@ header nav li span {
   gap: 10px;
 }
 
-#movieTitle button {
+.movieTitle button {
   background-color: var(--btn-and-links);
   width: 250px;
   height: 50px;
@@ -89,14 +116,13 @@ header nav li span {
   transition: 0.8s;
 }
 
-#movieTitle button:hover {
+.movieTitle button:hover {
   scale: 1.02;
   background-color: var(--red-shadows);
 
 }
 
-
-#ratings {
+.ratings {
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -105,33 +131,50 @@ header nav li span {
   gap: 5px;
 }
 
-
-#ratings li img {
+.ratings li img {
   width: 30px;
   height: 100%;
   filter: invert(100);
 }
 
-#ratings li span {
+.ratings li span {
   margin-left: 20px;
   font-size: 20px;
   font-weight: 500;
 }
 
 
+.carousel-inner iframe {
+  height: 100%;
+}
+
+
 #emCartaz {
+  margin-top: 30px;
   padding: 0 2em;
   display: flex;
   flex-direction: column;
   gap: 20px;
+  font-weight: 700;
 }
 
-#emCartaz h2 {
-  margin-top: 30px;
-  color: white;
+section h2 {
+  position: relative;
+  overflow: hidden;
+  color: var(--title);
 }
 
-
+section h2:after {
+  display: inline-block;
+  content: "";
+  height: 1px;
+  background: var(--light-bg);
+  position: absolute;
+  width: 100%;
+  top: 60%;
+  margin-top: -2px;
+  margin-left: 10px;
+}
 
 .containerPosters {
   display: flex;
