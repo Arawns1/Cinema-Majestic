@@ -1,9 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap');
+
+:root {
+  --btn-and-links: #b5121b;
+  --red-shadows: #6f0b11;
+  --title: #ffffff;
+  --subtitles: #81010D;
+  --light-bg: #333333;
+  --dark-bg: #000000;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   font-family: 'Roboto', sans-serif;
 }
+
+
 
 html,
 body {
@@ -23,6 +36,11 @@ header nav ul {
   padding: 0px 30px;
 }
 
+ul {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
 header nav li {
   display: flex;
   align-items: center;
@@ -37,11 +55,69 @@ header nav li span {
   margin: 20px;
 }
 
-#carrousel img {
+#carouselExampleAutoplaying img {
   width: 100%;
   height: 70vh;
   object-fit: cover;
 }
+
+.carousel-inner {
+  position: relative;
+}
+
+#movieTitle {
+  position: absolute;
+  top: 130px;
+  left: 200px;
+  color: #ffffff;
+  width: 500px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#movieTitle button {
+  background-color: var(--btn-and-links);
+  width: 250px;
+  height: 50px;
+  border: 2px solid var(--red-shadows);
+  border-radius: 8px;
+  color: var(--title);
+  outline: none;
+  transition: 0.8s;
+}
+
+#movieTitle button:hover {
+  scale: 1.02;
+  background-color: var(--red-shadows);
+
+}
+
+
+#ratings {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  list-style: none;
+  gap: 5px;
+}
+
+
+#ratings li img {
+  width: 30px;
+  height: 100%;
+  filter: invert(100);
+}
+
+#ratings li span {
+  margin-left: 20px;
+  font-size: 20px;
+  font-weight: 500;
+}
+
 
 #emCartaz {
   padding: 0 2em;
@@ -54,6 +130,8 @@ header nav li span {
   margin-top: 30px;
   color: white;
 }
+
+
 
 .containerPosters {
   display: flex;
