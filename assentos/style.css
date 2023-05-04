@@ -1,4 +1,6 @@
+/**** GERAL ****/
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -9,10 +11,16 @@ body {
     background-color: #1d1d1f;
     color: #fff;
 }
+
+
+/**** HEADER ****/
 #logo {
     display: flex;
     align-items: center;
     cursor: pointer;
+}
+.logoImagem {
+    width: 120px;
 }
 #navegacao {
     display: flex;
@@ -39,6 +47,12 @@ body {
     justify-content: space-evenly;
     gap: 20px;
 }
+.iconeCliente {
+    width: 30px;
+}
+
+
+/**** CONTEÚDO PRINCIPAL ****/
 #container {
     width: 70vw;
     margin: auto;
@@ -61,10 +75,22 @@ body {
     gap: 18px;
     font-weight: bold;
 }
-.sala {
+.legenda {
+    width: 100%;
     display: flex;
-    flex-direction: row;
-    scale: 110%;
+    flex-direction: column;
+}
+.legendaTitulo{
+    padding-top: 30px;
+    font-weight: bold;
+}
+.legendaTitulo::after {
+    content: "";
+    display: block;
+    height: 1px;
+    background-color: #2a2a2a;
+    margin-top: 3px;
+    width: 100%;
 }
 .legendaOpcoes {
     display: flex;
@@ -126,72 +152,6 @@ body {
     justify-content: space-between;
     font-weight: bold;
 }
-.legenda {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.legendaTitulo{
-    padding-top: 30px;
-}
-.resumoFilme {
-    display: flex;
-    height: 150px;
-    gap: 30px;
-    justify-content: space-evenly;
-}
-.resumoCompra, #totalValor, .resumoFilme {
-    padding: 10px;
-}
-.imagemFilme {
-    height: 100%;
-}
-.infoFilme {
-    display: flex;
-    flex-direction: column;
-    margin-top: 10px;
-    gap: 10px;
-    justify-content: space-evenly;
-}
-.tipoFilme {
-    display: flex;
-    gap: 20px;
-}
-.resumoCompra {
-    margin-top: 30px;
-    display: flex;
-    flex-direction: column;
-    font-size: 15px;
-}
-.aquisicoes {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin-top: 15px;
-}
-#totalValor {
-    margin-top: 40px;
-}
-.telaFilme, .audioFilme {
-    background-color: #b5121b;
-    padding: 5px;
-    color: #efefef;
-}
-.resumo {
-    padding-bottom: 20px;
-    width: 80vw;
-    border: 1px solid black;
-    margin-top: 50px;
-    background-color: #333;
-}
-.avancarAssentos {
-    height: 50px;
-    background-color: #b5121b;
-    border: none;
-    color: #fff;
-    cursor: pointer;
-}
 .iconeOpcoes {
     filter: invert(100);
     width: 35px;
@@ -219,8 +179,70 @@ body {
     margin-top: 50px;
     box-shadow: 0px -2px 6px #fff;
 }
-.iconeCliente {
-    width: 30px;
+
+
+/**** BARRA LATERAL ***/
+
+.lateral {
+    display: flex;
+    flex-direction: column;
+}
+.resumo {
+    padding-bottom: 20px;
+    width: 80vw;
+    border: 1px solid black;
+    margin-top: 50px;
+    background-color: #333;
+}
+.resumoFilme {
+    display: flex;
+    height: 150px;
+    gap: 30px;
+    justify-content: space-evenly;
+}
+.resumoCompra, #totalValor, .resumoFilme {
+    padding: 10px;
+}
+.resumoCompra {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    font-size: 15px;
+}
+.imagemFilme {
+    height: 100%;
+}
+.infoFilme {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    gap: 10px;
+    justify-content: space-evenly;
+}
+.tipoFilme {
+    display: flex;
+    gap: 20px;
+}
+.aquisicoes {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+}
+#totalValor {
+    margin-top: 40px;
+}
+.telaFilme, .audioFilme {
+    background-color: #b5121b;
+    padding: 5px;
+    color: #efefef;
+}
+.avancarAssentos {
+    height: 50px;
+    background-color: #b5121b;
+    border: none;
+    color: #fff;
+    cursor: pointer;
 }
 .tituloEscolha::after {
     content: "";
@@ -238,13 +260,7 @@ body {
     display: block;
     background-color: #2a2a2a;
 }
-.lateral {
-    display: flex;
-    flex-direction: column;
-}
-.logoImagem {
-    width: 120px;
-}
+
 @media (min-width: 320px) {
     #container {
         gap: 0;
@@ -411,27 +427,3 @@ body {
         color: #000;
     }
 }
-/*@media (min-width: 1600px) {
-    #container {
-        justify-content: center;
-    }
-    .sala {
-        scale: 100%;
-        margin-top: 30px;
-    }
-    .compra {
-        margin-top: 0;
-    }
-    .lateral {
-        width: 30%;
-    }
-    .assentoEscolhido {
-        color: #000;
-    }
-    .tela {
-        margin-top: 50px;
-    }
-    .compraOpcoes {
-        font-size: 15px;
-    }
-}*/
