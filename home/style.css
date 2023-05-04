@@ -75,16 +75,16 @@ header #login span {
   position: relative;
   width: 100%;
   height: 70vh;
-
+  position: relative;
 }
 
 .carousel-item {
-
   display: flex;
   justify-content: space-between;
   align-content: center;
   height: 100%;
   object-fit: cover;
+
 }
 
 .carousel-item iframe {
@@ -159,22 +159,9 @@ header #login span {
 }
 
 section h2 {
-  position: relative;
-  overflow: hidden;
   color: var(--title);
 }
 
-section h2:after {
-  display: inline-block;
-  content: "";
-  height: 1px;
-  background: var(--light-bg);
-  position: absolute;
-  width: 100%;
-  top: 60%;
-  margin-top: -2px;
-  margin-left: 10px;
-}
 
 .containerPosters {
   display: flex;
@@ -189,8 +176,65 @@ section h2:after {
   width: 13vw;
 }
 
+
+
+@media (max-width: 1000px) {
+  .movieTitle .sinopse {
+    display: none;
+  }
+
+  .movieTitle {
+    width: 13vw;
+    top: 25vh;
+  }
+
+  .movieTitle h1 {
+    min-width: 20vw;
+  }
+
+  section h2:after {
+    display: none;
+  }
+}
+
 @media (max-width: 600px) {
   #login span {
     display: none;
   }
+
+  .movieTitle .ratings {
+    display: none;
+  }
+
+  .carousel-inner {
+    display: inline-block;
+  }
+
+  .movieTitle {
+    margin-top: 200px;
+    display: flex;
+    flex-direction: row;
+    width: 80%
+  }
+
+  .movieTitle h1 {
+    font-size: 1.3em;
+    display: inline-block;
+  }
+
+  .movieTitle button {
+    background-color: var(--btn-and-links);
+    width: 80vw;
+    height: 50px;
+    border: 2px solid var(--red-shadows);
+    border-radius: 8px;
+    color: var(--title);
+    outline: none;
+    transition: 0.8s;
+  }
+
+  section h2:after {
+    display: none;
+  }
+
 }
