@@ -2,6 +2,7 @@
 
 body{
     font-family: 'Roboto', sans-serif;
+    background-color: black;
 }
 .header{
     
@@ -11,7 +12,8 @@ body{
     padding: 20px;
 }
 .logo {
-    width: 80px;
+    width: 150px;
+    background-color: #FFFFFF;
 }
 .menu {
     display: flex;
@@ -27,5 +29,31 @@ body{
 .menu-item i{
     color: #FFFFFF;
     margin-right: 10px;
-
+}
+.main{
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 100px auto;
+}
+.check-image{
+    max-width: 300px;
+    margin: 0 auto 60px;
+}
+.mensagem-compra {
+    text-align: center;
+    margin-bottom: 40px;
+}
+.botoes {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 15px;
+    border: 1px solid #6f0b11;
+    background-color: #B5121B;
+    color: #FFFFFF;
+    cursor: pointer;
+    box-shadow: 2px 2px #333333;
+    }
+.botoes:hover {
+background-color: #6f0b11;
 }
