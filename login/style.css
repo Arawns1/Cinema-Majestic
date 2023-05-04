@@ -124,3 +124,9 @@ body {
 .form_link:hover{
     text-decoration: underline;   
 }
+
+.logo {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+}
