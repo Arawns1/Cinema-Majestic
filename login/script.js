@@ -47,7 +47,7 @@ document.querySelector("#login").querySelector(".form_button").addEventListener(
                 _callback();
             }
             sessionStorage.setItem("user", JSON.stringify(user));
-            window.location.href = "./home.html";
+            window.location.href = "../home/index.html";
         }else{
             setFormMessage(loginForm, "error" , "E-mail ou senha inválidos.");        
         setTimeout(function() {

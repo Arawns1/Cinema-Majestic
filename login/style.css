@@ -1,6 +1,6 @@
 body {
-    --color-primary: #009579;
-    --color-primary-dark: #007f67;
+    --color-primary: #1d1d1f;
+    --color-primary-dark: #B5121B;
     --color-secondary: #252c6a;
     --color-error: #cc3333;
     --color-success: #4bb544;
@@ -30,7 +30,7 @@ body {
 .container,
 .form_input,
 .form_button {
-    font: 500 1rem 'Quicksand', sans-serif;
+    font: 500 1rem 'Roboto', sans-serif;
 }
 
 .form_hidden {
