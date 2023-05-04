@@ -6,32 +6,42 @@
 }
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #000;
+    background-color: #1d1d1f;
     color: #fff;
 }
-.header {
-    border: 1px solid black;
+#logo {
+    display: flex;
+    align-items: center;
+}
+#navegacao {
+    display: flex;
+    flex-direction: row;
     height: 60px;
-    border-left: none;
-    border-right: none;
-    display: flex;
-    align-items: center;
-}
-#headerOpcoes {
-    display: flex;
-    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
     justify-content: space-between;
-    width: 100%;
-    padding-left: 30px;
+
+    background-color: #000;
 }
-.cliente {
+#carrinho img, #login img {
+    width: 35px;
+}
+#carrinho, #login {
     display: flex;
-    justify-content: space-around;
-    width: 120px;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+#cliente {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
 }
 #container {
     width: 70vw;
     margin: auto;
+    margin-top: 30px;
+    padding-bottom: 50px;
     display: flex;
     flex-direction: row;
     gap: 150px;
@@ -183,11 +193,21 @@ body {
     filter: invert(100);
     width: 35px;
 }
-#menuAssento, #menuIngresso, #menuProdutos, #menuPagamento, #menuConclusao {
+.opcao, .opcaoAtiva {
     flex-direction: column;
     display: flex;
     align-items: center;
     gap: 5px;
+    opacity: 50%;
+}
+.opcaoAtiva {
+    opacity: 100%;
+}
+.opcaoAtiva::after {
+    content: "";
+    height: 1px;
+    width: 95%;
+    background-color: #6f0b11;
 }
 .tela {
     width: 250px;
@@ -219,12 +239,20 @@ body {
     display: flex;
     flex-direction: column;
 }
-
+.logoImagem {
+    width: 120px;
+}
 @media (min-width: 320px) {
     #container {
         gap: 0;
         flex-direction: column;
         align-items: center;
+    }
+    #carrinho span, #login span {
+        display: none;
+    }
+    #cliente {
+        width: 100px;
     }
     .compra {
         width: 100%;
@@ -289,6 +317,12 @@ body {
     .corredor {
         display: flex;
     }
+    #cliente {
+        width: 200px;
+    }
+    #carrinho span, #login span {
+        display: block;
+    }
     .compraOpcoes {
         justify-content: space-evenly;
         gap: 0;
@@ -324,11 +358,15 @@ body {
     .tela {
         margin-top: 50px;
     }
+    .iconeOpcoes {
+        width: 35px;
+    }
 }
 
 @media (min-width: 1200px) {
     #container {
         width: 70vw;
+        justify-content: center;
         flex-direction: row;
         gap: 100px;
     }
@@ -351,6 +389,7 @@ body {
         width: 100%;
         gap: 0;
         justify-content: space-between;
+        font-size: 15px;
     }
     .tituloEscolha {
         margin-top: 50px;
@@ -362,13 +401,14 @@ body {
         font-size: 14px;
     }
     .lateral {
-        width: 40%;
+        width: 30%;
+        margin-top: -100px;
     }
     .assentoEscolhido {
         color: #000;
     }
 }
-@media (min-width: 1600px) {
+/*@media (min-width: 1600px) {
     #container {
         justify-content: center;
     }
@@ -388,4 +428,7 @@ body {
     .tela {
         margin-top: 50px;
     }
-}
+    .compraOpcoes {
+        font-size: 15px;
+    }
+}*/
