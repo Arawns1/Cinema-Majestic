@@ -2,7 +2,7 @@
 
 body{
     font-family: 'Roboto', sans-serif;
-    background-color: black;
+    background-color: #1D1D1F;
 }
 .header{
     
@@ -13,7 +13,7 @@ body{
 }
 .logo {
     width: 150px;
-    background-color: #FFFFFF;
+    background-color: transparent;
 }
 .menu {
     display: flex;
@@ -37,12 +37,15 @@ body{
     margin: 100px auto;
 }
 .check-image{
-    max-width: 300px;
+    max-width: 100px;
     margin: 0 auto 60px;
 }
 .mensagem-compra {
     text-align: center;
     margin-bottom: 40px;
+    color: #FFFFFF;
+    font-style: bold;
+    font-size: 35px;
 }
 .botoes {
     padding: 10px;
@@ -53,6 +56,8 @@ body{
     color: #FFFFFF;
     cursor: pointer;
     box-shadow: 2px 2px #333333;
+    font-style: bold;
+    font-size: 18px;
     }
 .botoes:hover {
 background-color: #6f0b11;
