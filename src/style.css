@@ -1,57 +1,120 @@
-*{
-
+* {
+  color: white;
   margin: 0;
   box-sizing: border-box;
-}
-#container{
-background-color: rgb(249, 249, 249);
+  font-size: 100%;
 
 }
+
+#separador {
+  background-color: #333333;
+
+}
+
+
+#container {
+
+  background-color: #000000;
+}
+
+html {
+  background-color: #000000;
+}
+
 #topo {
   display: flex;
-  border: 1px solid #000;
-  height:100%;
+
+  height: 100%;
   background-color: #333333;
-  transition: filter 0.4s;
   justify-content: space-between;
 }
-#etapas{
+
+#etapas {
   justify-content: space-between;
-  padding: 1% 1% ;
+  padding: 1% 1%;
   display: flex;
   flex-direction: row;
-  
+
 }
-#corpo{
-  background-color: rgb(254, 254, 254);
-  
+
+#corpo {
+  background-color: rgb(248, 4, 4);
+
 }
+
 .produto {
 
   font-size: 80%;
   display: inline-block;
-  border: 1px solid black;
+  border: 1px solid #333333;
   padding: 1%;
   margin: 1%;
   text-align: center;
   width: 15%;
+  background-color: #333333;
+ 
 }
 
 .produto img {
-
-  max-width: 100%;
+ width: 100px;
   height: 40%;
   margin-bottom: 10px;
 
 }
+
 #extrato {
-  font-size: 80%;
+
+  float: right;
+
+  font-size: 100%;
   display: inline-block;
   border: 1px solid black;
+  background-color: #333333;
   padding: 1%;
   margin: 1%;
   text-align: center;
-  height: 30%;
+  height: 100%;
   width: 40%;
- 
+  text-align: left;
+  padding-top: 28%;
+}
+
+#pr {
+  border: 1px solid #ccc;
+}
+
+#iconesA {
+
+  background-color: #333333;
+  border: none;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: filter 0.4;
+}
+
+#icones {
+
+  background-color: #b5121b;
+  border: none;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: filter 0.4;
+}
+
+button:hover {
+  filter: brightness(0.3);
+  background-color: #6f0b11;
+}
+
+input[type="number"] {
+  background-color: #333333;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }

@@ -51,7 +51,9 @@ produtos.forEach(produto => {
   //para quantidade de produtos======================================
   let inputQuantidade = document.createElement("input");
   inputQuantidade.type = "number";
-  inputQuantidade.value = 0;
+  inputQuantidade.onchange = () => extrato()
+  inputQuantidade.value = 0
+  inputQuantidade.id = produto.nome
 
   const botao = document.createElement("button");
 
@@ -75,19 +77,25 @@ produtos.forEach(produto => {
 // EXTRATO ============================================================
 
 const extrato = () => {
-  let pPipoca = 5 * produtos.getElementById(Produto.Pipoca.inputQuantidade.value)
-  console.log(pPipoca)
+  let pPipoca = 5 * document.getElementById("Pipoca").value
+  document.getElementById("pPipoca").innerText = pPipoca
 
-  let pCoca = 3 * produtos.getElementById(Produto.coca - cola.inputQuantidade.value)
-  console.log(pCoca)
+  let pCoca = 3 * document.getElementById("coca-cola").value
+  document.getElementById("pCoca").innerText = pCoca
 
-  let pMentos = 1 * produtos.getElementById(Produto.Mentos.inputQuantidade.value)
-  console.log(pMentos)
+  let pMentos = 1 * document.getElementById("mentos").value
+  document.getElementById("pMentos").innerText = pMentos
 
-  let pTrento = 2 * produtos.getElementById(Produto.Trento.inputQuantidade.value)
-  console.log(pTrento)
+  let pTrento = 2 * document.getElementById("trento").value
+  document.getElementById("pTrento").innerText = pTrento
 
-  let pAgua = 1.50 * produtos.getElementById(Produto.Agua.inputQuantidade.value)
-  console.log(pAgua) 
+  let pAgua = 1.50 * document.getElementById("Agua").value
+  document.getElementById("pAgua").innerText = pAgua 
 
+  let total = pAgua + pCoca + pMentos + pTrento + pPipoca
+  document.getElementById("total").innerText = total 
 }
+
+// document.getElementById("search").addEventListener('input', (e) => {
+//   extrato();
+// })
