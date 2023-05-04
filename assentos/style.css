@@ -12,6 +12,7 @@ body {
 #logo {
     display: flex;
     align-items: center;
+    cursor: pointer;
 }
 #navegacao {
     display: flex;
@@ -31,6 +32,7 @@ body {
     flex-direction: row;
     align-items: center;
     gap: 10px;
+    cursor: pointer;
 }
 #cliente {
     display: flex;
@@ -188,6 +190,7 @@ body {
     background-color: #b5121b;
     border: none;
     color: #fff;
+    cursor: pointer;
 }
 .iconeOpcoes {
     filter: invert(100);
