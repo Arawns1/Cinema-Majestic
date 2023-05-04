@@ -1,0 +1,391 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #000;
+    color: #fff;
+}
+.header {
+    border: 1px solid black;
+    height: 60px;
+    border-left: none;
+    border-right: none;
+    display: flex;
+    align-items: center;
+}
+#headerOpcoes {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding-left: 30px;
+}
+.cliente {
+    display: flex;
+    justify-content: space-around;
+    width: 120px;
+}
+#container {
+    width: 70vw;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    gap: 150px;
+}
+.compra {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.compraOpcoes {
+    display: flex;
+    justify-content: center;
+    font-size: 12px;
+    gap: 18px;
+    font-weight: bold;
+}
+.sala {
+    display: flex;
+    flex-direction: row;
+    scale: 110%;
+}
+.legendaOpcoes {
+    display: flex;
+    margin-top: 20px;
+    justify-content: space-evenly;
+    font-size: 14px;
+    align-items: center;
+    width: 100%;
+    padding-bottom: 10px;
+}
+.assento, .legDisp, .legSel, .legOcup {
+    display: flex;
+    width: 5px;
+    height: 5px;
+    background-color: #b5121b;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    font-size: 10px;
+    color: #b5121b;
+}
+.legSel {
+    background-color: #a3a3a3;
+}
+.legOcup {
+    background-color: #6f0b11;
+}
+.assento:hover {
+    cursor: pointer;
+    color: white;
+}
+.assentoEscolhido {
+    background-color: #a3a3a3;
+}
+.assentos {
+    display: flex;
+    min-width: 340px;
+    max-width: 340px;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-between;
+    padding: 5px;
+}
+.sala {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+    margin-top: 50px;
+}
+.corredor {
+    display: none;
+    flex-direction: column;
+    font-size: 12px;
+    height: 370px;
+    justify-content: space-between;
+    font-weight: bold;
+}
+.legenda {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.legendaTitulo{
+    padding-top: 30px;
+}
+.resumoFilme {
+    display: flex;
+    height: 150px;
+    gap: 30px;
+    justify-content: space-evenly;
+}
+.resumoCompra, #totalValor, .resumoFilme {
+    padding: 10px;
+}
+.imagemFilme {
+    height: 100%;
+}
+.infoFilme {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    gap: 10px;
+    justify-content: space-evenly;
+}
+.tipoFilme {
+    display: flex;
+    gap: 20px;
+}
+.resumoCompra {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    font-size: 15px;
+}
+.aquisicoes {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+}
+#totalValor {
+    margin-top: 40px;
+}
+.telaFilme, .audioFilme {
+    background-color: #b5121b;
+    padding: 5px;
+    color: #efefef;
+}
+.resumo {
+    padding-bottom: 20px;
+    width: 80vw;
+    border: 1px solid black;
+    margin-top: 50px;
+    background-color: #333;
+}
+.avancarAssentos {
+    height: 50px;
+    background-color: #b5121b;
+    border: none;
+    color: #fff;
+}
+.iconeOpcoes {
+    filter: invert(100);
+    width: 35px;
+}
+#menuAssento, #menuIngresso, #menuProdutos, #menuPagamento, #menuConclusao {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.tela {
+    width: 250px;
+    height: 10px;
+    background-color: white;
+    margin-top: 50px;
+    box-shadow: 0px -2px 6px #fff;
+}
+.iconeCliente {
+    width: 30px;
+}
+.tituloEscolha::after {
+    content: "";
+    height: 1px;
+    width: 100%;
+    margin-top: 10px;
+    display: block;
+    background-color: #2a2a2a;
+}
+.tituloResumo::after {
+    content: "";
+    height: 1px;
+    width: 100%;
+    margin-top: 3px;
+    display: block;
+    background-color: #2a2a2a;
+}
+.lateral {
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 320px) {
+    #container {
+        gap: 0;
+        flex-direction: column;
+        align-items: center;
+    }
+    .compra {
+        width: 100%;
+    }
+    .iconeOpcoes {
+        width: 30px;
+    }
+    .resumo {
+        width: 80vw;
+        font-size: 14px;
+    }
+    .resumoCompra, #totalValor, .resumoFilme {
+        padding: 10px;
+    }
+    .resumoFilme{
+        gap: 10px;
+    }
+    .compraOpcoes {
+        margin-top: 20px;
+        gap: 10px;
+        font-family: 11px
+    }
+    .sala {
+        margin-top: 0;
+        scale: 85%;
+    }
+    .tituloEscolha {
+        margin-top: 40px;
+    }
+    .tela, .legenda {
+        margin-top: 20px;
+    }
+    .legendaOpcoes {
+        font-size: 12px;
+        display: flex;
+        gap: 10px;
+    }
+    .legDisp, .legOcup, .legSel {
+        width: 1px;
+        height: 1px;
+    }
+    .assento {
+        color: #fff;
+        font-size: 12px;
+    }
+    .aquisicoes {
+        font-size: 14px;
+    }
+    .avancarAssentos {
+        margin-top: 20px;
+        width: 100%;
+    }
+    .assentoEscolhido {
+        color: #000;
+    }
+}
+
+@media (min-width: 768px) {
+    .compra {
+        width: 80vw;
+    }
+    .corredor {
+        display: flex;
+    }
+    .compraOpcoes {
+        justify-content: space-evenly;
+        gap: 0;
+        width: 100%;
+    }
+    .tituloEscolha {
+        margin-top: 50px;
+    }
+    .sala {
+        width: 340px;
+        scale: 100%;
+        margin-top: 20px;
+    }
+    .resumo {
+        width: 50vw;
+    }
+    .legenda {
+        margin-top: 20px;
+        width: 70%;
+    }
+    .resumoFilme, .resumoCompra, #totalValor {
+        padding: 15px;
+    }
+    .avancarAssentos {
+        width: 100%;
+    }
+    .assento {
+        color: #fff;
+    }
+    .assentoEscolhido {
+        color: #000;
+    }
+    .tela {
+        margin-top: 50px;
+    }
+}
+
+@media (min-width: 1200px) {
+    #container {
+        width: 70vw;
+        flex-direction: row;
+        gap: 100px;
+    }
+    .assento {
+        color: #b5121b;
+    }
+    .compra {
+        width: 50%;
+    }
+    .sala {
+        width: 340px;
+    }
+    .corredor {
+        display: flex;
+    }
+    .resumo {
+        width: 100%;
+    }
+    .compraOpcoes {
+        width: 100%;
+        gap: 0;
+        justify-content: space-between;
+    }
+    .tituloEscolha {
+        margin-top: 50px;
+    }
+    .avancarAssentos {
+        width: 100%;
+    }
+    .infoFilme {
+        font-size: 14px;
+    }
+    .lateral {
+        width: 40%;
+    }
+    .assentoEscolhido {
+        color: #000;
+    }
+}
+@media (min-width: 1600px) {
+    #container {
+        justify-content: center;
+    }
+    .sala {
+        scale: 100%;
+        margin-top: 30px;
+    }
+    .compra {
+        margin-top: 0;
+    }
+    .lateral {
+        width: 30%;
+    }
+    .assentoEscolhido {
+        color: #000;
+    }
+    .tela {
+        margin-top: 50px;
+    }
+}
