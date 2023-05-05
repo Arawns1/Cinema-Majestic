@@ -27,21 +27,26 @@ function assentoEscolhido() {
     }
 } 
 
-/* escreve os assentos dentro da div sala */
+/* escreve os assentos e os corredores dentro da div sala */
 function escreveTela() {
 
-    var colunas = ['K', 'J', 'I', 'H', 'G', 'F', 'E', 'D', 'C', 'B', 'A']
+    var corredores = ['K', 'J', 'I', 'H', 'G', 'F', 'E', 'D', 'C', 'B', 'A']
     var totalAssentos = 10
     var assentos = document.getElementsByClassName("assentos")[0]
+    var corredorDiv = document.getElementsByClassName("corredor")
 
-    for (i = 0; i < colunas.length; i++) {
+    for (i = 0; i < corredores.length; i++) {
         for (j = 0 ; j < totalAssentos; j++) {
-            assentos.innerHTML += `<div class="assento">${colunas[i]}${j+1}</div>`
+            assentos.innerHTML += `<div class="assento">${corredores[i]}${j+1}</div>`
         }
+    }
+
+    for(i = 0; i < corredores.length; i++) {
+        corredores.forEach(letra => corredorDiv[i].innerHTML += `<span>${letra}</span>`)
     }
 }
 
-/* quantidade máxima de assentos que podem ser escolhidos  */
+/* quantidade máxima de assentos que podem ser escolhidos */
 var qntdAssentosMax = 8
 
 /* salva o nome dos assentos escolhidos */
