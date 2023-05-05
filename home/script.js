@@ -14,10 +14,8 @@ window.addEventListener('load', () => {
 
     
 });
-
 document.querySelector("#linkSair").addEventListener("click" , e => {
     e.preventDefault();
     sessionStorage.clear();
     window.location.href = "./index.html";
 })
-

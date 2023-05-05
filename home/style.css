@@ -4,7 +4,7 @@
   --btn-and-links: #b5121b;
   --red-shadows: #6f0b11;
   --title: #ffffff;
-  --subtitles: #81010D;
+  --subtitles: #d9d9d9af;
   --light-bg: #333333;
   --dark-bg: #000000;
 }
@@ -23,6 +23,16 @@ html,
 body {
   max-height: 100%;
   background-color: var(--dark-bg) !important;
+  padding-bottom: 100px;
+}
+
+button {
+  background-color: var(--btn-and-links);
+  border: 2px solid var(--red-shadows);
+  border-radius: 8px;
+  color: var(--title);
+  outline: none;
+  transition: 0.8s;
 }
 
 header nav {
@@ -143,20 +153,30 @@ header #login img {
   height: 100%;
 }
 
+.sinopse {
+  color: var(--subtitles);
+}
 
 #emCartaz {
   margin-top: 30px;
   padding: 0 2em;
   display: flex;
   flex-direction: column;
-  gap: 20px;
   font-weight: 700;
-}
-
-section h2 {
   color: var(--title);
 }
 
+#cartazTitle {
+  color: var(--title);
+  margin-bottom: 2vh;
+
+}
+
+#cartazTitle h2 {
+  font-weight: 500;
+  margin: 0;
+  padding: 0;
+}
 
 .containerPosters {
   display: flex;
@@ -167,9 +187,159 @@ section h2 {
   flex-wrap: wrap;
 }
 
-.containerPosters img {
-  width: 13vw;
+.poster {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 15px;
+  position: relative;
+  transition: 1s ease-in-out;
+
 }
+
+
+
+.titlePoster {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  opacity: 1;
+  margin-top: 10%;
+  padding: 5px;
+  font-size: 1.1em;
+  font-weight: 700;
+
+}
+
+.poster:hover {
+  cursor: pointer;
+  scale: 1.1;
+  box-shadow: -6px -12px 60px -5px #b5121aa2;
+  border: 2px solid var(--btn-and-links);
+  text-decoration: underline;
+  transition: 1s;
+}
+
+.label {
+  position: absolute;
+  width: 70px;
+  height: 30px;
+  background-color: var(--light-bg);
+  border-radius: 2px;
+  top: 10px;
+  left: 0;
+  text-align: center;
+  line-height: 30px;
+  color: var(--title);
+  transition: 1s;
+}
+
+/* .poster i {
+  transform: translateY(-120%);
+  position: absolute;
+  color: #ffffff;
+  scale: 1.5;
+  z-index: 2;
+} */
+
+/* .posterMenu {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  width: 100%;
+  height: 0%;
+  padding: 0 10px;
+  border-radius: 10px 10px 0px 0px;
+  opacity: 0.8;
+  z-index: 1;
+  background-color: var(--dark-bg);
+  cursor: pointer;
+  /* animation-name: menuDown;
+  animation-duration: 2s; 
+}
+
+.posterMenu:hover {
+  cursor: pointer;
+   animation-name: menuUp;
+  animation-duration: 2s;
+  animation-fill-mode: forwards; 
+} */
+
+
+
+/* @keyframes menuUp {
+  0% {
+    height: 0%;
+    visibility: hidden;
+  }
+
+  100% {
+    height: 80%;
+    visibility: visible;
+  }
+}
+
+@keyframes menuDown {
+  0% {
+    height: 80%;
+    visibility: visible;
+    opacity: 1;
+  }
+
+  100% {
+    height: 0%;
+    visibility: hidden;
+    opacity: 0.5;
+  }
+} */
+
+
+/* .infoPoster {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+} */
+
+
+
+/* 
+.genres {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+  color: var(--title);
+}
+
+.genres div {
+  background-color: var(--red-shadows);
+  padding: 3px;
+  border-radius: 3px;
+  color: var(--title);
+}
+
+.btnCompraPoster {
+  opacity: 1;
+  width: 80%;
+  height: 40px;
+  border-radius: 8px;
+}
+
+.btnCompraPoster:hover {
+  scale: 1.02;
+  background-color: var(--red-shadows);
+}
+
+.btnCompraPoster span {
+  font-size: 15px;
+} */
+
+
+
 
 
 
@@ -184,7 +354,8 @@ section h2 {
   }
 
   .movieTitle h1 {
-    min-width: 20vw;
+    min-width: 30vw;
+    font-size: 2rem;
   }
 
   section h2:after {
@@ -197,24 +368,33 @@ section h2 {
     display: none;
   }
 
+  #carrousel {
+    height: 10px;
+    width: 10px;
+    display: none;
+  }
+
+  .poster img {
+    max-width: 50vw;
+  }
+
+
   .movieTitle .ratings {
     display: none;
   }
 
-  .carousel-inner {
-    display: inline-block;
-  }
-
   .movieTitle {
-    margin-top: 200px;
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    align-items: center;
     width: 80%
   }
 
   .movieTitle h1 {
-    font-size: 1.3em;
-    display: inline-block;
+    font-size: 1.2em;
+    min-width: 10vw;
+    font-weight: 700;
   }
 
   .movieTitle button {
@@ -234,14 +414,14 @@ section h2 {
 
 }
 
-#login{
+#login {
   min-width: 150px;
   align-items: center;
   justify-content: center;
   margin: 0;
 }
 
-.spanLoginHidden{
+.spanLoginHidden {
   display: none !important;
 }
 
@@ -252,62 +432,63 @@ section h2 {
 }
 
 
-#spanLogado {  
+#spanLogado {
   display: flex;
   margin: 0;
   justify-content: center;
-  position: relative;  
-    
+  position: relative;
+
 }
 
-#userIcon button{  
-  
+#userIcon button {
+
   top: 10%;
-  color: white;  
+  color: white;
   background-color: #B5121B;
   font-weight: 700;
   font-size: 18px;
   letter-spacing: 2px;
   width: 50px;
-  height:  50px;
+  height: 50px;
   border: none;
-  border-radius: 50px;   
+  border-radius: 50px;
   margin: 0;
   align-items: center;
   justify-content: center;
-  
+
 }
 
 #userIcon:hover button {
-  
+
   width: 150px;
   border-radius: 0;
-  transition: 0.5s;     
-  
+  transition: 0.5s;
+
 }
 
 #userIcon:hover .userDropDown {
-  
+
   height: 96px;
   transition: 0.5s;
-  transition-delay: 0.5s;     
-  
+  transition-delay: 0.5s;
+
 }
+
 .userDropDown a:hover {
-  
+
   background-color: #B5121B;
-  transition: 0.3s;     
-  
+  transition: 0.3s;
+
 }
 
-#userIcon  { 
-    
+#userIcon {
+
   margin: 0px;
-  display: inline-block;     
-  
+  display: inline-block;
+
 }
 
-.userDropDown{
+.userDropDown {
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -333,4 +514,3 @@ section h2 {
   text-decoration: none;
   color: white;
 }
-
