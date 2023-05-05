@@ -54,7 +54,7 @@ produtos.forEach(produto => {
   let inputQuantidade = document.createElement("input");
   inputQuantidade.type = "number";
   inputQuantidade.onchange = () => extrato()
-  inputQuantidade.value = 0
+  inputQuantidade.value = "";
   inputQuantidade.id = produto.nome
   
   const botao = document.createElement("button");
@@ -120,6 +120,7 @@ PipocasEspecias.forEach(pipoca => {
   inputQuantidade.id = pipoca.nome;
   inputQuantidade.addEventListener("change", () => {
     extrato();
+
   });
 
   quadro.appendChild(img);
@@ -132,34 +133,94 @@ PipocasEspecias.forEach(pipoca => {
 // EXTRATO ============================================================
 
 const extrato = () => {
-  let pPipoca = 5 * document.getElementById("Pipoca").value
-  document.getElementById("pPipoca").innerText = pPipoca
-  
-  let pCoca = 3 * document.getElementById("coca-cola").value
-  document.getElementById("pCoca").innerText = pCoca
-  
-  let pMentos = 1 * document.getElementById("mentos").value
-  document.getElementById("pMentos").innerText = pMentos
-  
-  let pTrento = 2 * document.getElementById("trento").value
-  document.getElementById("pTrento").innerText = pTrento
-  
-  let pAgua = 1.50 * document.getElementById("Agua").value
-  document.getElementById("pAgua").innerText = pAgua 
-  
 
+  let pPipoca = 5 * document.getElementById("Pipoca").value
+  if (pPipoca > 0) {
+    document.getElementById("pPipoca").innerText = pPipoca
+    document.querySelector(".ExtratoPipoca").classList.remove("ExtratoPipocahidden")
+    document.querySelector("#pr").classList.remove("prhidden");
+  }
+  else{
+   document.querySelector(".ExtratoPipoca").classList.add("ExtratoPipocahidden")
+   
+  }
+
+
+  let pCoca = 3 * document.getElementById("coca-cola").value
+  if (pCoca > 0) {
+    document.getElementById("pCoca").innerText = pCoca
+    document.querySelector(".ExtratoCoca").classList.remove("ExtratoCocahidden")
+    document.querySelector("#pr").classList.remove("prhidden");
+  }
+  else{
+    document.querySelector(".ExtratoCoca").classList.add("ExtratoCocahidden")
+  }
+
+  let pMentos = 1 * document.getElementById("mentos").value
+  if (pMentos > 0) {
+    document.getElementById("pMentos").innerText = pMentos
+    document.querySelector(".ExtratoMentos").classList.remove("ExtratoMentoshidden")
+    document.querySelector("#pr").classList.remove("prhidden");
+  }
+  else{
+    document.querySelector(".ExtratoMentos").classList.add("ExtratoMentoshidden")
+  }
+
+
+  let pTrento = 2 * document.getElementById("trento").value
+  if (pTrento > 0) {
+    document.getElementById("pTrento").innerText = pTrento
+    document.querySelector(".ExtratoTrento").classList.remove("ExtratoTrentohidden")
+    document.querySelector("#pr").classList.remove("prhidden");
+  }
+  else{
+    document.querySelector(".ExtratoTrento").classList.add("ExtratoTrentohidden")
+  }
+
+  let pAgua = 1.50 * document.getElementById("Agua").value
+  if (pAgua > 0) {
+    document.getElementById("pAgua").innerText = pAgua 
+    document.querySelector(".ExtratoAgua").classList.remove("ExtratoAguahidden")
+    document.querySelector("#pr").classList.remove("prhidden");
+  }
+  else{
+    document.querySelector(".ExtratoAgua").classList.add("ExtratoAguahidden")
+  }
 
   let pePipocaChocolate = 20.0 * document.getElementById("Pipoca Chocolate").value
-  document.getElementById("pePipocaChocolate").innerText = pePipocaChocolate 
+  if (pePipocaChocolate > 0) {
+    document.getElementById("pePipocaChocolate").innerText = pePipocaChocolate 
+    document.querySelector(".ExtratoPChocolate").classList.remove("ExtratoPChocolatehidden")
+    document.querySelector("#pr").classList.remove("prhidden");
+  }
+  else{
+    document.querySelector(".ExtratoPChocolate").classList.add("ExtratoPChocolatehidden")
+  }
 
   let PipocaCara = 15.0 * document.getElementById("Pipoca Caramelho").value
-  document.getElementById("PipocaCara").innerText = PipocaCara 
+  if (PipocaCara > 0) {
+    document.getElementById("PipocaCara").innerText = PipocaCara 
+    document.querySelector(".ExtratoPCaramelo").classList.remove("ExtratoPCaramelohidden")
+    document.querySelector("#pr").classList.remove("prhidden");
+  }
+  else{
+    document.querySelector(".ExtratoPCaramelo").classList.add("ExtratoPCaramelohidden")
+  }
+
 
   let PipocaOreo = 25.0 * document.getElementById("Pipoca com Oreo").value
-  document.getElementById("PipocaOreo").innerText = PipocaOreo 
+  if (PipocaOreo > 0) {
+    document.getElementById("PipocaOreo").innerText = PipocaOreo 
+    document.querySelector(".ExtratoPOreo").classList.remove("ExtratoPOreohidden")
+    document.querySelector("#pr").classList.remove("prhidden");
+  }
+
+  else{
+    document.querySelector(".ExtratoPOreo").classList.add("ExtratoPOreohidden")
+  }
 
   let total = pAgua + pCoca + pMentos + pTrento + pPipoca + pePipocaChocolate + PipocaCara + PipocaOreo
   document.getElementById("total").innerText = total 
-
-  
 }
+
+
