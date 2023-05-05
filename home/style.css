@@ -260,7 +260,7 @@ section h2 {
     
 }
 
-#userIcon button{  
+#userIcon #userBtn{  
   
   top: 10%;
   color: white;  
@@ -278,7 +278,7 @@ section h2 {
   
 }
 
-#userIcon:hover button {
+#userIcon:hover #userBtn {
   
   width: 150px;
   border-radius: 0;
@@ -312,7 +312,7 @@ section h2 {
   flex-direction: column;
   overflow: hidden;
   height: 0;
-  background-color: #1d1d1f;
+  background-color:  #000000;
   box-shadow: 0px 0px 16px 0px rgba(255, 27, 27, 0.562);
   border: none;
   position: absolute;
@@ -322,6 +322,38 @@ section h2 {
   transition: 0.3s;
   align-content: center;
   justify-content: center;
+
+}
+.novaSenha {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  height: 0px;
+  background-color:  #000000;
+  box-shadow: 0px 0px 16px 0px rgba(255, 27, 27, 0.562);
+  border: none;
+  position: absolute;
+  min-width: 150px;  
+  right: calc(50% - 75px);
+  z-index: 3;
+  transition: 0.3s;  
+  align-content: center;   
+}
+
+.novaSenha input {
+  font-size: 16px;
+  display: flex;
+  width: 80%;
+  padding: 0.05rem;
+  margin:  5% auto;
+  box-sizing: border-box;
+  border-radius: 10px;
+  border: 1px solid #dddddd;
+  outline: none;
+  background: #eeeeee;
+  transition: background 0.2s, border-color 0.2s;
+  text-align: center;
+  margin-top: 5px;
 
 }
 
@@ -334,3 +366,49 @@ section h2 {
   color: white;
 }
 
+.form_message {
+  text-align: center;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 15px;
+}
+
+.form_message_success {
+  color: green;
+}
+
+.form_message_error {
+  color: red;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-size: 15px;  
+
+}
+
+
+
+#userIcon:hover .novaSenhaDrop {
+  
+  height: 150px;
+  transition: 0.5s;
+  transition-delay: 0.5s;     
+  
+}
+
+#novaSenhaBtn {
+
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: white;
+  border: none;
+  cursor: pointer;
+  background: #b5121b;
+}
+
+#novaSenhaBtn:active {
+  transform: scale(0.98);     
+}
+
+.displayNone {
+  display: none;
+}

@@ -85,8 +85,6 @@ document.querySelector("#create_account").querySelector(".form_button").addEvent
             setFormMessage(createAccountForm, "success" , "");
         }, 3000);
     }
-    
-
 });
 
 function setInputError(inputElement, message) {
