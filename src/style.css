@@ -1,9 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap%27');
 * {
+  font-family: 'Roboto', sans-serif;
   color: white;
   margin: 0;
   box-sizing: border-box;
   font-size: 100%;
-
 }
 
 html,
@@ -41,6 +42,18 @@ body {
   justify-content: center; 
 
 }
+
+main{
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-areas: "p e";
+
+}
+
+#produtos{
+  grid-area: p;
+}
+
 .produto {
 
   font-size: 100%;
@@ -92,7 +105,7 @@ margin-top: 30px;
 
   flex-direction: column;
   float: right;
- 
+  grid-area: e;
 }
 
 .resumo {
@@ -217,7 +230,7 @@ input[type="number"] {
   padding: 5px;
   border: 1px solid #ccc;
   border-radius: 4px;
-  
+
 }
 
 .ExtratoPipocahidden{
