@@ -56,6 +56,7 @@ var escolhidoLista = []
 document.addEventListener("DOMContentLoaded", escreveTela)
 document.addEventListener("DOMContentLoaded", escolhaAssento)
 
+/* salva as informações na session */
 document.querySelector(".avancarAssentos").addEventListener("click", e => {
     e.preventDefault()
 

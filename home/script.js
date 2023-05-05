@@ -18,7 +18,7 @@ window.addEventListener('load', () => {
 document.querySelector("#linkSair").addEventListener("click" , e => {
     e.preventDefault();
     sessionStorage.clear();
-    window.location.href = "./index.html";
+    window.location.reload();
 })
 
 function setFormMessage(formElement, type, message) {
@@ -74,5 +74,15 @@ document.querySelector(".novaSenha").addEventListener('mouseleave' , e => {
 
 document.querySelector("#comprarMarioBtn").addEventListener("click", e => {
     e.preventDefault
-    window.location.href = "../assentos/index.html"
+    window.location.href = "../assentos/mario.html"
+})
+
+document.querySelector("#comprarGuardioesBtn").addEventListener("click", e => {
+    e.preventDefault
+    window.location.href = "../assentos/guardioesgalaxia.html"
+})
+
+document.querySelector("#comprarCavaleirosBtn").addEventListener("click", e => {
+    e.preventDefault
+    window.location.href = "../assentos/cavaleiroszodiaco.html"
 })
