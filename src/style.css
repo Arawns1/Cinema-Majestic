@@ -11,9 +11,10 @@
 
 }
 
- html,body {
+html,
+body {
   background-color: #000000;
-}   
+}
 
 #topo {
   display: flex;
@@ -22,6 +23,10 @@
   background-color: #333333;
   justify-content: space-between;
 }
+ #logo{
+    width: 150px;
+}
+
 
 #etapas {
   justify-content: space-between;
@@ -32,83 +37,178 @@
 }
 
 #corpo {
-  background-color: rgb(248, 4, 4);
+  background-color: rgb(0, 150, 7);
 
 }
 
 .produto {
 
-  font-size: 80%;
+  font-size: 100%;
   display: inline-block;
   border: 1px solid #333333;
   padding: 1%;
   margin: 1%;
   text-align: center;
-  width: 15%;
   background-color: #333333;
- height: 10vh;
- width: 10vw;
+  height: 25vh;
+  width: 15svw;
+  min-width: 160px;
+  min-height: 160px;
+  border-radius: 10%;
+
 }
 
 .produto img {
- width: 45%;
-  height: 45%;
-margin-bottom: 10%;
-
+  width: 65%;
+  height: 65%;
 }
-
-/* #extrato {
-
-  float: right;
+/*----------------------------------------------------------*/
+.PipocasEspecias {
 
   font-size: 100%;
   display: inline-block;
-  border: 1px solid black;
-  background-color: #333333;
+  border: 1px solid #333333;
   padding: 1%;
   margin: 1%;
   text-align: center;
+  background-color: #333333;
+  height: 50vh;
+  width: 20vw;
+  min-width: 160px;
+  min-height: 160px;
+  border-radius: 10%;
+
+}
+
+.PipocasEspecias img {
+  width: 75%;
+  height: 75%;
+}
+
+/* -----------------------------------------------------------*/
+
+.lateral {
+
+  flex-direction: column;
+  float: right;
+ 
+}
+
+.resumo {
+ 
+  padding-bottom: 20px;
+  width: 100%;
+  border: 1px solid black;
+  margin-top: 50px;
+  background-color: #333;
+
+}
+.resumoFilme {
+  display: flex;
+  height: 150px;
+  gap: 30px;
+  justify-content: space-evenly;
+}
+.resumoCompra, #totalValor, .resumoFilme {
+  padding: 10px;
+}
+.resumoCompra {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  font-size: 15px;
+}
+.imagemFilme {
   height: 100%;
-  width: 40%;
-  text-align: left;
-  padding-top: 28%;
-} */
+}
+.infoFilme {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  gap: 10px;
+  justify-content: space-evenly;
+}
+.tipoFilme {
+  display: flex;
+  gap: 20px;
+}
+.aquisicoes {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 15px;
+}
+#totalValor {
+  margin-top: 40px;
+}
+.telaFilme, .audioFilme {
+  background-color: #b5121b;
+  padding: 5px;
+  color: #efefef;
+}
+.avancarAssentos {
+  height: 50px;
+  background-color: #b5121b;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+.tituloEscolha::after {
+  content: "";
+  height: 1px;
+  width: 100%;
+  margin-top: 10px;
+  display: block;
+  background-color: #2a2a2a;
+}
+.tituloResumo::after {
+  content: "";
+  height: 1px;
+  width: 100%;
+  margin-top: 3px;
+  display: block;
+  background-color: #2a2a2a;
+}
+
+/*-------------------------------------------------------------------*/
 
 #pr {
-  border: 1px solid #ccc;
+    border-top: 1px solid #CCC; 
+    padding: 3% 5%;
 }
 
 #iconesA {
 
   background-color: #333333;
-  border: none;
-  color: white;
-  border: none;
   border-radius: 10px;
   cursor: pointer;
   transition: filter 0.4;
 }
-
-#icones {
-
-  background-color: #b5121b;
-  border: none;
-  color: white;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: filter 0.4;
+ 
+#sEtapas{
+  color: #000000;
+}
+span{
+  color: #ffffff;
 }
 
-button:hover {
-  filter: brightness(0.3);
-  background-color: #6f0b11;
+
+.icones {
+  text-align: center;
+  filter: invert(100);
+   border-inline: 1px solid #CCC; 
 }
 
+.iconesSelecionado{
+  
+  border-inline: 1px solid #CCC; 
+  filter: invert(100);
+  box-shadow: 2px 2px 4px #00e1ff
+  
+}
 input[type="number"] {
   background-color: #333333;
   width: 100%;
-  box-sizing: border-box;
   padding: 5px;
   border: 1px solid #ccc;
   border-radius: 4px;
