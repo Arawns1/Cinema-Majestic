@@ -4,7 +4,7 @@
   --btn-and-links: #b5121b;
   --red-shadows: #6f0b11;
   --title: #ffffff;
-  --subtitles: #81010D;
+  --subtitles: #d9d9d9af;
   --light-bg: #333333;
   --dark-bg: #000000;
 }
@@ -14,7 +14,6 @@
   margin: 0;
   padding: 0;
   font-family: 'Roboto', sans-serif;
-
 }
 
 
@@ -23,6 +22,16 @@ html,
 body {
   max-height: 100%;
   background-color: var(--dark-bg) !important;
+  padding-bottom: 100px;
+}
+
+button {
+  background-color: var(--btn-and-links);
+  border: 2px solid var(--red-shadows);
+  border-radius: 8px;
+  color: var(--title);
+  outline: none;
+  transition: 0.8s;
 }
 
 header nav {
@@ -100,6 +109,7 @@ header #login img {
   gap: 10px;
 }
 
+
 .movieTitle button {
   background-color: var(--btn-and-links);
   width: 250px;
@@ -143,20 +153,30 @@ header #login img {
   height: 100%;
 }
 
+.sinopse {
+  color: var(--subtitles);
+}
 
 #emCartaz {
   margin-top: 30px;
   padding: 0 2em;
   display: flex;
   flex-direction: column;
-  gap: 20px;
   font-weight: 700;
-}
-
-section h2 {
   color: var(--title);
 }
 
+#cartazTitle {
+  color: var(--title);
+  margin-bottom: 2vh;
+
+}
+
+#cartazTitle h2 {
+  font-weight: 500;
+  margin: 0;
+  padding: 0;
+}
 
 .containerPosters {
   display: flex;
@@ -167,11 +187,65 @@ section h2 {
   flex-wrap: wrap;
 }
 
-.containerPosters img {
-  width: 13vw;
+.poster {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 15px;
+  position: relative;
+  transition: 1s ease-in-out;
+  width: 220px;
+  height: 320px;
+
 }
 
+.poster img {
+  width: 100%;
+  height: 100%;
+}
 
+.titlePoster {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0000008f;
+  width: 100%;
+  height: 50px;
+  padding: 20px;
+}
+
+.titlePoster h2 {
+  font-size: 14px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.poster:hover {
+  cursor: pointer;
+  scale: 1.1;
+  box-shadow: -6px -12px 60px -5px #b5121aa2;
+  border: 2px solid var(--btn-and-links);
+  text-decoration: underline;
+  transition: 1s;
+}
+
+.label {
+  position: absolute;
+  width: 70px;
+  height: 30px;
+  background-color: var(--red-shadows);
+  border-radius: 2px;
+  top: 10px;
+  left: 0;
+  text-align: center;
+  line-height: 30px;
+  color: var(--title);
+  transition: 1s;
+}
 
 @media (max-width: 1000px) {
   .movieTitle .sinopse {
@@ -184,7 +258,8 @@ section h2 {
   }
 
   .movieTitle h1 {
-    min-width: 20vw;
+    min-width: 30vw;
+    font-size: 1.5rem;
   }
 
   section h2:after {
@@ -197,24 +272,41 @@ section h2 {
     display: none;
   }
 
-  .movieTitle .ratings {
-    display: none;
+  .carousel-inner {
+    height: 40vh;
+    width: 100%;
+    position: relative;
   }
 
-  .carousel-inner {
-    display: inline-block;
+  .poster {
+    max-width: 35vw;
+    max-height: 45vh;
   }
 
   .movieTitle {
-    margin-top: 200px;
+    position: absolute;
     display: flex;
     flex-direction: row;
-    width: 80%
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 30%;
+    left: 0;
+    top: 70%;
+    bottom: 0;
+    background-color: #333333bd;
+    padding: 0px 20px;
+    border-radius: 0px 5px 0px 5px;
+  }
+
+  .ratings {
+    display: none;
   }
 
   .movieTitle h1 {
-    font-size: 1.3em;
-    display: inline-block;
+    font-size: 1.1em;
+    min-width: 10vw;
+    font-weight: 700;
   }
 
   .movieTitle button {
@@ -231,17 +323,16 @@ section h2 {
   section h2:after {
     display: none;
   }
-
 }
 
-#login{
+#login {
   min-width: 150px;
   align-items: center;
   justify-content: center;
   margin: 0;
 }
 
-.spanLoginHidden{
+.spanLoginHidden {
   display: none !important;
 }
 
@@ -252,67 +343,67 @@ section h2 {
 }
 
 
-#spanLogado {  
+#spanLogado {
   display: flex;
   margin: 0;
   justify-content: center;
-  position: relative;  
-    
+  position: relative;
+
 }
 
-#userIcon #userBtn{  
-  
+#userIcon #userBtn {
+
   top: 10%;
-  color: white;  
+  color: white;
   background-color: #B5121B;
   font-weight: 700;
   font-size: 18px;
   letter-spacing: 2px;
   width: 50px;
-  height:  50px;
+  height: 50px;
   border: none;
-  border-radius: 50px;   
+  border-radius: 50px;
   margin: 0;
   align-items: center;
   justify-content: center;
-  
+
 }
 
 #userIcon:hover #userBtn {
-  
+
   width: 150px;
   border-radius: 0;
-  transition: 0.5s;     
-  
+  transition: 0.5s;
+
 }
 
 #userIcon:hover .userDropDown {
-  
+
   height: 96px;
   transition: 0.5s;
-  transition-delay: 0.5s;     
-  
+  transition-delay: 0.5s;
+
 }
+
 .userDropDown a:hover {
-  
   background-color: #B5121B;
-  transition: 0.3s;     
-  
+  transition: 0.3s;
+
 }
 
-#userIcon  { 
-    
+#userIcon {
+
   margin: 0px;
-  display: inline-block;     
-  
+  display: inline-block;
+
 }
 
-.userDropDown{
+.userDropDown {
   display: flex;
   flex-direction: column;
   overflow: hidden;
   height: 0;
-  background-color:  #000000;
+  background-color: #000000;
   box-shadow: 0px 0px 16px 0px rgba(255, 27, 27, 0.562);
   border: none;
   position: absolute;
@@ -324,20 +415,21 @@ section h2 {
   justify-content: center;
 
 }
+
 .novaSenha {
   display: flex;
   flex-direction: column;
   overflow: hidden;
   height: 0px;
-  background-color:  #000000;
+  background-color: #000000;
   box-shadow: 0px 0px 16px 0px rgba(255, 27, 27, 0.562);
   border: none;
   position: absolute;
-  min-width: 150px;  
+  min-width: 150px;
   right: calc(50% - 75px);
   z-index: 3;
-  transition: 0.3s;  
-  align-content: center;   
+  transition: 0.3s;
+  align-content: center;
 }
 
 .novaSenha input {
@@ -345,7 +437,7 @@ section h2 {
   display: flex;
   width: 80%;
   padding: 0.05rem;
-  margin:  5% auto;
+  margin: 5% auto;
   box-sizing: border-box;
   border-radius: 10px;
   border: 1px solid #dddddd;
@@ -381,18 +473,18 @@ section h2 {
   color: red;
   margin-top: 0px;
   margin-bottom: 0px;
-  font-size: 15px;  
+  font-size: 15px;
 
 }
 
 
 
 #userIcon:hover .novaSenhaDrop {
-  
+
   height: 150px;
   transition: 0.5s;
-  transition-delay: 0.5s;     
-  
+  transition-delay: 0.5s;
+
 }
 
 #novaSenhaBtn {
@@ -406,7 +498,7 @@ section h2 {
 }
 
 #novaSenhaBtn:active {
-  transform: scale(0.98);     
+  transform: scale(0.98);
 }
 
 .displayNone {
