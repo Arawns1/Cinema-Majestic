@@ -149,14 +149,17 @@ window.addEventListener('load', () => {
     function addPosters() {
         var poster = ``
         slideMovies.forEach(movie => {
-            poster += `<div class="poster">
-        <div class="label">Estreia</div>
-        <img src="${movie.posterURL}" alt="${movie.movieTitle} poster">
-        <div class="titlePoster">
-        <h2>${movie.movieTitle}</h2>
-        </div>
+            poster += `<a href="${movie.paginaCompra}">
+            <div class="poster">
+            <div class="label">Estreia</div>
+            <img src="${movie.posterURL}" alt="${movie.movieTitle} poster">
+            <div class="titlePoster">
+            <h2>${movie.movieTitle}</h2>
+            </div>
+            </div>
+            </a>
         
-    </div>`
+    `
         })
         return poster
     }

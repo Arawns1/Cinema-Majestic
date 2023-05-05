@@ -75,6 +75,22 @@ header #login img {
   object-fit: cover;
 }
 
+a {
+  color: var(--title);
+  text-decoration: none;
+}
+
+a:visited {
+  color: var(--title);
+  text-decoration: none;
+}
+
+a:active {
+  color: var(--title);
+  text-decoration: none;
+}
+
+
 #logo {
   margin-left: 20px;
   width: 230px;
@@ -231,6 +247,7 @@ header #login img {
 }
 
 .titlePoster h2 {
+  color: var(--title);
   font-size: 14px;
   font-weight: 700;
   text-align: center;
