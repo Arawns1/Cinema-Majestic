@@ -155,6 +155,7 @@ header #login img {
 
 .sinopse {
   color: var(--subtitles);
+  font-size: 20px;
 }
 
 #emCartaz {
