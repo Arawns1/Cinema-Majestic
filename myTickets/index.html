@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../home/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap" rel="stylesheet">
+    <script src="../home/script.js" defer></script>
+    <script src="script.js" defer></script>
+    <title>Meus Tickets</title>
+</head>
+<header>
+    <nav>
+        <ul>
+            <li tabindex="1" id="logo"><img src="../logoBranca.png" alt="logo do site">
+            </li>
+            <li tabindex="2" id="login">
+                <span id="spanLogin"><a href="/login/login.html" class="spanLink"><img src="../home/assets/perfil.png"
+                            alt="Ícone de Login"></a></span>
+                <span id="spanLogado" class="spanLoginHidden">
+                    <div id="userIcon">
+                        <button id="userBtn">PL</button>
+                        <div class="userDropDown">
+                            <a href="#" id="linkMeusIngressos">Meus Ingressos</a>
+                            <a href="#" id="linkAlterarSenha">Alterar Senha</a>
+                            <a href="#" id="linkSair">Sair</a>
+                        </div>
+                        <div class="novaSenha">
+                            <input type="password" id="inputSenha" placeholder="Nova Senha">
+                            <input type="password" id="inputConfirmaSenha" placeholder="Repita a Senha">
+                            <div class="form_message form_message_success form_message_error"></div>
+                            <button id="novaSenhaBtn">Salvar</button>
+                        </div>
+                    </div>
+                </span>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+<body>
+    <div class="container">
+        <div class="subtitleContainer">
+            <h2>Minhas compras</h2>
+        </div>
+
+        <div class="ticketsContainer"></div>
+    </div>
+</body>
+
+</html>
