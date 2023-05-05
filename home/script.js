@@ -71,3 +71,8 @@ document.querySelector(".novaSenha").addEventListener('mouseleave' , e => {
     inputSenha.value = "";
     inputConfirmaSenha.value = "";
 });
+
+document.querySelector("#comprarMarioBtn").addEventListener("click", e => {
+    e.preventDefault
+    window.location.href = "../assentos/index.html"
+})

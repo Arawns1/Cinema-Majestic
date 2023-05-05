@@ -6,24 +6,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script src="./script.js" defer></script>
+    <script src="../home/script.js" defer></script>
     <title>Assentos</title>
 </head>
 <body>
     
     <header>
+        
         <nav>
-            
-            <div id="navegacao">
-
-                <div id="logo"><img src="./assets/logoBranca.png" alt="logo do site" class="logoImagem"></div>
-
-                <div id="cliente">
-                    <div id="carrinho"><img src="./assets/image.png" alt="carrinho de compras"><span>Carrinho</span></div>
-                    <div id="login"><img src="./assets/perfil.png" alt="login do site"><span>Login</span></div>
-                </div>
-
-            </div>
-            
+            <ul>
+              <li tabindex="1" id="logo"><img src="https://picsum.photos/148/48
+                " alt="logo do site"><span>Majestic</span></li>
+              <li tabindex="2" id="login">        
+                <span id="spanLogin" ><a href="/login/login.html" class="spanLink"><img src="assets/perfil.png" alt="Ícone de Login"></a></span>
+                <span id="spanLogado" class="spanLoginHidden">
+                  <div id="userIcon">            
+                    <button id="userBtn">PL</button>
+                    <div class="userDropDown">
+                      <a href="#" id="linkMeusIngressos">Meus Ingressos</a>
+                      <a href="#" id="linkAlterarSenha">Alterar Senha</a>
+                      <a href="#" id="linkSair">Sair</a>
+                    </div>
+                    <div class="novaSenha" >
+                      <input type="password" id="inputSenha" placeholder="Nova Senha">
+                      <input type="password" id="inputConfirmaSenha" placeholder="Repita a Senha">
+                      <div class="form_message form_message_success form_message_error"></div>
+                      <button id="novaSenhaBtn">Salvar</button>
+                    </div>
+                  </div>          
+                </span>
+              </li>
+            </ul>
           </nav>
 
     </header>

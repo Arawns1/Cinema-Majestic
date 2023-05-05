@@ -59,9 +59,8 @@ document.addEventListener("DOMContentLoaded", escolhaAssento)
 document.querySelector(".avancarAssentos").addEventListener("click", e => {
     e.preventDefault()
 
-    var usuarioLogado = JSON.parse(sessionStorage.getItem("user"))
     var nomeFilme = document.querySelector(".nomeFilme").textContent
-    var assentosUsuario = [usuarioLogado, nomeFilme, escolhidoLista] 
+    var assentosUsuario = [nomeFilme, escolhidoLista] 
 
     sessionStorage.setItem("assentos", JSON.stringify(assentosUsuario))
 
