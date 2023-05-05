@@ -126,11 +126,8 @@ PipocasEspecias.forEach(pipoca => {
   quadro.appendChild(nome);
   quadro.appendChild(preco);
   quadro.appendChild(inputQuantidade);
-
   divPipocasEspecias.appendChild(quadro);
 });
-
-
 
 // EXTRATO ============================================================
 
