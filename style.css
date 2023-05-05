@@ -30,11 +30,23 @@ body{
     margin-right: 10px;
 }
 .container {
-    width: 70vw;
+    width: auto;
+    background-color:#1D1D1F;
+    color: #FFFFFF;
     margin: auto;
-    margin-top: 30px;
-    padding-bottom: 50px;
+    height: 100vh;
+    width: 70vw;
     display: flex;
     flex-direction: row;
-    gap: 150px;
+}
+.content {
+    background-color: #2ed6bd;
+    color: #B5121B;
+    width: 50%;
+    height: 200px;
+}
+.lateral {
+    background-color: #3fd62e;
+    color: #b51269;
+    width: 30%;
 }
