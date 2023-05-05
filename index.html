@@ -4,36 +4,74 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tela de pagamento</title>
+    <link rel="stylesheet" href="C:\Users\User\Documents\GitHub\Trabalho-FrontEnd-Serratec-2023.1\img\styles.css">
 </head>
 <body>
-    <div id = "cabecario">
-        <nav>
-            <img src="./img/fc1d9e24-aa0a-4677-8315-3200a4b49dca.jpg" alt="logotipo da empresa">
-            <img src="img/image.png" alt="imagem carrinho de compras">
-            <img src="./img/perfil.png" alt="Imagem perfil">
-        </nav>
-
-    </div>
-    
-
-    <div id ="processo" >
-        <nav>
-        <button id = "assento"><img src="./img/chair.png" alt="assento de cinema"></button>
-        <button id = "ingressos"><img src="./img/icons8-bilhete-100.png" alt="Bilhete de cinema"></button>
-        <button id = "lanches"><img src="./img/icons8-pipoca-100.png" alt="Pipoca"></button>
-        <button id = "cartao"><img src="./img/icons8-parte-traseira-de-cartão-de-banco-100.png" alt="Traseira de um cartão"> </button>
-        <button id = "final"><img src="./img/icons8-selecionado-192.png" alt=""></button>
-        </nav>
         
-    </div>
-
-    <div id="cartoes">
-        <nav>
-            <button id="debito"><img src="./img/debitocard.png" alt="cartão de debito"></button>
-            <button id="credito"><img src="./img/credit.jpg" alt=""></button>
-        </nav>
-    </div>
+        
+<main>
+    <div class = "container">
+        <form action="">
+            <div class="inputBox">
+                <span>Número do cartão</span>
+                 <input type="text" maxlenght="16" class ="Entrada do número de cartão">
+            
+            </div>
+            <div class="inputBox">
+                <span>Titular do cartão</span>
+                 <input type="text"  class ="Entrada nome do titular">
+            
+            </div>
+            <div class="flexBox">
+                <div class="inputBox">
+                    <span>mês de validade</span>
+                    <select name="" id="Ano">
+                    <option value="mês" select disable>mês</option>
+                    <option value="01">01</option>
+                    <option value="02">02</option>
+                    <option value="03">03</option>
+                    <option value="04">04</option>
+                    <option value="05">05</option>
+                    <option value="06">06</option>
+                    <option value="07">07</option>
+                    <option value="08">08</option>
+                    <option value="09">09</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    </select>
+                </div>
+                <div class="inputBox">
+                    <span>Ano de validade</span>
+                    <select name="" id="Ano de validade">
+                    <option value="Ano" select disable>Ano</option>
+                    <option value="2023">2023</option>
+                    <option value="2024">2024</option>
+                    <option value="2025">2025</option>
+                    <option value="2026">2026</option>
+                    <option value="2027">2027</option>
+                    <option value="2028">2028</option>
+                    <option value="2029">2029</option>
+                    <option value="2030">2030</option>
+                    <option value="2031">2031</option>
+                    <option value="2032">2032</option>
+                    <option value="2033">2033</option>
+                    <option value="2034">2034</option>
+                    </select>
+                </div>
+                <div>
+                    <div class ="inputbox">
+                        <span>cvv</span>
+                        <input type="text" maxlength="4" class="cvv-input">
+    
+                    </div>
+                </div>
+            </div>
+            <input type="Enviar" value="Enviar" class="submit-btn">
+        </form>
+    
+    
+</main>
     
 </body>
 </html>
