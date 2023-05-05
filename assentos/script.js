@@ -46,6 +46,7 @@ function escreveTela() {
     }
 }
 
+
 /* quantidade máxima de assentos que podem ser escolhidos */
 var qntdAssentosMax = 8
 
@@ -54,3 +55,14 @@ var escolhidoLista = []
 
 document.addEventListener("DOMContentLoaded", escreveTela)
 document.addEventListener("DOMContentLoaded", escolhaAssento)
+
+document.querySelector(".avancarAssentos").addEventListener("click", e => {
+    e.preventDefault()
+
+    var usuarioLogado = JSON.parse(sessionStorage.getItem("user"))
+    var nomeFilme = document.querySelector(".nomeFilme").textContent
+    var assentosUsuario = [usuarioLogado, nomeFilme, escolhidoLista] 
+
+    sessionStorage.setItem("assentos", JSON.stringify(assentosUsuario))
+
+})
