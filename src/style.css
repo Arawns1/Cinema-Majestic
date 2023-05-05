@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap%27');
+* {
+  font-family: 'Roboto', sans-serif;
+  color: white;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+html,
+body {
+  background-color: #000000;
+}
+
+#topo {
+  display: flex;
+
+  height: 100%;
+  background-color: #000000;
+  justify-content: space-between;
+}
+ #logo{
+    width: 150px;
+}
+
+
+#etapas {
+  justify-content: space-between;
+  padding: 1% 1%;
+  display: flex;
+  flex-direction: row;
+
+}
+
+#corpo {
+  background-color: rgb(0, 150, 7);
+
+}
+.container{
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: center; 
+
+}
+
+main{
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-areas: "p e";
+
+}
+
+#produtos{
+  grid-area: p;
+}
+
+.produto {
+
+  font-size: 100%;
+  display: inline-block;
+  border: 1px solid #333333;
+  padding: 1%;
+  margin: 1%;
+  text-align: center;
+  background-color: #333333;
+  height: 25vh;
+  width: 15vw;
+  min-width: 160px;
+  min-height: 160px;
+  border-radius: 10%;
+margin-top: 30px;
+}
+
+.produto img {
+  width: 55%;
+  height: 55%;
+}
+/*----------------------------------------------------------*/
+.PipocasEspecias {
+
+  font-size: 100%;
+  display: inline-block;
+  border: 1px solid #333333;
+  padding: 1%;
+  margin: 1%;
+  text-align: center;
+  background-color: #333333;
+  height: 40vh;
+  width: 20vw;
+  min-width: 200px;
+  min-height: 200px;
+  border-radius: 10%;
+  margin-top: 30px;
+}
+
+.PipocasEspecias img {
+  margin-top:-10%;
+  width: 45%;
+  height:65%;
+}
+
+/* -----------------------------------------------------------*/
+
+.lateral {
+
+  flex-direction: column;
+  float: right;
+  grid-area: e;
+}
+
+.resumo {
+ 
+  padding-bottom: 20px;
+  width: 100%;
+  border: 1px solid black;
+  margin-top: 50px;
+  background-color: #333;
+
+}
+.resumoFilme {
+  display: flex;
+  height: 150px;
+  gap: 30px;
+  justify-content: space-evenly;
+}
+.resumoCompra, #totalValor, .resumoFilme {
+  padding: 10px;
+}
+.resumoCompra {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  font-size: 15px;
+}
+.imagemFilme {
+  height: 100%;
+}
+.infoFilme {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  gap: 10px;
+  justify-content: space-evenly;
+}
+.tipoFilme {
+  display: flex;
+  gap: 20px;
+}
+.aquisicoes {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 15px;
+}
+#totalValor {
+  margin-top: 40px;
+}
+.telaFilme, .audioFilme {
+  background-color: #b5121b;
+  padding: 5px;
+  color: #efefef;
+}
+.avancarAssentos {
+  height: 50px;
+  background-color: #b5121b;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+.tituloEscolha::after {
+  content: "";
+  height: 1px;
+  width: 100%;
+  margin-top: 10px;
+  display: block;
+  background-color: #2a2a2a;
+}
+.tituloResumo::after {
+  content: "";
+  height: 1px;
+  width: 100%;
+  margin-top: 3px;
+  display: block;
+  background-color: #2a2a2a;
+}
+
+/*-------------------------------------------------------------------*/
+
+#pr {
+    border-top: 1px solid #CCC; 
+    padding: 3% 5%;
+
+}
+.prhidden{
+display: none;
+}
+
+#iconesA {
+
+  background-color: #000000;
+  border: none;
+  cursor: pointer;
+ padding: 10px  50px;
+
+}
+ 
+#sEtapas{
+  color: #000000;
+}
+span{
+  color: #ffffff;
+}
+
+
+.icones {
+  filter: invert(100);
+   border-inline: 1px solid #CCC; 
+}
+
+.iconesSelecionado{
+  
+  border-inline: 1px solid #CCC; 
+  filter: invert(100);
+  box-shadow: 2px 2px 4px #00e1ff
+  
+}
+input[type="number"] {
+  background-color: #333333;
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+
+}
+
+.ExtratoPipocahidden{
+  display: none;
+}
+.ExtratoCocahidden{
+  display: none;
+}
+.ExtratoMentoshidden{
+  display: none;
+}
+.ExtratoTrentohidden{
+  display: none;
+}
+.ExtratoAguahidden{
+  display: none;
+}
+.ExtratoPChocolatehidden{
+  display: none;
+}
+.ExtratoPCaramelohidden{
+  display: none;
+}
+.ExtratoPOreohidden{
+  display: none;
+}
