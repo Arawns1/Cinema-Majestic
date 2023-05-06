@@ -19,7 +19,7 @@
 
 html,
 body {
-    max-height: 100%;
+    max-height: 100%; 
     background-color: var(--dark-bg) !important;
 }
 
@@ -41,9 +41,9 @@ ul {
 }
 
 header nav li {
+    color: white;
     display: flex;
     align-items: center;
-    color: white;
     list-style: none;
     margin: 5px;
     font-weight: 700;
@@ -64,45 +64,45 @@ header #login img {
     object-fit: cover;
 }
 
-#logo {
+#logo { /*LOGO CINEMA*/
     margin-left: 20px;
     width: 230px;
     height: 80px;
   }
   
-#logo img {
+#logo img { 
     width: 100%;
     height: 100%;
   }
 
-.container {
+.container { /*DIV PRINCIPAL*/
     margin-top: 50px;
     padding: 0px 50px;
 }
 
-.subtitleContainer {
-    width: 100%;
-    height: auto;
+.subtitleContainer { /*TÍTULO DA PÁGINA "Minhas compras"*/
     border-bottom: 1px solid #ffffff;
     color: #ffffff;
+    width: 100%;
+    height: auto;
     margin-bottom: 50px;
     padding: 10px 0px;
 }
 
-.ticketsContainer {
+.ticketsContainer { /*"BOX" QUE CONTÉM OS INGRESSOS*/
     padding: 0px 100px;
 }
 
-.ticket {
+.ticket { /*CLASSE QUE CONTÉM O INGRESSO (UNIDADE)*/
+    background-color: #333333;
     display: flex;
     flex-direction: row;
-    background-color: #333333;
     padding: 20px;
     margin-bottom: 20px;
 }
 
 .ticketInfo1,
-.ticketInfo2 {
+.ticketInfo2 { /*INFOS DOS TICKETS: nome do filme, horário, endereço, número do pedido, cartão, valor total*/
     color: #d9d9d9;
     width: 40%;
     height: 200px;
@@ -112,24 +112,26 @@ header #login img {
     flex-direction: column;
 }
 
-.ticket section {
+.ticket section {  
     display: flex;
     flex-direction: row;
     height: 50px;
     align-items: center;
 }
 
-.ticket img {
+.ticket img { /*CARTAZES DOS FILMES*/
     height: 200px;
     width: 140px;
 }
 
-#icon {
+#icon { /*ÍCONES DA PASTA ASSETS*/
     height: 30px;
     width: 30px;
     margin-right: 10px;
     filter: invert(100);
 }
+
+/* RESPONSIVIDADE: */
 
 @media (max-width: 760px) {
     .ticketsContainer {
@@ -149,9 +151,9 @@ header #login img {
     }
 
     .ticket {
+        background-color: #333333;
         display: flex;
         flex-direction: column;
-        background-color: #333333;
         padding: 20px;
         margin-bottom: 20px;
         align-items: center;
@@ -176,9 +178,9 @@ header #login img {
 
 @media (max-width: 450px) {
     .ticket {
+        background-color: #333333;
         display: flex;
         flex-direction: column;
-        background-color: #333333;
         padding: 20px 0px;
         margin-bottom: 20px;
         align-items: center;
