@@ -1,6 +1,7 @@
 /* Pegando Informações do Session Storage */
 
 var objFilmeEscolhido = JSON.parse(sessionStorage.getItem("filmeEscolhido"))
+var objAssentoEscolhido = JSON.parse(sessionStorage.getItem("assentos"))
 /* Insere informações do filme no resumo */
 
 var button = document.querySelector(".avancarAssentos").addEventListener("click", e => {
