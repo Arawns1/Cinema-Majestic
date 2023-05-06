@@ -63,7 +63,7 @@ document.querySelector(".avancarAssentos").addEventListener("click", e => {
     var nomeFilme = document.querySelector(".nomeFilme").textContent
     var assentosUsuario = [nomeFilme, escolhidoLista]
     
-    if(sessionStorage.getItem("user") !== null){
+    if(sessionStorage.getItem("user") !== null && escolhidoLista.length !== 0){
 
         sessionStorage.setItem("assentos", JSON.stringify(assentosUsuario))
         var nomeFilme = document.querySelector(".nomeFilme").textContent
