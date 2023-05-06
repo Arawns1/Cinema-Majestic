@@ -1,7 +1,8 @@
+const linkPaginaLogin = "../login/login.html"
+
 /* Pegando Informações do Local Storage */
 
 var objFilmeEscolhido = JSON.parse(localStorage.getItem("filmeEscolhido"))
-console.log(objFilmeEscolhido)
 /* Insere informações do filme no resumo */
 
 document.querySelector(".resumoFilme").innerHTML =
@@ -80,16 +81,14 @@ document.addEventListener("DOMContentLoaded", escolhaAssento)
 document.querySelector(".avancarAssentos").addEventListener("click", e => {
     e.preventDefault()
     var nomeFilme = document.querySelector(".nomeFilme").textContent
-    var assentosUsuario = [nomeFilme, escolhidoLista]
 
     if (sessionStorage.getItem("user") !== null) {
         if (escolhidoLista.length !== 0) {
-
-            sessionStorage.setItem("assentos", JSON.stringify(assentosUsuario))
+            sessionStorage.setItem("assentos", JSON.stringify(escolhidoLista))
             var nomeFilme = document.querySelector(".nomeFilme").textContent
+            
             if (nomeFilme == "Super Mario Bros: O Filme") {
                 window.location.href = "../ingressos/mario.html"
-
             }
             if (nomeFilme == "Guardiões da Galáxia Vol. 3") {
                 window.location.href = "../ingressos/guardioesGalaxia.html"
@@ -103,11 +102,10 @@ document.querySelector(".avancarAssentos").addEventListener("click", e => {
     }
     else {
         let myModal = new bootstrap.Modal(document.getElementById('modalNaoLogado'), {});
-        console.log(myModal)
         myModal.show();
     }
 })
 
 document.querySelector(".btn-primary").addEventListener("click", e => {
-    window.location.href = "../login/login.html"
+    window.location.href = linkPaginaLogin
 })
