@@ -1,0 +1,668 @@
+/**** GERAL ****/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #1d1d1f;
+    color: #fff;
+}
+
+
+/**** HEADER ****/
+header nav {
+    background: #000000;
+}
+
+header nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    padding: 0px 30px;
+}
+
+ul {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+header nav li {
+    display: flex;
+    align-items: center;
+    color: white;
+    list-style: none;
+    margin: 5px;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+header nav li span {
+    margin: 20px;
+}
+
+header #login img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+}
+
+#login {
+    min-width: 150px;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    margin: 0;
+}
+
+.spanLoginHidden {
+    display: none !important;
+}
+
+.spanLink {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.logoCinema {
+    width: 120px;
+}
+
+#logo {
+    padding-left: 20px;
+}
+
+
+#spanLogado {
+    display: flex;
+    margin: 0;
+    justify-content: center;
+    position: relative;
+
+}
+
+#userIcon #userBtn {
+
+    top: 10%;
+    color: white;
+    background-color: #B5121B;
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: 2px;
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50px;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#userIcon:hover #userBtn {
+
+    width: 150px;
+    border-radius: 0;
+    transition: 0.5s;
+
+}
+
+#userIcon:hover .userDropDown {
+
+    height: 96px;
+    transition: 0.5s;
+    transition-delay: 0.5s;
+
+}
+
+.userDropDown a:hover {
+
+    background-color: #B5121B;
+    transition: 0.3s;
+
+}
+
+#userIcon {
+
+    margin: 0px;
+    display: inline-block;
+
+}
+
+.userDropDown {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    height: 0;
+    background-color: #000000;
+    box-shadow: 0px 0px 16px 0px rgba(255, 27, 27, 0.562);
+    border: none;
+    position: absolute;
+    min-width: 150px;
+    right: calc(50% - 75px);
+    z-index: 2;
+    transition: 0.3s;
+    align-content: center;
+    justify-content: center;
+
+}
+
+.novaSenha {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    height: 0px;
+    background-color: #000000;
+    box-shadow: 0px 0px 16px 0px rgba(255, 27, 27, 0.562);
+    border: none;
+    position: absolute;
+    min-width: 150px;
+    right: calc(50% - 75px);
+    z-index: 3;
+    transition: 0.3s;
+    align-content: center;
+}
+
+.novaSenha input {
+    font-size: 16px;
+    display: flex;
+    width: 80%;
+    padding: 0.05rem;
+    margin: 5% auto;
+    box-sizing: border-box;
+    border-radius: 10px;
+    border: 1px solid #dddddd;
+    outline: none;
+    background: #eeeeee;
+    transition: background 0.2s, border-color 0.2s;
+    text-align: center;
+    margin-top: 5px;
+
+}
+
+.userDropDown a {
+    font-size: 15px;
+    padding: 5px;
+    text-align: center;
+    display: block;
+    text-decoration: none;
+    color: white;
+}
+
+.form_message {
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 15px;
+}
+
+.form_message_success {
+    color: green;
+}
+
+.form_message_error {
+    color: red;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 15px;
+
+}
+
+
+
+#userIcon:hover .novaSenhaDrop {
+
+    height: 150px;
+    transition: 0.5s;
+    transition-delay: 0.5s;
+
+}
+
+#novaSenhaBtn {
+
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: white;
+    border: none;
+    cursor: pointer;
+    background: #b5121b;
+}
+
+#novaSenhaBtn:active {
+    transform: scale(0.98);
+}
+
+.displayNone {
+    display: none;
+}
+
+
+/**** CONTEÚDO PRINCIPAL ****/
+#container {
+    width: 70vw;
+    margin: auto;
+    margin-top: 30px;
+    padding-bottom: 50px;
+    display: flex;
+    flex-direction: row;
+    gap: 150px;
+
+}
+
+.compra {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 35px;
+}
+
+.compraOpcoes {
+    display: flex;
+    justify-content: center;
+    font-size: 12px;
+    gap: 18px;
+    font-weight: bold;
+}
+
+.iconeOpcoes {
+    filter: invert(100);
+    width: 35px;
+}
+
+.opcao,
+.opcaoAtiva {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    opacity: 50%;
+}
+
+.opcaoAtiva {
+    opacity: 100%;
+}
+
+.opcaoAtiva::after {
+    content: "";
+    height: 1px;
+    width: 95%;
+    background-color: #6f0b11;
+}
+
+.tela {
+    width: 250px;
+    height: 10px;
+    background-color: white;
+    margin-top: 50px;
+    box-shadow: 0px -2px 6px #fff;
+}
+
+
+/**** BARRA LATERAL ***/
+
+.lateral {
+    display: flex;
+    flex-direction: column;
+}
+
+.resumo {
+    padding-bottom: 20px;
+    width: 80vw;
+    border: 1px solid black;
+    margin-top: 50px;
+    background-color: #333;
+}
+
+.resumoFilme {
+    display: flex;
+    height: 150px;
+    gap: 30px;
+    justify-content: space-evenly;
+}
+
+.resumoCompra,
+#totalValor,
+.resumoFilme {
+    padding: 10px;
+}
+
+.resumoCompra {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    font-size: 15px;
+}
+
+.imagemFilme {
+    height: 100%;
+}
+
+.infoFilme {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    gap: 10px;
+    justify-content: space-evenly;
+}
+
+.tipoFilme {
+    display: flex;
+    gap: 20px;
+}
+
+.aquisicoes {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+#totalValor {
+    margin-top: 40px;
+}
+
+.telaFilme,
+.audioFilme {
+    background-color: #b5121b;
+    padding: 5px;
+    color: #efefef;
+}
+
+.avancarAssentos {
+    height: 50px;
+    background-color: #b5121b;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+.tituloEscolha::after {
+    content: "";
+    height: 1px;
+    width: 100%;
+    margin-top: 10px;
+    display: block;
+    background-color: #2a2a2a;
+}
+
+.tituloResumo::after {
+    content: "";
+    height: 1px;
+    width: 100%;
+    margin-top: 3px;
+    display: block;
+    background-color: #2a2a2a;
+}
+
+@media (min-width: 320px) {
+    .form {
+        width: 1000px;
+    }
+
+    #container {
+        gap: 0;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .compra {
+        width: 100%;
+    }
+
+    .iconeOpcoes {
+        width: 30px;
+    }
+
+    .resumo {
+        width: 48vw;
+    }
+
+    .resumoCompra,
+    #totalValor,
+    .resumoFilme {
+        padding: 10px;
+    }
+
+    .resumoFilme {
+        gap: 10px;
+    }
+
+    .compraOpcoes {
+        margin-top: 20px;
+        gap: 20px;
+        font-family: 11px
+    }
+
+    .sala {
+        margin-top: 0;
+        scale: 85%;
+    }
+
+    .tituloEscolha {
+        margin-top: 40px;
+    }
+
+    .tela,
+    .legenda {
+        margin-top: 20px;
+    }
+
+    .legendaOpcoes {
+        font-size: 12px;
+        display: flex;
+        gap: 10px;
+    }
+
+    .legDisp,
+    .legOcup,
+    .legSel {
+        width: 1px;
+        height: 1px;
+    }
+
+    .assento {
+        color: #fff;
+        font-size: 12px;
+    }
+
+    .aquisicoes {
+        font-size: 14px;
+    }
+
+    .avancarAssentos {
+        margin-top: 20px;
+        width: 100%;
+    }
+
+    .assentoEscolhido {
+        color: #000;
+    }
+}
+
+@media (min-width: 768px) {
+    .compra {
+        width: 46vw;
+    }
+
+    .corredor {
+        display: flex;
+    }
+
+    .compraOpcoes {
+        justify-content: space-evenly;
+        gap: 0;
+        width: 100%;
+    }
+
+    .tituloEscolha {
+        margin-top: 50px;
+    }
+
+    .sala {
+        width: 340px;
+        scale: 100%;
+        margin-top: 20px;
+    }
+
+    .resumo {
+        width: 40vw;
+    }
+
+    .legenda {
+        margin-top: 20px;
+        width: 70%;
+    }
+
+    .resumoFilme,
+    .resumoCompra,
+    #totalValor {
+        padding: 15px;
+    }
+
+    .avancarAssentos {
+        width: 100%;
+    }
+
+    .assento {
+        color: #fff;
+    }
+
+    .assentoEscolhido {
+        color: #000;
+    }
+
+    .tela {
+        margin-top: 50px;
+    }
+
+    .iconeOpcoes {
+        width: 35px;
+    }
+}
+
+@media (min-width: 1200px) {
+    #container {
+        width: 70vw;
+        justify-content: center;
+        flex-direction: row;
+        gap: 100px;
+    }
+
+    .assento {
+        color: #b5121b;
+    }
+
+    .compra {
+        width: 50%;
+    }
+
+    .sala {
+        width: 340px;
+    }
+
+    .corredor {
+        display: flex;
+    }
+
+    .resumo {
+        width: 100%;
+    }
+
+    .compraOpcoes {
+        width: 100%;
+        gap: 0;
+        justify-content: space-between;
+        font-size: 15px;
+    }
+
+    .tituloEscolha {
+        margin-top: 50px;
+    }
+
+    .avancarAssentos {
+        width: 100%;
+    }
+
+    .infoFilme {
+        font-size: 14px;
+    }
+
+
+
+    .assentoEscolhido {
+        color: #000;
+    }
+}
+
+* {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: nome;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+
+.containerPagamento {
+    min-width: 300px;
+    width: 40vw;
+}
+
+form {
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, .1);
+    padding: 15px;
+}
+
+.inputBox {
+    margin-top: 20px;
+}
+
+.inputBox label {
+    display: block;
+    color: #777;
+    margin: 5px 0px;
+}
+
+.inputBox input,
+.inputBox select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #dddddd;
+    outline: none;
+    background: #eeeeee;
+}
+
+.inputBox select {
+    cursor: pointer;
+}
+
+.inputBox input:focus,
+.inputBox select:focus {
+    border: 1px solid #777;
+}
+
+.inputBox input::placeholder {
+    text-transform: none;
+    letter-spacing: 0.5px;
+}
+
+
+.flexbox {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap;
+}
