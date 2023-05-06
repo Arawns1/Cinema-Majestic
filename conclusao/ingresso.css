@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#container {
+    width: 100%;
+}
+#logoIngresso {
+    width: 30%;
+    margin: auto;
+}
+#ingresso {
+    width: 30%;
+    margin: auto;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    border: 1px solid #000;
+    padding: 10px;
+}
+#infoSessao {
+    display: flex;
+    flex-direction: column;
+    line-height: 25px;
+}
+
+#produtos {
+    display: flex;
+    flex-direction: column;
+}
+
+#qrcode {
+    width: 20%;
+    margin: auto;
+    margin-top: 20px;
+}
