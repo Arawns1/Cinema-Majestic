@@ -41,7 +41,7 @@ function escreveTela() {
         }
     }
 
-    for(i = 0; i < corredores.length; i++) {
+    for(i = 0; i < corredorDiv.length; i++) {
         corredores.forEach(letra => corredorDiv[i].innerHTML += `<span>${letra}</span>`)
     }
 }
@@ -56,13 +56,29 @@ var escolhidoLista = []
 document.addEventListener("DOMContentLoaded", escreveTela)
 document.addEventListener("DOMContentLoaded", escolhaAssento)
 
+/* salva as informações na session */
 document.querySelector(".avancarAssentos").addEventListener("click", e => {
     e.preventDefault()
 
-    var usuarioLogado = JSON.parse(sessionStorage.getItem("user"))
     var nomeFilme = document.querySelector(".nomeFilme").textContent
-    var assentosUsuario = [usuarioLogado, nomeFilme, escolhidoLista] 
+    var assentosUsuario = [nomeFilme, escolhidoLista]
+    
+    if(sessionStorage.getItem("user") !== null && escolhidoLista.length !== 0){
 
-    sessionStorage.setItem("assentos", JSON.stringify(assentosUsuario))
+        sessionStorage.setItem("assentos", JSON.stringify(assentosUsuario))
+        var nomeFilme = document.querySelector(".nomeFilme").textContent
+       if (nomeFilme == "Super Mario Bros: O Filme") {
+         window.location.href = "../ingressos/mario.html"
+         
+         } 
+       if(nomeFilme == "Guardiões da Galáxia Vol. 3"){
+         window.location.href = "../ingressos/guardioesGalaxia.html"
+         }
+          
+       if(nomeFilme == "Cavaleiros do Zodíaco - Saint Seiya: O Começo"){
+         window.location.href = "../ingressos/cavaleirosDoZodiaco.html"
+         }
+  
+    } 
 
 })

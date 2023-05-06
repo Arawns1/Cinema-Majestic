@@ -6,24 +6,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script src="./script.js" defer></script>
+    <script src="../home/script.js" defer></script>
     <title>Assentos</title>
 </head>
 <body>
     
     <header>
+        
         <nav>
-            
-            <div id="navegacao">
-
-                <div id="logo"><img src="./assets/logoBranca.png" alt="logo do site" class="logoImagem"></div>
-
-                <div id="cliente">
-                    <div id="carrinho"><img src="./assets/image.png" alt="carrinho de compras"><span>Carrinho</span></div>
-                    <div id="login"><img src="./assets/perfil.png" alt="login do site"><span>Login</span></div>
-                </div>
-
-            </div>
-            
+            <ul>
+              <li tabindex="1" id="logo">
+                <a href="../home/index.html">
+                    <img src="../images/logoBranca.png" alt="logo do site">
+                </a>
+              </li>
+              <li tabindex="2" id="login">        
+                <span id="spanLogin" ><a href="/login/login.html" class="spanLink"><img src="../images/login.png" alt="Ícone de Login"></a></span>
+                <span id="spanLogado" class="spanLoginHidden">
+                  <div id="userIcon">            
+                    <button id="userBtn">PL</button>
+                    <div class="userDropDown">
+                      <a href="#" id="linkMeusIngressos">Meus Ingressos</a>
+                      <a href="#" id="linkAlterarSenha">Alterar Senha</a>
+                      <a href="#" id="linkSair">Sair</a>
+                    </div>
+                    <div class="novaSenha" >
+                      <input type="password" id="inputSenha" placeholder="Nova Senha">
+                      <input type="password" id="inputConfirmaSenha" placeholder="Repita a Senha">
+                      <div class="form_message form_message_success form_message_error"></div>
+                      <button id="novaSenhaBtn">Salvar</button>
+                    </div>
+                  </div>          
+                </span>
+              </li>
+            </ul>
           </nav>
 
     </header>
@@ -96,28 +112,19 @@
                 <div class="resumo">
 
                     <div class="resumoFilme">
-                        <img src="https://sm.ign.com/ign_br/screenshot/default/foevbcsayamvqpf-1675462826997_2ck5.jpg" alt="poster filme" class="imagemFilme">
+                        <img src="https://pbs.twimg.com/media/FuRb1pSWwAEDwzq.jpg:large" alt="poster filme" class="imagemFilme">
 
                         <div class="infoFilme">
-                            <div class="nomeFilme">Super Mario Bros: O Filme</div>
+                            <div class="nomeFilme">Cavaleiros do Zodíaco - Saint Seiya: O Começo</div>
                             <div class="tipoFilme">
                                 <div class="audioFilme">Dublado</div>
                                 <div class="telaFilme">2D</div>
                             </div>
-                            <div class="sessaoFilme">📅 03/05/2023 - 18:30</div>
+                            <div class="sessaoFilme">📅 05/05/2023 - 20:00</div>
                             <div class="localFilme">📍 Petrópolis - RJ</div>
                         </div>
                     </div>
-
-                    <div class="resumoCompra">
-                        <h3 class="tituloResumo">Resumo</h3>
-                        <div class="aquisicoes">
-                            <span class="qntdAquisicao">Teste teste teste</span>
-                            <span class="qntdAquisicao">Teste teste teste</span>
-                        </div>
-                    </div>
-
-                    <div id="totalValor">Total R$ 00.00</div>
+ 
 
                 </div>
 
