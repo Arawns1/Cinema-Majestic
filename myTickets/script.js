@@ -34,7 +34,7 @@ const main = document.querySelector(".ticketsContainer");
 let htmlTickets = "";
 tickets.forEach(element => {
     htmlTickets += `
-    <div class="ticket">
+    <div tabindex="3" class="ticket">
         <img src="${element.img}" alt="img filme">
 
         <div class="ticketInfo1">
