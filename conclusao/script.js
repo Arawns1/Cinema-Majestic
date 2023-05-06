@@ -35,3 +35,51 @@ var gerarIngresso = document.querySelector("#imprimirIngresso").addEventListener
 
 })
 
+document.querySelector("#linkSair").addEventListener("click", e => {
+  e.preventDefault();
+  sessionStorage.clear();
+  window.location.reload();
+})
+
+document.querySelector("#novaSenhaBtn").addEventListener("click", e => {
+  e.preventDefault();
+
+  var inputSenha = document.querySelector("#inputSenha").value;
+  var inputConfirmaSenha = document.querySelector("#inputConfirmaSenha").value;
+  var novaSenha = document.querySelector(".novaSenha");
+
+
+  if (inputSenha != "" && inputSenha == inputConfirmaSenha) {
+      const userLogado = JSON.parse(sessionStorage.getItem("user"));
+      userLogado.senha = window.btoa(inputSenha);
+      localStorage.removeItem(userLogado.email);
+      localStorage.setItem(userLogado.email, JSON.stringify(userLogado));
+      setFormMessage(novaSenha, "success", "Senha Alterada!");
+      setTimeout(function () {
+          setFormMessage(novaSenha, "success", "");
+      }, 3000);
+  } else {
+      setFormMessage(novaSenha, "error", "As senhas devem ser iguais");
+      setTimeout(function () {
+          setFormMessage(novaSenha, "success", "");
+      }, 3000);
+  }
+});
+
+document.querySelector("#linkAlterarSenha").addEventListener('click', e => {
+  e.preventDefault();
+  var novaSenha = document.querySelector(".novaSenha");
+  novaSenha.classList.add("novaSenhaDrop");
+
+});
+
+document.querySelector(".novaSenha").addEventListener('mouseleave', e => {
+  e.preventDefault();
+  var novaSenha = document.querySelector(".novaSenha");
+  var inputSenha = document.querySelector("#inputSenha");
+  var inputConfirmaSenha = document.querySelector("#inputConfirmaSenha");
+  novaSenha.classList.remove("novaSenhaDrop");
+  inputSenha.value = "";
+  inputConfirmaSenha.value = "";
+});
+
