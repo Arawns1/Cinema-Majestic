@@ -87,3 +87,7 @@ document.querySelector(".novaSenha").addEventListener('mouseleave', e => {
   inputConfirmaSenha.value = "";
 });
 
+document.querySelector("#linkMeusIngressos").addEventListener('click', e => {
+  window.location.href = "../myTickets/index.html"
+});
+
