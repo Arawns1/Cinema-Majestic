@@ -7,9 +7,6 @@
   font-size: 100%;
 }
 
-button{
-  border-radius: 0 !important;
-}
 html,
 body {
   background-color: #000000;
@@ -395,6 +392,10 @@ input[type="number"] {
   
   .lateralAllan {
     width: 300px;  
+}
+
+.avancarProdutos {
+  border-radius: 0;
 }
 
 }
