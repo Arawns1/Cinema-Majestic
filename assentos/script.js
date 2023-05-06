@@ -79,26 +79,35 @@ document.addEventListener("DOMContentLoaded", escolhaAssento)
 /* salva as informações na session */
 document.querySelector(".avancarAssentos").addEventListener("click", e => {
     e.preventDefault()
-    console.log("clicou")
     var nomeFilme = document.querySelector(".nomeFilme").textContent
     var assentosUsuario = [nomeFilme, escolhidoLista]
 
-    if (sessionStorage.getItem("user") !== null && escolhidoLista.length !== 0) {
+    if (sessionStorage.getItem("user") !== null) {
+        if (escolhidoLista.length !== 0) {
 
-        sessionStorage.setItem("assentos", JSON.stringify(assentosUsuario))
-        var nomeFilme = document.querySelector(".nomeFilme").textContent
-        if (nomeFilme == "Super Mario Bros: O Filme") {
-            window.location.href = "../ingressos/mario.html"
+            sessionStorage.setItem("assentos", JSON.stringify(assentosUsuario))
+            var nomeFilme = document.querySelector(".nomeFilme").textContent
+            if (nomeFilme == "Super Mario Bros: O Filme") {
+                window.location.href = "../ingressos/mario.html"
+
+            }
+            if (nomeFilme == "Guardiões da Galáxia Vol. 3") {
+                window.location.href = "../ingressos/guardioesGalaxia.html"
+            }
+
+            if (nomeFilme == "Cavaleiros do Zodíaco - Saint Seiya: O Começo") {
+                window.location.href = "../ingressos/cavaleirosDoZodiaco.html"
+            }
 
         }
-        if (nomeFilme == "Guardiões da Galáxia Vol. 3") {
-            window.location.href = "../ingressos/guardioesGalaxia.html"
-        }
-
-        if (nomeFilme == "Cavaleiros do Zodíaco - Saint Seiya: O Começo") {
-            window.location.href = "../ingressos/cavaleirosDoZodiaco.html"
-        }
-
     }
+    else {
+        let myModal = new bootstrap.Modal(document.getElementById('modalNaoLogado'), {});
+        console.log(myModal)
+        myModal.show();
+    }
+})
 
+document.querySelector(".btn-primary").addEventListener("click", e => {
+    window.location.href = "../login/login.html"
 })

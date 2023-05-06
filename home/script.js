@@ -114,7 +114,7 @@ window.addEventListener('load', () => {
     slideMovies.forEach(movie => {
         document.querySelector(".idFilme-" + movie.id + " button").addEventListener("click", e => {
             e.preventDefault();
-            localStorage.setItem("filmeEscolhido", JSON.stringify(movie));
+            sessionStorage.setItem("filmeEscolhido", JSON.stringify(movie));
             window.location.href = linkPaginaAssentos
         })
     })
@@ -173,7 +173,7 @@ window.addEventListener('load', () => {
     slideMovies.forEach(movie => {
         document.querySelector(".idPosterFilme-" + movie.id).addEventListener("click", e => {
             e.preventDefault();
-            localStorage.setItem("filmeEscolhido", JSON.stringify(movie));
+            sessionStorage.setItem("filmeEscolhido", JSON.stringify(movie));
             window.location.href = linkPaginaAssentos
         })
     })
