@@ -20,6 +20,7 @@ body {
  
 /*Container que engloba todo o Body*/
 .containerAllan {
+  height: 100vh;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -182,7 +183,6 @@ input[type="number"] {
   .resumoAllan {
     width: 100%;
     font-size: 14px;
-    padding: 15px;
   }
 
   .avancarProdutos {
@@ -191,7 +191,7 @@ input[type="number"] {
   }
 
   .lateralAllan {
-    width: 300px;
+    width: 100%;
 
   }
 }
