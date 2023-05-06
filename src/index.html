@@ -8,128 +8,167 @@
   <title>Document</title>
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
-
+  <link rel="stylesheet" href="../home/style.css">
+  <link rel="stylesheet" href="../assentos/style.css">
+  <script  src="../assentos/script.js" defer> </script>
 </head>
 
 <body>
-  <div id="container">
-    <div id="topo">
-
-      <img id="logo" src="logoBranca.png" alt="logo">
-
-      <button id="iconesA"><img src="perfil.png" width="40" height="40" alt="GitHub">
-      </button>
-
-    </div>
+  <div id="containerAllan">
 
 
-    <div id="etapas">
+    <header>
 
-      <div class="icones"><img src="cadeira.png" width="20%" height="100%" alt="GitHub">
-        <span id="sEtapas">Assentos</span>
-      </div>
+      <nav>
+        <ul>
+          <li tabindex="1" id="logo"><img src="https://picsum.photos/148/48
+              " alt="logo do site"><span>Majestic</span></li>
+          <li tabindex="2" id="login">
+            <span id="spanLogin"><a href="/login/login.html" class="spanLink"><img src="../assentos/assets/perfil.png"
+                  alt="Ícone de Login"></a></span>
+            <span id="spanLogado" class="spanLoginHidden">
+              <div id="userIcon">
+                <button id="userBtn">PL</button>
+                <div class="userDropDown">
+                  <a href="#" id="linkMeusIngressos">Meus Ingressos</a>
+                  <a href="#" id="linkAlterarSenha">Alterar Senha</a>
+                  <a href="#" id="linkSair">Sair</a>
+                </div>
+                <div class="novaSenha">
+                  <input type="password" id="inputSenha" placeholder="Nova Senha">
+                  <input type="password" id="inputConfirmaSenha" placeholder="Repita a Senha">
+                  <div class="form_message form_message_success form_message_error"></div>
+                  <button id="novaSenhaBtn">Salvar</button>
+                </div>
+              </div>
+            </span>
+          </li>
+        </ul>
+      </nav>
 
-      <div class="iconesSelecionado"><img src="icons8-pipoca.png" width="30%" height="100%" alt="GitHub">
-        <span id="sEtapas">Produtos</span>
-      </div>
-
-      <div class="icones"><img src="cartao.png" width="20%" height="100%" alt="GitHub">
-        <span id="sEtapas">Pagamento</span>
-      </div>
-
-      <div class="icones"><img src="ok.png" width="20%" height="100%" alt="GitHub">
-        <span id="sEtapas">Conclusão</span>
-      </div>
-    </div>
+    </header>
 
     <main>
 
-      <div class="lateral">
+    <div class="containProdutosLateral">
+
+      <div id="containProdutos">
+
+        <div class="compraOpcoes">
+          <div class="opcaoAtiva">
+            <img class="iconeOpcoes" src="../assentos/assets/chair.png" alt="ícone assento">
+            <span>Assentos</span>
+          </div>
+          <div class="opcao">
+            <img class="iconeOpcoes" src="../assentos/assets/icons8-bilhete-100.png" alt="ícone ingressos">
+            <span>Ingressos</span>
+          </div>
+          <div class="opcao">
+            <img class="iconeOpcoes" src="../assentos/assets/icons8-pipoca-100.png" alt="ícone produtos">
+            <span>Produtos</span>
+          </div>
+          <div class="opcao">
+            <img class="iconeOpcoes" src="../assentos/assets/icons8-parte-traseira-de-cartão-de-banco-100.png" alt="ícone pagamento">
+            <span>Pagamento</span>
+          </div>
+          <div class="opcao">
+            <img class="iconeOpcoes" src="../assentos/assets/icons8-selecionado-192.png" alt="ícone conclusão">
+            <span>Conclusão</span>
+          </div>
+        </div>
+  
+        <div>  
+    <div id="produtos"> </div>
+  </div>
+  
+    </div>
+    
+
+      <div class="lateralAllan">
         <div class="resumo">
 
-        <div class="resumoFilme">
-          <img src="https://sm.ign.com/ign_br/screenshot/default/foevbcsayamvqpf-1675462826997_2ck5.jpg"
-            alt="poster filme" class="imagemFilme">
-            
-          <div class="infoFilme">
-            <div class="nomeFilme">Super Mario Bros: O Filme</div>
-            <div class="tipoFilme">
-              <div class="audioFilme">Dublado</div>
-              <div class="telaFilme">2D</div>
-            </div>
-            <div class="sessaoFilme">📅 03/05/2023 - 18:30</div>
-            <div class="localFilme">📍 Petrópolis - RJ</div>
-          </div>
-        </div>
+          <div class="resumoFilme">
+            <img src="https://sm.ign.com/ign_br/screenshot/default/foevbcsayamvqpf-1675462826997_2ck5.jpg"
+              alt="poster filme" class="imagemFilme">
 
-        <div class="resumoCompra">
-          <h3 class="tituloResumo">Resumo</h3>
-          <div class="aquisicoes">
-            <span class="qntdAquisicao">Teste teste teste</span>
-            <span class="qntdAquisicao">Teste teste teste</span>
-          </div>
-        </div>
-
-        <div id="extrato">
-          <div id="pr" class="prhidden">
-            
-            <div class="ExtratoPipoca">
-              <span>Pipoca R$:</span>
-              
-              <span id="pPipoca"></span>
+            <div class="infoFilme">
+              <div class="nomeFilme">Super Mario Bros: O Filme</div>
+              <div class="tipoFilme">
+                <div class="audioFilme">Dublado</div>
+                <div class="telaFilme">2D</div>
+              </div>
+              <div class="sessaoFilme">📅 03/05/2023 - 18:30</div>
+              <div class="localFilme">📍 Petrópolis - RJ</div>
             </div>
-            <div class="ExtratoCoca">
-              <span>Coca-Cola R$:</span>
-              <span id="pCoca"></span>
-            </div>
-            <div class="ExtratoMentos">
-              <span>Mentos R$:</span>
-              <span id="pMentos"></span>
-            </div>
-            <div class="ExtratoTrento">
-              <span>Trento R$:</span>
-              <span id="pTrento"></span>
-            </div>
-            <div class="ExtratoAgua">
-              <span>Água R$: </span>
-              <span id="pAgua"></span>
-            </div>
-            
-            <div class="ExtratoPChocolate">
-              <span>Pipoca Chocolate R$: </span>
-              <span id="pePipocaChocolate"></span>
-            </div>
-            
-            <div class="ExtratoPCaramelo">
-              <span>Pipoca Caramelo R$: </span>
-              <span id="PipocaCara"></span>
-            </div>
-            
-            <div class="ExtratoPOreo">
-              <span>Pipoca Com Oreo R$: </span>
-              <span id="PipocaOreo"></span>
-            </div>
-            
-            <div>
-              <div id="totalValor">Total R$: <span id="total"></span></div>
-              
-            </div>
-
           </div>
 
-          
-        </div>
+          <div class="resumoCompra">
+            <h3 class="tituloResumo">Resumo</h3>
+            <div class="aquisicoes">
+              <span class="qntdAquisicao">Teste teste teste</span>
+              <span class="qntdAquisicao">Teste teste teste</span>
+            </div>
+          </div>
 
-      </div>
+          <div id="extrato">
+            <div id="pr" class="prhidden">
+
+              <div class="ExtratoPipoca">
+                <span>Pipoca R$:</span>
+
+                <span id="pPipoca"></span>
+              </div>
+              <div class="ExtratoCoca">
+                <span>Coca-Cola R$:</span>
+                <span id="pCoca"></span>
+              </div>
+              <div class="ExtratoMentos">
+                <span>Mentos R$:</span>
+                <span id="pMentos"></span>
+              </div>
+              <div class="ExtratoTrento">
+                <span>Trento R$:</span>
+                <span id="pTrento"></span>
+              </div>
+              <div class="ExtratoAgua">
+                <span>Água R$: </span>
+                <span id="pAgua"></span>
+              </div>
+
+              <div class="ExtratoPChocolate">
+                <span>Pipoca Chocolate R$: </span>
+                <span id="pePipocaChocolate"></span>
+              </div>
+
+              <div class="ExtratoPCaramelo">
+                <span>Pipoca Caramelo R$: </span>
+                <span id="PipocaCara"></span>
+              </div>
+
+              <div class="ExtratoPOreo">
+                <span>Pipoca Com Oreo R$: </span>
+                <span id="PipocaOreo"></span>
+              </div>
+
+              <div>
+                <div id="totalValor">Total R$: <span id="total"></span></div>
+
+              </div>  
+
+            </div>
+
+
+          </div>
+
+        </div>
+        
+        
+        <button class="avancarAssentos">Avançar</button>
+      </div>  
 
     </div>
-    
-    <div id="produtos">
-    </div>
-  </main>
-    
-    <div id="PipocasEspecias"></div>
-    
+
+    </main>
   </div>
 </body>
 

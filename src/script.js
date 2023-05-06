@@ -29,6 +29,23 @@ var produtos = [
     imagem: 'agua.png'
   },
   
+  {
+    nome: 'Pipoca Chocolate',
+    preco: 20.00,
+    imagem: 'pipoca_chocolate-removebg-preview.png'
+  },
+
+  {
+    nome: 'Pipoca Caramelho',
+    preco: 15.00,
+    imagem: 'pipoca_caramelo-removebg-preview.png'
+  },
+
+  {
+    nome: 'Pipoca com Oreo',
+    preco: 25.00,
+    imagem: 'pipoca_oreo-removebg-preview.png'
+  },
 
 ]
 
@@ -77,58 +94,6 @@ produtos.forEach(produto => {
 });
 
 
-//===================================================================================================
-var PipocasEspecias = [
-  {
-    nome: 'Pipoca Chocolate',
-    preco: 20.00,
-    imagem: 'pipoca_chocolate-removebg-preview.png'
-  },
-
-  {
-    nome: 'Pipoca Caramelho',
-    preco: 15.00,
-    imagem: 'pipoca_caramelo-removebg-preview.png'
-  },
-
-  {
-    nome: 'Pipoca com Oreo',
-    preco: 25.00,
-    imagem: 'pipoca_oreo-removebg-preview.png'
-  },
-]
-
-const divPipocasEspecias = document.getElementById("PipocasEspecias");
-
-PipocasEspecias.forEach(pipoca => {
-  const quadro = document.createElement("div");
-  quadro.classList.add("PipocasEspecias");
-
-  const img = document.createElement("img");
-  img.src = pipoca.imagem;
-  img.alt = pipoca.nome;
-
-  const nome = document.createElement("p");
-  nome.textContent = pipoca.nome;
-
-  const preco = document.createElement("p");
-  preco.textContent = `R$ ${pipoca.preco.toFixed(2)}`;
-
-  const inputQuantidade = document.createElement("input");
-  inputQuantidade.type = "number";
-  inputQuantidade.value = 0;
-  inputQuantidade.id = pipoca.nome;
-  inputQuantidade.addEventListener("change", () => {
-    extrato();
-
-  });
-
-  quadro.appendChild(img);
-  quadro.appendChild(nome);
-  quadro.appendChild(preco);
-  quadro.appendChild(inputQuantidade);
-  divPipocasEspecias.appendChild(quadro);
-});
 
 // EXTRATO ============================================================
 

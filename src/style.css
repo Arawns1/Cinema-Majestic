@@ -36,39 +36,30 @@ body {
   background-color: rgb(0, 150, 7);
 
 }
-.container{
+.containerAllan{
   display: flex;
   flex-wrap: wrap; 
   justify-content: center; 
 
 }
 
-main{
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  grid-template-areas: "p e";
-
-}
-
-#produtos{
-  grid-area: p;
-}
 
 .produto {
 
   font-size: 100%;
   display: inline-block;
-  border: 1px solid #333333;
+  border: 1px solid #000000;
   padding: 1%;
   margin: 1%;
   text-align: center;
-  background-color: #333333;
+  background-color: #333;
   height: 25vh;
   width: 15vw;
   min-width: 160px;
   min-height: 160px;
   border-radius: 10%;
 margin-top: 30px;
+
 }
 
 .produto img {
@@ -76,36 +67,29 @@ margin-top: 30px;
   height: 55%;
 }
 /*----------------------------------------------------------*/
-.PipocasEspecias {
 
-  font-size: 100%;
-  display: inline-block;
-  border: 1px solid #333333;
-  padding: 1%;
-  margin: 1%;
-  text-align: center;
-  background-color: #333333;
-  height: 40vh;
-  width: 20vw;
-  min-width: 200px;
-  min-height: 200px;
-  border-radius: 10%;
+.containProdutosLateral{
+  
+  width: 70vw;
+  margin: auto;
   margin-top: 30px;
-}
+  padding-bottom: 50px;
+  display: flex;
+  flex-direction: row;
+  gap: 150px;
 
-.PipocasEspecias img {
-  margin-top:-10%;
-  width: 45%;
-  height:65%;
 }
-
 /* -----------------------------------------------------------*/
 
-.lateral {
-
+main{
+  display: flex;
   flex-direction: column;
-  float: right;
-  grid-area: e;
+  background-color: #1d1d1f;
+}
+
+.lateralAllan {
+  display: flex;
+  flex-direction: column;
 }
 
 .resumo {
@@ -256,4 +240,18 @@ input[type="number"] {
 }
 .ExtratoPOreohidden{
   display: none;
+}
+#produtos{
+  display: flex;
+  max-width: 100%;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+}
+#containProdutos{
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  
 }
