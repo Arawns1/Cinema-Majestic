@@ -263,6 +263,7 @@ header nav {
     display: flex;
     justify-content: space-between;
     height: 12vh;
+    border: ;
 }
 .tipo-ingresso select {
     height: 2vh;
@@ -275,83 +276,7 @@ header nav {
     gap: 18px;
     font-weight: bold;
 }
-.legenda {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-}
-.legendaTitulo{
-    padding-top: 30px;
-    font-weight: bold;
-}
-.legendaTitulo::after {
-    content: "";
-    display: block;
-    height: 1px;
-    background-color: #2a2a2a;
-    margin-top: 3px;
-    width: 100%;
-}
-.legendaOpcoes {
-    display: flex;
-    margin-top: 20px;
-    justify-content: space-evenly;
-    font-size: 14px;
-    align-items: center;
-    width: 100%;
-    padding-bottom: 10px;
-}
-.assento, .legDisp, .legSel, .legOcup {
-    display: flex;
-    width: 5px;
-    height: 5px;
-    background-color: #b5121b;
-    align-items: center;
-    justify-content: center;
-    padding: 10px;
-    border-top-left-radius: 50%;
-    border-top-right-radius: 50%;
-    font-size: 10px;
-    color: #b5121b;
-}
-.legSel {
-    background-color: #a3a3a3;
-}
-.legOcup {
-    background-color: #6f0b11;
-}
-.assento:hover {
-    cursor: pointer;
-    color: white;
-}
-.assentoEscolhido {
-    background-color: #a3a3a3;
-}
-.assentos {
-    display: flex;
-    min-width: 340px;
-    max-width: 340px;
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: space-between;
-    padding: 5px;
-}
-.sala {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 35px;
-    margin-top: 50px;
-}
-.corredor {
-    display: none;
-    flex-direction: column;
-    font-size: 12px;
-    height: 370px;
-    justify-content: space-between;
-    font-weight: bold;
-}
+
 .iconeOpcoes {
     filter: invert(100);
     width: 35px;
