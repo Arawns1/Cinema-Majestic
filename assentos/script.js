@@ -41,7 +41,7 @@ function escreveTela() {
         }
     }
 
-    for(i = 0; i < corredores.length; i++) {
+    for(i = 0; i < corredorDiv.length; i++) {
         corredores.forEach(letra => corredorDiv[i].innerHTML += `<span>${letra}</span>`)
     }
 }
