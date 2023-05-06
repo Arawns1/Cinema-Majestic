@@ -125,9 +125,10 @@ body {
     text-decoration: underline;   
 }
 #logo {
-    margin-left: 20px;
+    margin: auto;
     width: 230px;
     height: 80px;
+    padding-bottom: 40px;
   }
   
   #logo img {
