@@ -68,15 +68,15 @@ document.querySelector(".avancarAssentos").addEventListener("click", e => {
         sessionStorage.setItem("assentos", JSON.stringify(assentosUsuario))
         var nomeFilme = document.querySelector(".nomeFilme").textContent
        if (nomeFilme == "Super Mario Bros: O Filme") {
-         window.location.href = "../src/snacksMario.html"
+         window.location.href = "../ingressos/mario.html"
          
          } 
        if(nomeFilme == "Guardiões da Galáxia Vol. 3"){
-         window.location.href = "../src/snacksGuardioesDaGalaxia.html"
+         window.location.href = "../ingressos/guardioesGalaxia.html"
          }
           
        if(nomeFilme == "Cavaleiros do Zodíaco - Saint Seiya: O Começo"){
-         window.location.href = "../src/snacksCavaleirosDoZodiaco.html"
+         window.location.href = "../ingressos/cavaleirosDoZodiaco.html"
          }
   
     } 
