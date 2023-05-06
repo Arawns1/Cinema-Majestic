@@ -159,10 +159,10 @@ document.querySelector(".avancarProdutos").addEventListener("click" , e  =>{
   produtosStore.push(["Agua",1.50 , quantidadeAgua]);
   var produtoFiltrado = produtosStore.filter(e => e[2])
   
+   if(sessionStorage.getItem("user") !== null){
   sessionStorage.setItem("produtos" ,JSON.stringify(produtoFiltrado))
   window.location.href = "../pagamentos/index.html"
+ }
 
- 
-   
 });
 

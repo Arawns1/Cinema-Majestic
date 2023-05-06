@@ -66,7 +66,19 @@ document.querySelector(".avancarAssentos").addEventListener("click", e => {
     if(sessionStorage.getItem("user") !== null){
 
         sessionStorage.setItem("assentos", JSON.stringify(assentosUsuario))
-        window.location.href = "../src/index.html"
-    }    
+        var nomeFilme = document.querySelector(".nomeFilme").textContent
+       if (nomeFilme == "Super Mario Bros: O Filme") {
+         window.location.href = "../src/snacksMario.html"
+         
+         } 
+       if(nomeFilme == "Guardiões da Galáxia Vol. 3"){
+         window.location.href = "../src/snacksGuardioesDaGalaxia.html"
+         }
+          
+       if(nomeFilme == "Cavaleiros do Zodíaco - Saint Seiya: O Começo"){
+         window.location.href = "../src/snacksCavaleirosDoZodiaco.html"
+         }
+  
+    } 
 
 })
