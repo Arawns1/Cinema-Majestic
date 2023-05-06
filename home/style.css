@@ -297,10 +297,6 @@ a:active {
 }
 
 @media (max-width: 600px) {
-  #login span {
-    display: none;
-  }
-
   .carousel-inner {
     height: 40vh;
     width: 100%;
