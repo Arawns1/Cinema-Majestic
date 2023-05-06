@@ -1,57 +1,173 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
-    <title>Seleção de ingressos</title>
+    <script src="./script.js" defer></script>
+    <script src="../home/script.js" defer></script>
+    <title>Ingressos</title>
 </head>
 <body>
-    <header class="header">
-        <div><img class="logo" src="images/logoBranca.png" alt="Majestic"></div>
-        <nav class="menu">
-            <a href="#" class="menu-item"><i class="fa-solid fa-cart-shopping"></i>Carrinho</button>
-            <a href="#" class="menu-item"><i class="fa-solid fa-user"></i>Login</a>
-        </nav>
+    
+    <header>
+        
+        <nav>
+            <ul>
+              <li tabindex="1" id="logo"><img src="assets/logoBranca.png" class = "logoCinema" alt="logo do site"></li>
+              <li tabindex="2" id="login">        
+                <span id="spanLogin" ><a href="/login/login.html" class="spanLink"><img src="assets/perfil.png" alt="Ícone de Login"></a></span>
+                <span id="spanLogado" class="spanLoginHidden">
+                  <div id="userIcon">            
+                    <button id="userBtn">PL</button>
+                    <div class="userDropDown">
+                      <a href="#" id="linkMeusIngressos">Meus Ingressos</a>
+                      <a href="#" id="linkAlterarSenha">Alterar Senha</a>
+                      <a href="#" id="linkSair">Sair</a>
+                    </div>
+                    <div class="novaSenha" >
+                      <input type="password" id="inputSenha" placeholder="Nova Senha">
+                      <input type="password" id="inputConfirmaSenha" placeholder="Repita a Senha">
+                      <div class="form_message form_message_success form_message_error"></div>
+                      <button id="novaSenhaBtn">Salvar</button>
+                    </div>
+                  </div>          
+                </span>
+              </li>
+            </ul>
+          </nav>
+
     </header>
-    <main class="main">
-    </main>
-</body>
+
+
+
     <main>
-        <div class = container>
-            
-            <div class="content">
-                ##
-            </div>
-            <div class="lateral">
-                ###
-                <!-- <div class="resumo">
-                    <div class="resumoFilme">
-                        <img src="https://sm.ign.com/ign_br/screenshot/default/foevbcsayamvqpf-1675462826997_2ck5.jpg" alt="poster filme" class="imagem-filme">
-                        <div class="infoFilme">
-                            <div class="nomeFilme">Super Mario Bros: O Filme</div>
-                            <div class="tipoFilme">
-                                <div class="audioFilme">Dublado</div>
-                                <div class="telaFilme">2D</div>
+
+        <div id="container">
+
+            <div class="compra">
+
+                <div class="compraOpcoes">
+                    <div class="opcao">
+                        <img class ="iconeOpcoes" src="./assets/chair.png" alt="ícone assento">
+                        <span>Assentos</span>
+                    </div>
+                    <div class="opcaoAtiva">
+                        <img class ="iconeOpcoes" src="./assets/icons8-bilhete-100.png" alt="ícone ingressos">
+                        <span>Ingressos</span>
+                    </div>
+                    <div class="opcao">
+                        <img class ="iconeOpcoes" src="./assets/icons8-pipoca-100.png" alt="ícone produtos">
+                        <span>Produtos</span>
+                    </div>
+                    <div class="opcao">
+                        <img class ="iconeOpcoes" src="./assets/icons8-parte-traseira-de-cartão-de-banco-100.png" alt="ícone pagamento">
+                        <span>Pagamento</span>
+                    </div>
+                    <div class="opcao">
+                        <img class ="iconeOpcoes" src="./assets/icons8-selecionado-192.png" alt="ícone conclusão">
+                        <span>Conclusão</span>
+                    </div>
+                </div>
+                <h4 class="tituloEscolha">Escolha o tipo de ingresso</h4>
+                <div class="selecao">
+                    <div class="tipo-ingresso">
+                        <span>Inteira - (R$ 36,00)</span>
+                        <select name="inteira" id="ingresso-inteira">
+                            <option value = "0">0</option>
+                            <option value = "1">1</option>
+                            <option value = "2">2</option>
+                            <option value = "3">3</option>
+                            <option value = "4">4</option>
+                            <option value = "5">5</option>
+                            <option value = "6">6</option>
+                            <option value = "7">7</option>
+                            <option value = "8">8</option>
+                        </select>
+                    </div>
+                    <div class="tipo-ingresso">
+                        <span>Meia - (R$ 18,00)</span>
+                        <select name="meia" id="ingresso-meia">
+                            <option value = "0">0</option>
+                            <option value = "1">1</option>
+                            <option value = "2">2</option>
+                            <option value = "3">3</option>
+                            <option value = "4">4</option>
+                            <option value = "5">5</option>
+                            <option value = "6">6</option>
+                            <option value = "7">7</option>
+                            <option value = "8">8</option>
+                        </select>
+                    </div>
+                    <div class="tipo-ingresso">
+                        <span>Cliente Hermetius - (R$ 24,00)</span>
+                        <select name="inteiro" id="ingresso-inteiro">
+                            <option value = "0">0</option>
+                            <option value = "1">1</option>
+                            <option value = "2">2</option>
+                            <option value = "3">3</option>
+                            <option value = "4">4</option>
+                            <option value = "5">5</option>
+                            <option value = "6">6</option>
+                            <option value = "7">7</option>
+                            <option value = "8">8</option>
+                        </select>
+                    </div>
+                    <div class="tipo-ingresso">
+                        <span>Cliente G5 - (R$ 24,00)</span>
+                        <select name="inteiro" id="ingresso-inteiro">
+                            <option value = "0">0</option>
+                            <option value = "1">1</option>
+                            <option value = "2">2</option>
+                            <option value = "3">3</option>
+                            <option value = "4">4</option>
+                            <option value = "5">5</option>
+                            <option value = "6">6</option>
+                            <option value = "7">7</option>
+                            <option value = "8">8</option>
+                        </select>
+                    </div>
+
+                </div>
+                </div>
+                <div class="lateral">
+                    <div class="resumo">
+    
+                        <div class="resumoFilme">
+                            <img src="https://sm.ign.com/ign_br/screenshot/default/foevbcsayamvqpf-1675462826997_2ck5.jpg" alt="poster filme" class="imagemFilme">
+    
+                            <div class="infoFilme">
+                                <div class="nomeFilme">Super Mario Bros: O Filme</div>
+                                <div class="tipoFilme">
+                                    <div class="audioFilme">Dublado</div>
+                                    <div class="telaFilme">2D</div>
+                                </div>
+                                <div class="sessaoFilme">📅 03/05/2023 - 18:30</div>
+                                <div class="localFilme">📍 Petrópolis - RJ</div>
                             </div>
-                            <div class="sessaoFilme">📅 03/05/2023 - 18:30</div>
-                            <div class="localFilme">📍 Petrópolis - RJ</div>
                         </div>
-                    </div>
-                    <div class="resumoCompra">
-                        <h3 class="tituloResumo">Resumo</h3>
-                        <div class="aquisicoes">
-                            <span class="qntdAquisicao">Teste teste teste</span>
-                            <span class="qntdAquisicao">Teste teste teste</span>
+    
+                        <div class="resumoCompra">
+                            <h3 class="tituloResumo">Resumo</h3>
+                            <div class="aquisicoes">
+                                <span class="qntdAquisicao">Teste teste teste</span>
+                                <span class="qntdAquisicao">Teste teste teste</span>
+                            </div>
                         </div>
+    
+                        <div id="totalValor">Total R$ 00.00</div>
+    
                     </div>
-                    <div id="totalValor">Total R$ 00.00</div> -->
-                    <!-- <button class="avancarAssentos">Avançar</button> -->
+    
+                    <button class="avancarAssentos">Avançar</button>
+    
+                </div>
             </div>
-            </div>
+            
+
+        </div>
     </main>
 
+</body>
 </html>
