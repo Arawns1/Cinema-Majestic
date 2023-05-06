@@ -93,7 +93,7 @@ produtos.forEach(produto => {
   divProdutos.appendChild(quadro);
 });
 
-
+  
 
 // EXTRATO ============================================================
 
@@ -188,4 +188,8 @@ const extrato = () => {
   document.getElementById("total").innerText = total 
 }
 
+document.querySelector("#avancarProdutos").addEventListener("click" , e  =>{ 
+  e.preventDefault();
+  window.location.href="../pagamentos/index.html"
+});
 
