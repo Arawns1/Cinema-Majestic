@@ -5,7 +5,9 @@
     margin: 0;
     padding: 0;
     text-decoration: none;
+    box-sizing: content-box;
 }
+
 body {
     font-family: 'Roboto', sans-serif;
     background-color: #1d1d1f;
@@ -16,22 +18,22 @@ body {
 /**** HEADER ****/
 header nav {
     background: #000000;
-  }
-  
-  header nav ul {
+}
+
+header nav ul {
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-direction: row;
     padding: 0px 30px;
-  }
-  
-  ul {
+}
+
+ul {
     margin: 0 !important;
     padding: 0 !important;
-  }
-  
-  header nav li {
+}
+
+header nav li {
     display: flex;
     align-items: center;
     color: white;
@@ -39,107 +41,109 @@ header nav {
     margin: 5px;
     font-weight: 700;
     font-size: 18px;
-  }
-  
-  header nav li span {
+}
+
+header nav li span {
     margin: 20px;
-  }
-  
-  header #login img {
+}
+
+header #login img {
     width: 40px;
     height: 40px;
     object-fit: cover;
-  }
-  
-  #login {
+}
+
+#login {
     min-width: 150px;
     align-items: center;
     justify-content: center;
     margin: 0;
-  }
-  
-  .spanLoginHidden{
+}
+
+.spanLoginHidden {
     display: none !important;
-  }
-  
-  .spanLink {
+}
+
+.spanLink {
     color: white;
     text-decoration: none;
     cursor: pointer;
-  }
-  #logo {
+}
+
+#logo {
     margin-left: 20px;
     width: 230px;
     height: 80px;
-  }
-  
-  #logo img {
+}
+
+#logo img {
     width: 100%;
     height: 100%;
-  }
-  
-  
-  #spanLogado {  
+}
+
+
+#spanLogado {
     display: flex;
     margin: 0;
     justify-content: center;
-    position: relative;  
-      
-  }
-  
-  #userIcon #userBtn{  
-    
+    position: relative;
+
+}
+
+#userIcon #userBtn {
+
     top: 10%;
-    color: white;  
+    color: white;
     background-color: #B5121B;
     font-weight: 700;
     font-size: 18px;
     letter-spacing: 2px;
     width: 50px;
-    height:  50px;
+    height: 50px;
     border: none;
-    border-radius: 50px;   
+    border-radius: 50px;
     margin: 0;
     align-items: center;
     justify-content: center;
-    
-  }
-  
-  #userIcon:hover #userBtn {
-    
+
+}
+
+#userIcon:hover #userBtn {
+
     width: 150px;
     border-radius: 0;
-    transition: 0.5s;     
-    
-  }
-  
-  #userIcon:hover .userDropDown {
-    
+    transition: 0.5s;
+
+}
+
+#userIcon:hover .userDropDown {
+
     height: 96px;
     transition: 0.5s;
-    transition-delay: 0.5s;     
-    
-  }
-  .userDropDown a:hover {
-    
+    transition-delay: 0.5s;
+
+}
+
+.userDropDown a:hover {
+
     background-color: #B5121B;
-    transition: 0.3s;     
-    
-  }
-  
-  #userIcon  { 
-      
+    transition: 0.3s;
+
+}
+
+#userIcon {
+
     margin: 0px;
-    display: inline-block;     
-    
-  }
-  
-  .userDropDown{
+    display: inline-block;
+
+}
+
+.userDropDown {
     display: flex;
     flex-direction: column;
     overflow: hidden;
     height: 0;
-    background-color:  #000000;
+    background-color: #000000;
     box-shadow: 0px 0px 16px 0px rgba(255, 27, 27, 0.562);
     border: none;
     position: absolute;
@@ -149,30 +153,31 @@ header nav {
     transition: 0.3s;
     align-content: center;
     justify-content: center;
-  
-  }
-  .novaSenha {
+
+}
+
+.novaSenha {
     display: flex;
     flex-direction: column;
     overflow: hidden;
     height: 0px;
-    background-color:  #000000;
+    background-color: #000000;
     box-shadow: 0px 0px 16px 0px rgba(255, 27, 27, 0.562);
     border: none;
     position: absolute;
-    min-width: 150px;  
+    min-width: 150px;
     right: calc(50% - 75px);
     z-index: 3;
-    transition: 0.3s;  
-    align-content: center;   
-  }
-  
-  .novaSenha input {
+    transition: 0.3s;
+    align-content: center;
+}
+
+.novaSenha input {
     font-size: 16px;
     display: flex;
     width: 80%;
     padding: 0.05rem;
-    margin:  5% auto;
+    margin: 5% auto;
     box-sizing: border-box;
     border-radius: 10px;
     border: 1px solid #dddddd;
@@ -181,64 +186,64 @@ header nav {
     transition: background 0.2s, border-color 0.2s;
     text-align: center;
     margin-top: 5px;
-  
-  }
-  
-  .userDropDown a {
+
+}
+
+.userDropDown a {
     font-size: 15px;
     padding: 5px;
     text-align: center;
     display: block;
     text-decoration: none;
     color: white;
-  }
-  
-  .form_message {
+}
+
+.form_message {
     text-align: center;
     margin-top: 5px;
     margin-bottom: 5px;
     font-size: 15px;
-  }
-  
-  .form_message_success {
+}
+
+.form_message_success {
     color: green;
-  }
-  
-  .form_message_error {
+}
+
+.form_message_error {
     color: red;
     margin-top: 0px;
     margin-bottom: 0px;
-    font-size: 15px;  
-  
-  }
-  
-  
-  
-  #userIcon:hover .novaSenhaDrop {
-    
+    font-size: 15px;
+
+}
+
+
+
+#userIcon:hover .novaSenhaDrop {
+
     height: 150px;
     transition: 0.5s;
-    transition-delay: 0.5s;     
-    
-  }
-  
-  #novaSenhaBtn {
-  
+    transition-delay: 0.5s;
+
+}
+
+#novaSenhaBtn {
+
     font-weight: bold;
     font-size: 1.1rem;
     color: white;
     border: none;
     cursor: pointer;
     background: #b5121b;
-  }
-  
-  #novaSenhaBtn:active {
-    transform: scale(0.98);     
-  }
-  
-  .displayNone {
+}
+
+#novaSenhaBtn:active {
+    transform: scale(0.98);
+}
+
+.displayNone {
     display: none;
-  }
+}
 
 
 /**** CONTEÚDO PRINCIPAL ****/
@@ -251,12 +256,14 @@ header nav {
     flex-direction: row;
     gap: 150px;
 }
+
 .compra {
     margin-top: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
 .compraOpcoes {
     display: flex;
     justify-content: center;
@@ -264,15 +271,18 @@ header nav {
     gap: 18px;
     font-weight: bold;
 }
+
 .legenda {
     width: 100%;
     display: flex;
     flex-direction: column;
 }
-.legendaTitulo{
+
+.legendaTitulo {
     padding-top: 30px;
     font-weight: bold;
 }
+
 .legendaTitulo::after {
     content: "";
     display: block;
@@ -281,6 +291,7 @@ header nav {
     margin-top: 3px;
     width: 100%;
 }
+
 .legendaOpcoes {
     display: flex;
     margin-top: 20px;
@@ -290,7 +301,11 @@ header nav {
     width: 100%;
     padding-bottom: 10px;
 }
-.assento, .legDisp, .legSel, .legOcup {
+
+.assento,
+.legDisp,
+.legSel,
+.legOcup {
     display: flex;
     width: 5px;
     height: 5px;
@@ -303,19 +318,24 @@ header nav {
     font-size: 10px;
     color: #b5121b;
 }
+
 .legSel {
     background-color: #a3a3a3;
 }
+
 .legOcup {
     background-color: #6f0b11;
 }
+
 .assento:hover {
     cursor: pointer;
     color: white;
 }
+
 .assentoEscolhido {
     background-color: #a3a3a3;
 }
+
 .assentos {
     display: flex;
     min-width: 340px;
@@ -325,6 +345,7 @@ header nav {
     justify-content: space-between;
     padding: 5px;
 }
+
 .sala {
     width: 100%;
     display: flex;
@@ -333,6 +354,7 @@ header nav {
     gap: 35px;
     margin-top: 50px;
 }
+
 .corredor {
     display: none;
     flex-direction: column;
@@ -341,26 +363,32 @@ header nav {
     justify-content: space-between;
     font-weight: bold;
 }
+
 .iconeOpcoes {
     filter: invert(100);
     width: 35px;
 }
-.opcao, .opcaoAtiva {
+
+.opcao,
+.opcaoAtiva {
     flex-direction: column;
     display: flex;
     align-items: center;
     gap: 5px;
     opacity: 50%;
 }
+
 .opcaoAtiva {
     opacity: 100%;
 }
+
 .opcaoAtiva::after {
     content: "";
     height: 1px;
     width: 95%;
     background-color: #6f0b11;
 }
+
 .tela {
     width: 250px;
     height: 10px;
@@ -376,6 +404,7 @@ header nav {
     display: flex;
     flex-direction: column;
 }
+
 .resumo {
     padding-bottom: 20px;
     width: 80vw;
@@ -383,24 +412,31 @@ header nav {
     margin-top: 50px;
     background-color: #333;
 }
+
 .resumoFilme {
     display: flex;
     height: 150px;
     gap: 30px;
     justify-content: space-evenly;
 }
-.resumoCompra, #totalValor, .resumoFilme {
+
+.resumoCompra,
+#totalValor,
+.resumoFilme {
     padding: 10px;
 }
+
 .resumoCompra {
     margin-top: 30px;
     display: flex;
     flex-direction: column;
     font-size: 15px;
 }
+
 .imagemFilme {
     height: 100%;
 }
+
 .infoFilme {
     display: flex;
     flex-direction: column;
@@ -408,24 +444,30 @@ header nav {
     gap: 10px;
     justify-content: space-evenly;
 }
+
 .tipoFilme {
     display: flex;
     gap: 20px;
 }
+
 .aquisicoes {
     display: flex;
     flex-direction: column;
     gap: 10px;
     margin-top: 15px;
 }
+
 #totalValor {
     margin-top: 40px;
 }
-.telaFilme, .audioFilme {
+
+.telaFilme,
+.audioFilme {
     background-color: #b5121b;
     padding: 5px;
     color: #efefef;
 }
+
 .avancarAssentos {
     height: 50px;
     background-color: #b5121b;
@@ -433,6 +475,7 @@ header nav {
     color: #fff;
     cursor: pointer;
 }
+
 .tituloEscolha::after {
     content: "";
     height: 1px;
@@ -441,6 +484,7 @@ header nav {
     display: block;
     background-color: #2a2a2a;
 }
+
 .tituloResumo::after {
     content: "";
     height: 1px;
@@ -450,63 +494,136 @@ header nav {
     background-color: #2a2a2a;
 }
 
+#x-mark {
+    color: #c20f0f !important;
+    scale: 2;
+    margin-left: 10px;
+}
+
+.modal-header {
+    gap: 20px;
+    align-items: center;
+}
+
+.modal-backdrop {
+    background-color: #000;
+}
+
+.modal-content {
+    background-color: #333 !important;
+    color: #fff;
+}
+
+.btn-primary {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: #B5121B;
+    --bs-btn-border-color: #B5121B;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #B5121B;
+    --bs-btn-hover-border-color: #6f0b11;
+    --bs-btn-focus-shadow-rgb: 49, 132, 253;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #6f0b11;
+    --bs-btn-active-border-color: #6f0b11;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #fff;
+    --bs-btn-disabled-bg: #B5121B;
+    --bs-btn-disabled-border-color: #B5121B;
+}
+
+.btn-primary:hover {
+    background-color: #6f0b11;
+    border-color: #6f0b11;
+}
+
+.btn-secondary {
+    background-color: #777;
+}
+
+.btn-close {
+    filter: invert(100) !important;
+}
+
+
 @media (min-width: 320px) {
     #container {
         gap: 0;
         flex-direction: column;
         align-items: center;
     }
+
     .compra {
         width: 100%;
     }
+
     .iconeOpcoes {
         width: 30px;
     }
+
     .resumo {
         width: 80vw;
         font-size: 14px;
     }
-    .resumoCompra, #totalValor, .resumoFilme {
+
+    .resumoCompra,
+    #totalValor,
+    .resumoFilme {
         padding: 10px;
     }
-    .resumoFilme{
+
+    .resumoFilme {
         gap: 10px;
     }
+
     .compraOpcoes {
         margin-top: 20px;
         gap: 10px;
         font-family: 11px
     }
+
     .sala {
         margin-top: 0;
         scale: 85%;
     }
+
     .tituloEscolha {
         margin-top: 40px;
+        font-size: 16px !important;
+        font-weight: 700;
     }
-    .tela, .legenda {
+
+    .tela,
+    .legenda {
         margin-top: 20px;
     }
+
     .legendaOpcoes {
         font-size: 12px;
         display: flex;
         gap: 10px;
     }
-    .legDisp, .legOcup, .legSel {
+
+    .legDisp,
+    .legOcup,
+    .legSel {
         width: 1px;
         height: 1px;
     }
+
     .assento {
         color: #fff;
         font-size: 12px;
     }
+
     .aquisicoes {
         font-size: 14px;
     }
+
     .avancarAssentos {
         margin-top: 20px;
         width: 100%;
     }
+
     .assentoEscolhido {
         color: #000;
     }
@@ -516,44 +633,58 @@ header nav {
     .compra {
         width: 80vw;
     }
+
     .corredor {
         display: flex;
     }
+
     .compraOpcoes {
         justify-content: space-evenly;
         gap: 0;
         width: 100%;
     }
+
     .tituloEscolha {
         margin-top: 50px;
     }
+
     .sala {
         width: 340px;
         scale: 100%;
         margin-top: 20px;
     }
+
     .resumo {
         width: 50vw;
     }
+
     .legenda {
         margin-top: 20px;
         width: 70%;
     }
-    .resumoFilme, .resumoCompra, #totalValor {
+
+    .resumoFilme,
+    .resumoCompra,
+    #totalValor {
         padding: 15px;
     }
+
     .avancarAssentos {
         width: 100%;
     }
+
     .assento {
         color: #fff;
     }
+
     .assentoEscolhido {
         color: #000;
     }
+
     .tela {
         margin-top: 50px;
     }
+
     .iconeOpcoes {
         width: 35px;
     }
@@ -566,40 +697,52 @@ header nav {
         flex-direction: row;
         gap: 100px;
     }
+
     .assento {
         color: #b5121b;
     }
+
     .compra {
         width: 50%;
     }
+
     .sala {
         width: 340px;
     }
+
     .corredor {
         display: flex;
+
     }
+
     .resumo {
         width: 100%;
     }
+
     .compraOpcoes {
         width: 100%;
         gap: 0;
         justify-content: space-between;
         font-size: 15px;
     }
+
     .tituloEscolha {
         margin-top: 50px;
     }
+
     .avancarAssentos {
         width: 100%;
     }
+
     .infoFilme {
         font-size: 14px;
     }
+
     .lateral {
         width: 30%;
         margin-top: -100px;
     }
+
     .assentoEscolhido {
         color: #000;
     }
