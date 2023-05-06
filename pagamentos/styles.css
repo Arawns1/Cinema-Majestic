@@ -294,15 +294,6 @@ header #login img {
     background-color: #6f0b11;
 }
 
-.tela {
-    width: 250px;
-    height: 10px;
-    background-color: white;
-    margin-top: 50px;
-    box-shadow: 0px -2px 6px #fff;
-}
-
-
 /**** BARRA LATERAL ***/
 
 .lateral {
@@ -316,6 +307,14 @@ header #login img {
     border: 1px solid black;
     margin-top: 50px;
     background-color: #333;
+}
+.tituloResumo::after {
+    content: "";
+    height: 1px;
+    width: 100%;
+    margin-top: 3px;
+    display: block;
+    background-color: #2a2a2a;
 }
 
 .resumoFilme {
@@ -372,7 +371,6 @@ header #login img {
     padding: 5px;
     color: #efefef;
 }
-
 .avancarAssentos {
     height: 50px;
     background-color: #b5121b;
@@ -381,57 +379,30 @@ header #login img {
     cursor: pointer;
     transition: 1s;
 }
-
 .avancarAssentos:hover {
     background-color: var(--red-shadows);
     transition: 1s;
 }
-
-.tituloEscolha::after {
-    content: "";
-    height: 1px;
-    width: 100%;
-    margin-top: 10px;
-    display: block;
-    background-color: #2a2a2a;
-}
-
-.tituloResumo::after {
-    content: "";
-    height: 1px;
-    width: 100%;
-    margin-top: 3px;
-    display: block;
-    background-color: #2a2a2a;
-}
-
-
-
-
 /**** CARD DE PAGAMENTO ****/
 .containerPagamento {
     min-width: 300px;
     width: 40vw;
 }
-
 form {
     background: #333;
     border-radius: 5px;
     box-shadow: 0 10px 15px rgba(0, 0, 0, .1);
     padding: 15px;
 }
-
 .inputBox {
     margin-top: 20px;
 
 }
-
 .inputBox label {
     display: block;
     color: #fff;
     margin: 5px 0px;
 }
-
 .inputBox input,
 .inputBox select {
     width: 100%;
@@ -442,24 +413,20 @@ form {
     background: #444444;
     color: #fff;
 }
-
 .inputBox select {
     cursor: pointer;
     color: #999;
 }
-
 .inputBox input:focus,
 .inputBox select:focus {
     border: 1px solid #555;
     color: #fff;
 }
-
 .inputBox input::placeholder {
     text-transform: none;
     letter-spacing: 0.5px;
     color: #999;
 }
-
 .flexbox {
     display: flex;
     justify-content: space-between;
@@ -469,8 +436,6 @@ form {
 
 /**** MEDIA QUERIES ****/
 @media (min-width: 320px) {
-
-
     #container {
         gap: 0;
         flex-direction: column;
@@ -494,27 +459,14 @@ form {
     .resumoFilme {
         padding: 10px;
     }
-
     .resumoFilme {
         gap: 10px;
     }
-
     .compraOpcoes {
         margin-top: 20px;
         gap: 20px;
         font-family: 11px
     }
-
-    .sala {
-        margin-top: 0;
-        scale: 85%;
-    }
-
-    .tituloEscolha {
-        margin-top: 40px;
-    }
-
-    .tela,
     .legenda {
         margin-top: 20px;
     }
@@ -524,19 +476,6 @@ form {
         display: flex;
         gap: 10px;
     }
-
-    .legDisp,
-    .legOcup,
-    .legSel {
-        width: 1px;
-        height: 1px;
-    }
-
-    .assento {
-        color: #fff;
-        font-size: 12px;
-    }
-
     .aquisicoes {
         font-size: 14px;
     }
@@ -545,37 +484,16 @@ form {
         margin-top: 20px;
         width: 100%;
     }
-
-    .assentoEscolhido {
-        color: #000;
-    }
 }
-
 @media (min-width: 768px) {
     .compra {
         width: 46vw;
     }
-
-    .corredor {
-        display: flex;
-    }
-
     .compraOpcoes {
         justify-content: space-evenly;
         gap: 0;
         width: 100%;
     }
-
-    .tituloEscolha {
-        margin-top: 50px;
-    }
-
-    .sala {
-        width: 340px;
-        scale: 100%;
-        margin-top: 20px;
-    }
-
     .resumo {
         width: 40vw;
     }
@@ -598,11 +516,6 @@ form {
     .assento {
         color: #fff;
     }
-
-    .assentoEscolhido {
-        color: #000;
-    }
-
     .tela {
         margin-top: 50px;
     }
@@ -627,15 +540,6 @@ form {
     .compra {
         width: 50%;
     }
-
-    .sala {
-        width: 340px;
-    }
-
-    .corredor {
-        display: flex;
-    }
-
     .resumo {
         width: 100%;
     }
@@ -647,21 +551,11 @@ form {
         font-size: 15px;
     }
 
-    .tituloEscolha {
-        margin-top: 50px;
-    }
-
     .avancarAssentos {
         width: 100%;
     }
 
     .infoFilme {
         font-size: 14px;
-    }
-
-
-
-    .assentoEscolhido {
-        color: #000;
     }
 }
