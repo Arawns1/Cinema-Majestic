@@ -171,7 +171,7 @@ main{
 /*-------------------------------------------------------------------*/
 
 #pr {
-    border-top: 1px solid #CCC; 
+  
     padding: 3% 5%;
 
 }
@@ -394,8 +394,8 @@ input[type="number"] {
       display: flex;
       width: 70vw;
       flex-direction: row;
-      gap: 100px;
-
+      gap: 50px;
+      align-items: flex-start;
   }
   .assento {
       color: #b5121b;
@@ -429,7 +429,7 @@ input[type="number"] {
   }
   .lateralAllan {
       width: 30%;
-      margin-top: 50px;
+    margin-top: 65px;
      
   }
   .assentoEscolhido {
