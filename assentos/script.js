@@ -1,3 +1,22 @@
+/* Pegando Informações do Local Storage */
+
+var objFilmeEscolhido = JSON.parse(localStorage.getItem("filmeEscolhido"))
+console.log(objFilmeEscolhido)
+/* Insere informações do filme no resumo */
+
+document.querySelector(".resumoFilme").innerHTML =
+    `
+    <img src="${objFilmeEscolhido.posterURL}" alt="poster filme" class="imagemFilme">
+    <div class="infoFilme">
+        <div class="nomeFilme">${objFilmeEscolhido.movieTitle}</div>
+        <div class="tipoFilme">
+            <div class="audioFilme">Dublado</div>
+            <div class="telaFilme">2D</div>
+        </div>
+        <div class="sessaoFilme">📅 03/05/2023 - 18:30</div>
+        <div class="localFilme">📍 Petrópolis - RJ</div>
+    </div>
+`
 function escolhaAssento() {
 
     const assentos = document.getElementsByClassName("assento")
@@ -55,6 +74,7 @@ var escolhidoLista = []
 
 document.addEventListener("DOMContentLoaded", escreveTela)
 document.addEventListener("DOMContentLoaded", escolhaAssento)
+
 
 /* salva as informações na session */
 document.querySelector(".avancarAssentos").addEventListener("click", e => {

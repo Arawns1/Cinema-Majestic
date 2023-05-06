@@ -1,3 +1,5 @@
+const linkPaginaAssentos = "../assentos/assentos.html"
+
 var slideMovies = [
     {
         id: 0,
@@ -6,7 +8,6 @@ var slideMovies = [
         synopsis: "Agora já conhecidos como os Guardiões da Galáxia, os guerreiros viajam ao longo do cosmos e lutam para manter sua nova família unida. Enquanto isso tentam desvendar os mistérios da verdadeira paternidade de Peter Quill (Chris Pratt)",
         trailerURL: 'https://www.youtube.com/embed/ZLKMAtut5AQ',
         posterURL: 'https://th.bing.com/th/id/OIP.iPUFfQpueQXnhlkdltQxZgHaK9?pid=ImgDet&rs=1',
-        paginaCompra: '../assentos/guardioesgalaxia.html'
     },
     {
         id: 1,
@@ -15,7 +16,6 @@ var slideMovies = [
         synopsis: " Produzido pela Toei Animation e baseado na sensação internacional do anime, Cavaleiros do Zodíaco traz a saga de Saint Seiya para a tela grande em live-action pela primeira vez. Seiya (Mackenyu)",
         trailerURL: 'https://www.youtube.com/embed/ZLKMAtut5AQ',
         posterURL: 'https://www.cavzodiaco.com.br/images23/live_poster_new_1.jpg',
-        paginaCompra: '../assentos/cavaleiroszodiaco.html'
     },
     {
         id: 2,
@@ -24,7 +24,6 @@ var slideMovies = [
         synopsis: " Em Super Mario Bros. - O Filme, Mario é um encanador que trabalha junto com seu irmão Luigi. Um dia, Mario e Luigi vão parar no reino dos cogumelos, governado pela Princesa Peach, mas ameaçado pelo rei dos Koopas, Bowser.",
         trailerURL: 'https://www.youtube.com/embed/8apWNNMFDyY',
         posterURL: 'https://uploads.jovemnerd.com.br/wp-content/uploads/2023/02/super_mario_bros_filme_poster__2b3rnu52-758x1200.jpeg',
-        paginaCompra: '../assentos/mario.html'
     }
 ]
 window.addEventListener('load', () => {
@@ -116,7 +115,7 @@ window.addEventListener('load', () => {
         document.querySelector(".idFilme-" + movie.id + " button").addEventListener("click", e => {
             e.preventDefault();
             localStorage.setItem("filmeEscolhido", JSON.stringify(movie));
-            window.location.href = movie.paginaCompra
+            window.location.href = linkPaginaAssentos
         })
     })
 
@@ -175,12 +174,10 @@ window.addEventListener('load', () => {
         document.querySelector(".idPosterFilme-" + movie.id).addEventListener("click", e => {
             e.preventDefault();
             localStorage.setItem("filmeEscolhido", JSON.stringify(movie));
-            window.location.href = movie.paginaCompra
+            window.location.href = linkPaginaAssentos
         })
     })
 });
-
-
 
 document.querySelector("#linkSair").addEventListener("click", e => {
     e.preventDefault();
