@@ -150,7 +150,7 @@ const extrato = () => {
 }
 
   
-document.querySelector("#avancarProdutos").addEventListener("click" , e  =>{ 
+document.querySelector(".avancarProdutos").addEventListener("click" , e  =>{ 
   e.preventDefault();
   produtosStore.push(["Pipoca",5 , quantidadePipoca]);
   produtosStore.push(["coca-cola",3 , quantidadeCoca]);
@@ -160,9 +160,9 @@ document.querySelector("#avancarProdutos").addEventListener("click" , e  =>{
   var produtoFiltrado = produtosStore.filter(e => e[2])
   
   sessionStorage.setItem("produtos" ,JSON.stringify(produtoFiltrado))
+  window.location.href = "../pagamentos/index.html"
 
  
-   window.location.href="../pagamentos/index.html"
-
+   
 });
 

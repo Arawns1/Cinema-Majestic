@@ -144,7 +144,7 @@ main{
   padding: 5px;
   color: #efefef;
 }
-.avancarAssentos {
+.avancarProdutos {
   height: 50px;
   background-color: #b5121b;
   border: none;
@@ -314,7 +314,7 @@ input[type="number"] {
   .aquisicoes {
       font-size: 14px;
   }
-  .avancarAssentos {
+  .avancarProdutos {
       margin-top: 20px;
       width: 100%;
   }
@@ -367,7 +367,7 @@ input[type="number"] {
   .resumoFilme, .resumoCompra, #totalValor {
       padding: 15px;
   }
-  .avancarAssentos {
+  .avancarProdutos {
       width: 100%;
   }
   .assento {
@@ -421,7 +421,7 @@ input[type="number"] {
   .tituloEscolha {
       margin-top: 50px;
   }
-  .avancarAssentos {
+  .avancarProdutos {
       width: 100%;
   }
   .infoFilme {

@@ -66,6 +66,7 @@ document.querySelector(".avancarAssentos").addEventListener("click", e => {
     if(sessionStorage.getItem("user") !== null){
 
         sessionStorage.setItem("assentos", JSON.stringify(assentosUsuario))
+        window.location.href = "../src/index.html"
     }    
 
 })
