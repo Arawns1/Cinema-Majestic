@@ -3,7 +3,7 @@ function escolhaAssento() {
     const assentos = document.getElementsByClassName("assento")
 
     /* adiciona addEventListerner em cada assento */
-    for(i = 0; i < assentos.length; i++) {
+    for (i = 0; i < assentos.length; i++) {
         assentos[i].addEventListener("click", assentoEscolhido)
     }
 
@@ -12,20 +12,20 @@ function escolhaAssento() {
 function assentoEscolhido() {
 
     /* se o assento não foi escolhido e ainda não atingiu o limite */
-    if(this.classList.contains("assentoEscolhido") == false && escolhidoLista.length < qntdAssentosMax) {
+    if (this.classList.contains("assentoEscolhido") == false && escolhidoLista.length < qntdAssentosMax) {
         this.classList.add("assentoEscolhido")
         escolhidoLista.push(this.innerHTML)
-    
-    /* se o assento foi escolhido e ainda não atingiu o limite ou atingiu */
+
+        /* se o assento foi escolhido e ainda não atingiu o limite ou atingiu */
     } else if (this.classList.contains("assentoEscolhido") == true && (escolhidoLista.length < qntdAssentosMax || escolhidoLista.length == qntdAssentosMax)) {
         this.classList.remove("assentoEscolhido")
-            for(i = 0; i < escolhidoLista.length; i++) {
-                if(escolhidoLista[i] == this.innerHTML) {
-                    escolhidoLista.splice(i, 1)
-                }
-            } 
+        for (i = 0; i < escolhidoLista.length; i++) {
+            if (escolhidoLista[i] == this.innerHTML) {
+                escolhidoLista.splice(i, 1)
+            }
+        }
     }
-} 
+}
 
 /* escreve os assentos e os corredores dentro da div sala */
 function escreveTela() {
@@ -36,12 +36,12 @@ function escreveTela() {
     var corredorDiv = document.getElementsByClassName("corredor")
 
     for (i = 0; i < corredores.length; i++) {
-        for (j = 0 ; j < totalAssentos; j++) {
-            assentos.innerHTML += `<div class="assento">${corredores[i]}${j+1}</div>`
+        for (j = 0; j < totalAssentos; j++) {
+            assentos.innerHTML += `<div class="assento">${corredores[i]}${j + 1}</div>`
         }
     }
 
-    for(i = 0; i < corredores.length; i++) {
+    for (i = 0; i < corredores.length; i++) {
         corredores.forEach(letra => corredorDiv[i].innerHTML += `<span>${letra}</span>`)
     }
 }
@@ -59,26 +59,26 @@ document.addEventListener("DOMContentLoaded", escolhaAssento)
 /* salva as informações na session */
 document.querySelector(".avancarAssentos").addEventListener("click", e => {
     e.preventDefault()
-
+    console.log("clicou")
     var nomeFilme = document.querySelector(".nomeFilme").textContent
     var assentosUsuario = [nomeFilme, escolhidoLista]
-    
-    if(sessionStorage.getItem("user") !== null){
+
+    if (sessionStorage.getItem("user") !== null) {
 
         sessionStorage.setItem("assentos", JSON.stringify(assentosUsuario))
         var nomeFilme = document.querySelector(".nomeFilme").textContent
-       if (nomeFilme == "Super Mario Bros: O Filme") {
-         window.location.href = "../ingressos/mario.html"
-         
-         } 
-       if(nomeFilme == "Guardiões da Galáxia Vol. 3"){
-         window.location.href = "../ingressos/guardioesGalaxia.html"
-         }
-          
-       if(nomeFilme == "Cavaleiros do Zodíaco - Saint Seiya: O Começo"){
-         window.location.href = "../ingressos/cavaleirosDoZodiaco.html"
-         }
-  
-    } 
+        if (nomeFilme == "Super Mario Bros: O Filme") {
+            window.location.href = "../ingressos/mario.html"
+
+        }
+        if (nomeFilme == "Guardiões da Galáxia Vol. 3") {
+            window.location.href = "../ingressos/guardioesGalaxia.html"
+        }
+
+        if (nomeFilme == "Cavaleiros do Zodíaco - Saint Seiya: O Começo") {
+            window.location.href = "../ingressos/cavaleirosDoZodiaco.html"
+        }
+
+    }
 
 })

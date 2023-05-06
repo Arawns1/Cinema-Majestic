@@ -1,5 +1,6 @@
 var slideMovies = [
     {
+        id: 0,
         movieTitle: 'Guardiões da Galáxia: Volume 3',
         rating: 4.5,
         synopsis: "Agora já conhecidos como os Guardiões da Galáxia, os guerreiros viajam ao longo do cosmos e lutam para manter sua nova família unida. Enquanto isso tentam desvendar os mistérios da verdadeira paternidade de Peter Quill (Chris Pratt)",
@@ -8,6 +9,7 @@ var slideMovies = [
         paginaCompra: '../assentos/guardioesgalaxia.html'
     },
     {
+        id: 1,
         movieTitle: 'Os Cavaleiros do Zodíaco - Saint Seiya: O Começo',
         rating: 3.0,
         synopsis: " Produzido pela Toei Animation e baseado na sensação internacional do anime, Cavaleiros do Zodíaco traz a saga de Saint Seiya para a tela grande em live-action pela primeira vez. Seiya (Mackenyu)",
@@ -16,6 +18,7 @@ var slideMovies = [
         paginaCompra: '../assentos/cavaleiroszodiaco.html'
     },
     {
+        id: 2,
         movieTitle: 'Super Mario Bros.',
         rating: 5,
         synopsis: " Em Super Mario Bros. - O Filme, Mario é um encanador que trabalha junto com seu irmão Luigi. Um dia, Mario e Luigi vão parar no reino dos cogumelos, governado pela Princesa Peach, mas ameaçado pelo rei dos Koopas, Bowser.",
@@ -69,7 +72,7 @@ window.addEventListener('load', () => {
                     <iframe class="d-block w-100" 
                     src="${movie.trailerURL}?controls=0&autoplay=1&mute=1&autohide=0&showinfo=0&modestbranding=1&loop=1&rel=1&playlist=${movie.trailerURL.substring(movie.trailerURL.lastIndexOf("/") + 1)}"
                     frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                    <div class="movieTitle">
+                    <div class=" movieTitle idFilme-${movie.id}">
                         <h1>${movie.movieTitle} </h1>
                         <ul class="ratings">
                         ${addRating(movie)}
@@ -77,14 +80,11 @@ window.addEventListener('load', () => {
                         <p class="sinopse">
                         ${movie.synopsis}
                         </p>
-                        <a href="${movie.paginaCompra}">
                         <button tabindex="3">
                         Comprar Ingresso</button>
-                        </a>
                     </div>
                 </div>`
             }
-
             else {
                 moviePattern += `
                 <div class="carousel-item" data-bs-interval="5000">
@@ -93,7 +93,7 @@ window.addEventListener('load', () => {
                     frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     allowfullscreen></iframe>
-                    <div class="movieTitle">
+                    <div class="movieTitle idFilme-${movie.id}">
                         <h1>${movie.movieTitle} </h1>
                         <ul class="ratings">
                         ${addRating(movie)}
@@ -101,16 +101,24 @@ window.addEventListener('load', () => {
                         <p class="sinopse">
                         ${movie.synopsis}
                         </p>
-                        <a href="${movie.paginaCompra}">
                         <button tabindex="3">
                         Comprar Ingresso</button>
-                        </a>
                     </div>
                 </div>`
             }
         })
         return moviePattern
     }
+
+
+    //**** Redirecionador Filme Slide  */
+    slideMovies.forEach(movie => {
+        document.querySelector(".idFilme-" + movie.id + " button").addEventListener("click", e => {
+            e.preventDefault();
+            localStorage.setItem("filmeEscolhido", JSON.stringify(movie));
+            window.location.href = movie.paginaCompra
+        })
+    })
 
     function addRating(movie) {
         var stars = ``
@@ -148,21 +156,31 @@ window.addEventListener('load', () => {
     function addPosters() {
         var poster = ``
         slideMovies.forEach(movie => {
-            poster += `<a href="${movie.paginaCompra}">
-            <div class="poster">
+            poster += `
+            <div class="poster idPosterFilme-${movie.id}">
             <div class="label">Estreia</div>
             <img src="${movie.posterURL}" alt="${movie.movieTitle} poster">
             <div class="titlePoster">
             <h2>${movie.movieTitle}</h2>
             </div>
             </div>
-            </a>
         
     `
         })
         return poster
     }
+
+    //**** Redirecionador Filme Poster  */
+    slideMovies.forEach(movie => {
+        document.querySelector(".idPosterFilme-" + movie.id).addEventListener("click", e => {
+            e.preventDefault();
+            localStorage.setItem("filmeEscolhido", JSON.stringify(movie));
+            window.location.href = movie.paginaCompra
+        })
+    })
 });
+
+
 
 document.querySelector("#linkSair").addEventListener("click", e => {
     e.preventDefault();
@@ -170,8 +188,6 @@ document.querySelector("#linkSair").addEventListener("click", e => {
     window.location.reload();
 })
 /* ------ ADICIONANDO FILMES --------------- */
-
-
 function setFormMessage(formElement, type, message) {
     const messageElement = formElement.querySelector(".form_message");
 
@@ -179,8 +195,6 @@ function setFormMessage(formElement, type, message) {
     messageElement.classList.remove("form_message_success", "form_message_error");
     messageElement.classList.add(`form_message_${type}`);
 };
-
-
 document.querySelector("#novaSenhaBtn").addEventListener("click", e => {
     e.preventDefault();
 
