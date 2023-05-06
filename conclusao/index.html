@@ -11,38 +11,45 @@
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
     <script src="./script.js" defer></script>
+    <script src="../home/script.js"></script>
     <title></title>
 </head>
 
 <body>
+    
     <header>
+        
         <nav>
             <ul>
-                <li tabindex="1" id="logo"><img src="../images/logoBranca.png" class="logoCinema" alt="logo do site"></li>
-                <li tabindex="2" id="login">
-                    <span id="spanLogin"><a href="/login/login.html" class="spanLink"><img src="../images/login.png"
-                                alt="Ícone de Login"></a></span>
-                    <span id="spanLogado" class="spanLoginHidden">
-                        <div id="userIcon">
-                            <button id="userBtn">PL</button>
-                            <div class="userDropDown">
-                                <a href="#" id="linkMeusIngressos">Meus Ingressos</a>
-                                <a href="#" id="linkAlterarSenha">Alterar Senha</a>
-                                <a href="#" id="linkSair">Sair</a>
-                            </div>
-                            <div class="novaSenha">
-                                <input type="password" id="inputSenha" placeholder="Nova Senha">
-                                <input type="password" id="inputConfirmaSenha" placeholder="Repita a Senha">
-                                <div class="form_message form_message_success form_message_error"></div>
-                                <button id="novaSenhaBtn">Salvar</button>
-                            </div>
-                        </div>
-                    </span>
-                </li>
+              <li tabindex="1" id="logo">
+                <a href="../home/index.html">
+                    <img src="../images/logoBranca.png" alt="logo do site">
+                </a>
+              </li>
+              <li tabindex="2" id="login">        
+                <span id="spanLogin" ><a href="/login/login.html" class="spanLink"><img src="../images/login.png" alt="Ícone de Login"></a></span>
+                <span id="spanLogado" class="spanLoginHidden">
+                  <div id="userIcon">            
+                    <button id="userBtn">PL</button>
+                    <div class="userDropDown">
+                      <a href="#" id="linkMeusIngressos">Meus Ingressos</a>
+                      <a href="#" id="linkAlterarSenha">Alterar Senha</a>
+                      <a href="#" id="linkSair">Sair</a>
+                    </div>
+                    <div class="novaSenha" >
+                      <input type="password" id="inputSenha" placeholder="Nova Senha">
+                      <input type="password" id="inputConfirmaSenha" placeholder="Repita a Senha">
+                      <div class="form_message form_message_success form_message_error"></div>
+                      <button id="novaSenhaBtn">Salvar</button>
+                    </div>
+                  </div>          
+                </span>
+              </li>
             </ul>
-        </nav>
+          </nav>
 
     </header>
+
     <main class="main">
         <img class="check-image" src="images/check.png" alt="">
         <p class="mensagem-compra">Compra realizada com sucesso!</p>
