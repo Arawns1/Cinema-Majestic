@@ -53,12 +53,12 @@ body {
   margin: 1%;
   text-align: center;
   background-color: #333;
-  height: 25vh;
+  height: 26vh;
   width: 15vw;
   min-width: 160px;
-  min-height: 160px;
+  min-height: 180px;
   border-radius: 10%;
-margin-top: 30px;
+  margin-top: 30px;
 
 }
 
@@ -72,12 +72,11 @@ margin-top: 30px;
   
   width: 70vw;
   margin: auto;
-  margin-top: 30px;
   padding-bottom: 50px;
   display: flex;
   flex-direction: row;
   gap: 150px;
-
+  
 }
 /* -----------------------------------------------------------*/
 
@@ -90,9 +89,10 @@ main{
 .lateralAllan {
   display: flex;
   flex-direction: column;
+  
 }
 
-.resumo {
+.resumoAllan {
  
   padding-bottom: 20px;
   width: 100%;
@@ -261,8 +261,10 @@ input[type="number"] {
 @media (min-width: 320px) {
   .containProdutosLateral {
       gap: 0;
-      flex-direction: column;
       align-items: center;
+      flex-direction: column;
+      align-content: center;
+      justify-content: center;
   }
   .compra {
       width: 100%;
@@ -270,9 +272,10 @@ input[type="number"] {
   .iconeOpcoes {
       width: 30px;
   }
-  .resumo {
-      width: 80vw;
+  .resumoAllan {
+      width: 100%;
       font-size: 14px;
+
   }
   .resumoCompra, #totalValor, .resumoFilme {
       padding: 10px;
@@ -318,11 +321,23 @@ input[type="number"] {
   .assentoEscolhido {
       color: #000;
   }
+
+  .lateralAllan {
+    width: 300px;  
+     
+}
 }
 
 @media (min-width: 768px) {
   .containProdutosLateral {
       width: 80vw;
+      display: flex;
+      align-items: center;
+
+      gap: 0;
+      flex-direction: column;
+      align-content: center;
+      justify-content: center;
   }
   .corredor {
       display: flex;
@@ -340,9 +355,11 @@ input[type="number"] {
       scale: 100%;
       margin-top: 20px;
   }
-  .resumo {
-      width: 50vw;
-  }
+  .resumoAllan {
+    width: 100%;
+    font-size: 14px;
+
+}
   .legenda {
       margin-top: 20px;
       width: 70%;
@@ -365,14 +382,20 @@ input[type="number"] {
   .iconeOpcoes {
       width: 35px;
   }
+  
+  .lateralAllan {
+    width: 300px;  
+}
+
 }
 
 @media (min-width: 1200px) {
   .containProdutosLateral {
+      display: flex;
       width: 70vw;
-      justify-content: center;
       flex-direction: row;
       gap: 100px;
+
   }
   .assento {
       color: #b5121b;
@@ -406,7 +429,8 @@ input[type="number"] {
   }
   .lateralAllan {
       width: 30%;
-      margin-top: -450px;
+      margin-top: 50px;
+     
   }
   .assentoEscolhido {
       color: #000;
