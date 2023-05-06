@@ -125,10 +125,10 @@ body {
     text-decoration: underline;   
 }
 #logo {
-    padding-bottom: 20px;
     display: flex;
     justify-content: center;    
     height: 80px;
+    padding-bottom: 10px;
   }
   
   #logo img {
