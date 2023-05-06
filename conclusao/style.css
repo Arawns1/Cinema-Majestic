@@ -326,3 +326,60 @@ body {
 .botoes:hover {
     background-color: #6f0b11;
 }
+
+
+/**** INGRESSO ****/
+
+#container {
+    width: 100%;
+    display: none;
+}
+#logoIngresso {
+    width: 30%;
+    margin: auto;
+}
+#ingresso {
+    width: 200px;
+    margin: auto;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    border: 1px solid #000;
+    padding: 10px;
+}
+#infoSessao {
+    display: flex;
+    flex-direction: column;
+    line-height: 25px;
+}
+
+#produtos {
+    display: flex;
+    flex-direction: column;
+}
+
+#qrcode {
+    width: 20%;
+    margin: auto;
+    margin-top: 20px;
+}
+
+@media print {
+
+    #container {
+        display: block;
+        font-size: 12px;
+    }
+    header {
+        display: none;
+    }
+    body {
+        background-color: #fff;
+        color: #000;
+    }
+    .main {
+        display: none;
+    }
+}
