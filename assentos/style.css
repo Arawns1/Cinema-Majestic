@@ -515,8 +515,20 @@ header #login img {
 }
 
 .btn-primary {
-    background-color: #B5121B;
-    border-color: #6f0b11;
+    --bs-btn-color: #fff;
+    --bs-btn-bg: #B5121B;
+    --bs-btn-border-color: #B5121B;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #B5121B;
+    --bs-btn-hover-border-color: #6f0b11;
+    --bs-btn-focus-shadow-rgb: 49, 132, 253;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #6f0b11;
+    --bs-btn-active-border-color: #6f0b11;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #fff;
+    --bs-btn-disabled-bg: #B5121B;
+    --bs-btn-disabled-border-color: #B5121B;
 }
 
 .btn-primary:hover {
