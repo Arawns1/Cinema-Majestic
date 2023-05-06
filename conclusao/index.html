@@ -10,6 +10,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
+    <script src="./script.js" defer></script>
     <title></title>
 </head>
 
@@ -48,6 +49,47 @@
         <button class="botoes" id="imprimirIngresso">Imprimir ingresso</button>
         <button class="botoes" id="voltarMenu">Voltar ao menu</button>
     </main>
+
+    <div id="container"> 
+        <div id="ingresso">
+
+            <img src="../images/logoPreta.png" alt="logo cinema" id="logoIngresso">
+            <h3 id="nomeFilme">Super Mario Bros: O Filme</h3>
+            
+            <div id="infoSessao">
+
+                <div id="tipoFilme">
+                    <span id="audioFilme">Dublado</span>
+                    <span id="imagemFilme">2D</span>
+                </div>
+                <span id="dataSessao">03/05/2023 - 18:30</span>
+                <span id="localSessao">Petrópolis - RJ</span>
+            </div>
+
+            <div id="infoAssentos">
+                <h4 id="tituloAssentos">ASSENTOS</h4>
+                <span id="assentos">A5 B10 C3</span>
+            </div>
+
+            <div id="infoPedido">
+                <h4 id="tituloProdutos">PRODUTOS</h4>
+
+                <div id="produtos">
+                    <span id="pipocaPedido">x2 Pipoca</span>
+                    <span id="cocaPedido">x5 Coca-Cola</span>
+                    <span id="mentosPedido">x1 Mentos</span>
+                    <span id="trentoPedido">x1 Trento</span>
+                    <span id="aguaPedido">x1 Água</span>
+                </div>
+            </div>
+
+            <h4 id="valorTotal"> TOTAL: R$ 00.00</h4>
+
+            <img src="./qrcode.png" alt="qr code do ingresso" id="qrcode">
+        
+        </div>
+    </div>  
+    
 </body>
 
 </html>
