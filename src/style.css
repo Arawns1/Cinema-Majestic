@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap%27');
+
 * {
   font-family: 'Roboto', sans-serif;
   color: white;
@@ -19,6 +20,7 @@ body {
   background-color: #000000;
   justify-content: space-between;
 }
+
 #logo {
   margin-left: 20px;
   width: 230px;
@@ -30,23 +32,15 @@ body {
   height: 100%;
 }
 
-
-#etapas {
-  justify-content: space-between;
-  padding: 1% 1%;
-  display: flex;
-  flex-direction: row;
-
-}
-
 #corpo {
   background-color: rgb(0, 150, 7);
 
 }
-.containerAllan{
+
+.containerAllan {
   display: flex;
-  flex-wrap: wrap; 
-  justify-content: center; 
+  flex-wrap: wrap;
+  justify-content: center;
 
 }
 
@@ -73,21 +67,23 @@ body {
   width: 55%;
   height: 55%;
 }
+
 /*----------------------------------------------------------*/
 
-.containProdutosLateral{
-  
+.containProdutosLateral {
+
   width: 70vw;
   margin: auto;
   padding-bottom: 50px;
   display: flex;
   flex-direction: row;
   gap: 150px;
-  
+
 }
+
 /* -----------------------------------------------------------*/
 
-main{
+main {
   display: flex;
   flex-direction: column;
   background-color: #1d1d1f;
@@ -96,11 +92,10 @@ main{
 .lateralAllan {
   display: flex;
   flex-direction: column;
-  
 }
 
 .resumoAllan {
- 
+
   padding-bottom: 20px;
   width: 100%;
   border: 1px solid black;
@@ -108,49 +103,7 @@ main{
   background-color: #333;
 
 }
-.resumoFilme {
-  display: flex;
-  height: 150px;
-  gap: 30px;
-  justify-content: space-evenly;
-}
-.resumoCompra, #totalValor, .resumoFilme {
-  padding: 10px;
-}
-.resumoCompra {
-  margin-top: 30px;
-  display: flex;
-  flex-direction: column;
-  font-size: 15px;
-}
-.imagemFilme {
-  height: 100%;
-}
-.infoFilme {
-  display: flex;
-  flex-direction: column;
-  margin-top: 10px;
-  gap: 10px;
-  justify-content: space-evenly;
-}
-.tipoFilme {
-  display: flex;
-  gap: 20px;
-}
-.aquisicoes {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  margin-top: 15px;
-}
-#totalValor {
-  margin-top: 40px;
-}
-.telaFilme, .audioFilme {
-  background-color: #b5121b;
-  padding: 5px;
-  color: #efefef;
-}
+
 .avancarProdutos {
   height: 50px;
   background-color: #b5121b;
@@ -158,63 +111,22 @@ main{
   color: #fff;
   cursor: pointer;
 }
-.tituloEscolha::after {
-  content: "";
-  height: 1px;
-  width: 100%;
-  margin-top: 10px;
-  display: block;
-  background-color: #2a2a2a;
-}
-.tituloResumo::after {
-  content: "";
-  height: 1px;
-  width: 100%;
-  margin-top: 3px;
-  display: block;
-  background-color: #2a2a2a;
-}
-
 /*-------------------------------------------------------------------*/
 
 #pr {
-  
-    padding: 3% 5%;
+
+  padding: 3% 5%;
 
 }
-.prhidden{
-display: none;
+
+.prhidden {
+  display: none;
 }
 
-#iconesA {
-
-  background-color: #000000;
-  border: none;
-  cursor: pointer;
- padding: 10px  50px;
-
-}
- 
-#sEtapas{
-  color: #000000;
-}
-span{
+span {
   color: #ffffff;
 }
 
-
-.icones {
-  filter: invert(100);
-   border-inline: 1px solid #CCC; 
-}
-
-.iconesSelecionado{
-  
-  border-inline: 1px solid #CCC; 
-  filter: invert(100);
-  box-shadow: 2px 2px 4px #00e1ff
-  
-}
 input[type="number"] {
   background-color: #333333;
   width: 100%;
@@ -224,226 +136,128 @@ input[type="number"] {
 
 }
 
-.ExtratoPipocahidden{
+.ExtratoPipocahidden {
   display: none;
 }
-.ExtratoCocahidden{
+
+.ExtratoCocahidden {
   display: none;
 }
-.ExtratoMentoshidden{
+
+.ExtratoMentoshidden {
   display: none;
 }
-.ExtratoTrentohidden{
+
+.ExtratoTrentohidden {
   display: none;
 }
-.ExtratoAguahidden{
+
+.ExtratoAguahidden {
   display: none;
 }
-.ExtratoPChocolatehidden{
+
+.ExtratoPChocolatehidden {
   display: none;
 }
-.ExtratoPCaramelohidden{
+
+.ExtratoPCaramelohidden {
   display: none;
 }
-.ExtratoPOreohidden{
+
+.ExtratoPOreohidden {
   display: none;
 }
-#produtos{
+
+#produtos {
   display: flex;
   max-width: 100%;
   flex-wrap: wrap;
   width: 100%;
   justify-content: center;
 }
-#containProdutos{
+
+#containProdutos {
   display: flex;
   width: 100%;
   flex-direction: column;
   align-items: center;
-  
+
 }
-
-
 
 @media (min-width: 320px) {
   .containProdutosLateral {
-      gap: 0;
-      align-items: center;
-      flex-direction: column;
-      align-content: center;
-      justify-content: center;
+    gap: 0;
+    align-items: center;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
   }
-  .compra {
-      width: 100%;
-  }
-  .iconeOpcoes {
-      width: 30px;
-  }
+
   .resumoAllan {
-      width: 100%;
-      font-size: 14px;
-      padding: 15px;
+    width: 100%;
+    font-size: 14px;
+    padding: 15px;
   }
-  .resumoCompra, #totalValor, .resumoFilme {
-      padding: 10px;
-  }
-  .resumoFilme{
-      gap: 10px;
-  }
-  .compraOpcoes {
-      margin-top: 20px;
-      gap: 10px;
-      font-family: 11px
-  }
-  .sala {
-      margin-top: 0;
-      scale: 85%;
-  }
-  .tituloEscolha {
-      margin-top: 40px;
-  }
-  .tela, .legenda {
-      margin-top: 20px;
-  }
-  .legendaOpcoes {
-      font-size: 12px;
-      display: flex;
-      gap: 10px;
-  }
-  .legDisp, .legOcup, .legSel {
-      width: 1px;
-      height: 1px;
-  }
-  .assento {
-      color: #fff;
-      font-size: 12px;
-  }
-  .aquisicoes {
-      font-size: 14px;
-  }
+
   .avancarProdutos {
-      margin-top: 20px;
-      width: 100%;
-  }
-  .assentoEscolhido {
-      color: #000;
+    margin-top: 20px;
+    width: 100%;
   }
 
   .lateralAllan {
-    width: 300px;  
-     
-}
+    width: 300px;
+
+  }
 }
 
 @media (min-width: 768px) {
   .containProdutosLateral {
-      width: 80vw;
-      display: flex;
-      align-items: center;
+    width: 80vw;
+    display: flex;
+    align-items: center;
 
-      gap: 0;
-      flex-direction: column;
-      align-content: center;
-      justify-content: center;
+    gap: 0;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
   }
-  .corredor {
-      display: flex;
-  }
-  .compraOpcoes {
-      justify-content: space-evenly;
-      gap: 0;
-      width: 100%;
-  }
-  .tituloEscolha {
-      margin-top: 50px;
-  }
-  .sala {
-      width: 340px;
-      scale: 100%;
-      margin-top: 20px;
-  }
+
   .resumoAllan {
     width: 100%;
     font-size: 14px;
 
-}
-  .legenda {
-      margin-top: 20px;
-      width: 70%;
   }
-  .resumoFilme, .resumoCompra, #totalValor {
-      padding: 15px;
-  }
-  .avancarProdutos {
-      width: 100%;
-  }
-  .assento {
-      color: #fff;
-  }
-  .assentoEscolhido {
-      color: #000;
-  }
-  .tela {
-      margin-top: 50px;
-  }
-  .iconeOpcoes {
-      width: 35px;
-  }
-  
-  .lateralAllan {
-    width: 300px;  
-}
 
-.avancarProdutos {
-  border-radius: 0;
-}
+  .avancarProdutos {
+    width: 100%;
+  }
+
+  .lateralAllan {
+    width: 300px;
+  }
+
+  .avancarProdutos {
+    border-radius: 0;
+  }
 
 }
 
 @media (min-width: 1200px) {
   .containProdutosLateral {
-      display: flex;
-      width: 70vw;
-      flex-direction: row;
-      gap: 50px;
-      align-items: flex-start;
+    display: flex;
+    width: 70vw;
+    flex-direction: row;
+    gap: 50px;
+    align-items: flex-start;
   }
-  .assento {
-      color: #b5121b;
-  }
-  .compra {
-      width: 50%;
-  }
-  .sala {
-      width: 340px;
-  }
-  .corredor {
-      display: flex;
-  }
-  .resumo {
-      width: 100%;
-  }
-  .compraOpcoes {
-      width: 100%;
-      gap: 0;
-      justify-content: space-between;
-      font-size: 15px;
-  }
-  .tituloEscolha {
-      margin-top: 50px;
-  }
+
   .avancarProdutos {
-      width: 100%;
+    width: 100%;
   }
-  .infoFilme {
-      font-size: 14px;
-  }
+
   .lateralAllan {
-      width: 30%;
+    width: 30%;
     margin-top: 65px;
-     
-  }
-  .assentoEscolhido {
-      color: #000;
+
   }
 }
