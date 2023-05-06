@@ -40,22 +40,6 @@ ul {
     padding: 0 !important;
 }
 
-header nav li {
-    display: flex;
-    align-items: center;
-    color: white;
-    list-style: none;
-    margin: 5px;
-    font-weight: 700;
-    font-size: 18px;
-}
-
-header #login img {
-    width: 40px;
-    height: 40px;
-    object-fit: cover;
-}
-
 #login {
     min-width: 150px;
     align-items: center;
@@ -75,7 +59,7 @@ header #login img {
 
 .logoCinema {
     width: 120px;
-}
+} 
 
 #logo {
     margin-left: 20px;
@@ -256,38 +240,6 @@ header #login img {
 body {
     font-family: 'Roboto', sans-serif;
     background-color: #1D1D1F;
-}
-
-.header {
-
-    display: flex;
-    justify-content: space-between;
-    background-color: black;
-    padding: 20px;
-}
-
-.logo {
-    width: 150px;
-    background-color: transparent;
-}
-
-.menu {
-    display: flex;
-    align-items: center;
-}
-
-.menu-item {
-    color: #B5121B;
-    margin-left: 10px;
-}
-
-.menu-item:hover {
-    color: #6f0b11;
-}
-
-.menu-item i {
-    color: #FFFFFF;
-    margin-right: 10px;
 }
 
 .main {
