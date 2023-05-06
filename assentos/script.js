@@ -1,7 +1,7 @@
 const linkPaginaLogin = "../login/login.html"
 const linkPaginaIngressos = "../ingressos/mario.html"
 
-/* Pegando Informações do Local Storage */
+/* Pegando Informações do Session Storage */
 
 var objFilmeEscolhido = JSON.parse(sessionStorage.getItem("filmeEscolhido"))
 /* Insere informações do filme no resumo */
