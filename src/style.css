@@ -255,3 +255,160 @@ input[type="number"] {
   align-items: center;
   
 }
+
+
+
+@media (min-width: 320px) {
+  .containProdutosLateral {
+      gap: 0;
+      flex-direction: column;
+      align-items: center;
+  }
+  .compra {
+      width: 100%;
+  }
+  .iconeOpcoes {
+      width: 30px;
+  }
+  .resumo {
+      width: 80vw;
+      font-size: 14px;
+  }
+  .resumoCompra, #totalValor, .resumoFilme {
+      padding: 10px;
+  }
+  .resumoFilme{
+      gap: 10px;
+  }
+  .compraOpcoes {
+      margin-top: 20px;
+      gap: 10px;
+      font-family: 11px
+  }
+  .sala {
+      margin-top: 0;
+      scale: 85%;
+  }
+  .tituloEscolha {
+      margin-top: 40px;
+  }
+  .tela, .legenda {
+      margin-top: 20px;
+  }
+  .legendaOpcoes {
+      font-size: 12px;
+      display: flex;
+      gap: 10px;
+  }
+  .legDisp, .legOcup, .legSel {
+      width: 1px;
+      height: 1px;
+  }
+  .assento {
+      color: #fff;
+      font-size: 12px;
+  }
+  .aquisicoes {
+      font-size: 14px;
+  }
+  .avancarAssentos {
+      margin-top: 20px;
+      width: 100%;
+  }
+  .assentoEscolhido {
+      color: #000;
+  }
+}
+
+@media (min-width: 768px) {
+  .containProdutosLateral {
+      width: 80vw;
+  }
+  .corredor {
+      display: flex;
+  }
+  .compraOpcoes {
+      justify-content: space-evenly;
+      gap: 0;
+      width: 100%;
+  }
+  .tituloEscolha {
+      margin-top: 50px;
+  }
+  .sala {
+      width: 340px;
+      scale: 100%;
+      margin-top: 20px;
+  }
+  .resumo {
+      width: 50vw;
+  }
+  .legenda {
+      margin-top: 20px;
+      width: 70%;
+  }
+  .resumoFilme, .resumoCompra, #totalValor {
+      padding: 15px;
+  }
+  .avancarAssentos {
+      width: 100%;
+  }
+  .assento {
+      color: #fff;
+  }
+  .assentoEscolhido {
+      color: #000;
+  }
+  .tela {
+      margin-top: 50px;
+  }
+  .iconeOpcoes {
+      width: 35px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .containProdutosLateral {
+      width: 70vw;
+      justify-content: center;
+      flex-direction: row;
+      gap: 100px;
+  }
+  .assento {
+      color: #b5121b;
+  }
+  .compra {
+      width: 50%;
+  }
+  .sala {
+      width: 340px;
+  }
+  .corredor {
+      display: flex;
+  }
+  .resumo {
+      width: 100%;
+  }
+  .compraOpcoes {
+      width: 100%;
+      gap: 0;
+      justify-content: space-between;
+      font-size: 15px;
+  }
+  .tituloEscolha {
+      margin-top: 50px;
+  }
+  .avancarAssentos {
+      width: 100%;
+  }
+  .infoFilme {
+      font-size: 14px;
+  }
+  .lateralAllan {
+      width: 30%;
+      margin-top: -450px;
+  }
+  .assentoEscolhido {
+      color: #000;
+  }
+}
