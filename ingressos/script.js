@@ -43,11 +43,12 @@ function addAssentos() {
 
 /*------------ SELECTS -------------------- */
 var selects = document.querySelectorAll(".selecao select")
+
 selects.forEach(select => {
     select.innerHTML += addOptions();
     select.addEventListener("change", e => {
         e.preventDefault()
-        atualizaSelect(select.value, select.id)
+        // atualizaSelect(select.value, select.id)
     })
 })
 
@@ -60,89 +61,49 @@ function addOptions() {
     return options
 }
 
-
-
 var qntdMaxIngressos = objAssentoEscolhido.length;
-var qntdEscolhida = 0
-var ultimovalor = 0; //1
-var selectidultimo = null;
-function atualizaSelect(numIngresso, selectidatual) {
-    console.log("-----------")
+var qtdInteira = 0
+var qtdMeia = 0
+var qtdHermetius = 0
+var qtdG5bank = 0
 
-    // //Diminuir
-    // if (numIngresso < ultimovalor) {
-    //     if (numIngresso == 0) {
-    //         qntdEscolhida -= ultimovalor
-    //     }
-    //     else {
-    //         qntdEscolhida -= parseInt(numIngresso)
-    //     }
-    // }
+document.querySelector("#ingresso-inteira").addEventListener("change", e => {
+    e.preventDefault();
+    qtdInteira = e.target.value
+})
+document.querySelector("#ingresso-meia").addEventListener("change", e => {
+    e.preventDefault();
+    qtdMeia = e.target.value
+})
+document.querySelector("#ingresso-inteiro-hermetius").addEventListener("change", e => {
+    e.preventDefault();
+    qtdHermetius = e.target.value
+})
+document.querySelector("#ingresso-inteiro-g5").addEventListener("change", e => {
+    e.preventDefault();
+    qtdG5bank = e.target.value
 
-    if (numIngresso == 0 && ultimovalor == 0) {
-        qntdEscolhida = 0
-    }
-
-    if (selectidultimo != selectidatual) {
-        if (numIngresso < ultimovalor) {
-            if (numIngresso == 0) {
-                qntdEscolhida -= ultimovalor
-            }
-            else {
-                qntdEscolhida -= parseInt(numIngresso)
-            }
-        }
-        else {
-            if (numIngresso == qntdMaxIngressos) {
-                qntdEscolhida = numIngresso
-            }
-            else {
-                qntdEscolhida += parseInt(numIngresso)
-            }
-        }
-    }
-    else {
-        if (numIngresso < ultimovalor) {
-            if (numIngresso == 0) {
-                qntdEscolhida -= ultimovalor
-            }
-            else {
-                if (ultimovalor == 0) {
-                    qntdEscolhida += numIngresso
-                }
-                else {
-                    qntdEscolhida -= parseInt(numIngresso)
-                }
-            }
-        }
-        else {
-            if (numIngresso == qntdMaxIngressos) {
-                qntdEscolhida = numIngresso
-            }
-            else {
-                qntdEscolhida += parseInt(numIngresso)
-            }
-
-        }
-    }
-    selectidultimo = selectidatual;
-    console.log("qntdescolhida: " + qntdEscolhida)
-    console.log("nume ingressos disponiveis: " + (qntdMaxIngressos - qntdEscolhida))
-    console.log("valor atual: " + numIngresso)
-    console.log("ultimo valor:" + ultimovalor)
-    ultimovalor = numIngresso
-
-
-}
-
-
-
-
-/*------------ FIM SELECTS -------------------- */
-
+})
 
 var button = document.querySelector(".avancarAssentos").addEventListener("click", e => {
     e.preventDefault()
+    var total = parseInt(qtdInteira) + parseInt(qtdMeia) + parseInt(qtdHermetius) + parseInt(qtdG5bank)
+
+    let inteira = ["inteira", qtdInteira, 36.0]
+    let meia = ["meia", qtdMeia, 18.0]
+    let hermetius = ["hermetius", qtdHermetius, 24.0]
+    let g5 = ["g5", qtdG5bank, 24.0]
+
+    var ingressos = [inteira, meia, hermetius, g5, total]
+
+    if (total > qntdMaxIngressos) {
+        alert("Quantidade de assentos maior que o escolhido!")
+    }
+    else {
+        let ingressosFiltered = ingressos.filter(e => e[1])
+        sessionStorage.setItem("Ingressos", JSON.stringify(ingressosFiltered))
+    }
+
     if (sessionStorage.getItem("user") !== null) {
         var nomeFilme = JSON.parse(sessionStorage.getItem("assentos"));
 
@@ -156,11 +117,5 @@ var button = document.querySelector(".avancarAssentos").addEventListener("click"
         if (nomeFilme[0] == "Cavaleiros do Zodíaco - Saint Seiya: O Começo") {
             window.location.href = "../src/snacksCavaleirosDoZodiaco.html"
         }
-
     }
 })
-
-
-
-
-
