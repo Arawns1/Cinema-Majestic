@@ -133,7 +133,6 @@ window.addEventListener('load', () => {
         //Verifica de Termina com 5
         if ((movie.rating * 10) % 5 == 0 && (movie.rating * 10) % 2 != 0) {
             for (let i = 1; i <= movie.rating; i++) {
-                console.log(i + " - " + movie.rating)
                 stars += `<li><img src="assets/black-star-silhouette.png" alt="estrela_rating"></li>`
             }
             stars += `<li><img src="assets/black-star-silhouette.png" style="clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%)" alt="estrela_rating"></li>`

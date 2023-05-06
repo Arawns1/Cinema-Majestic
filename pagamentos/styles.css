@@ -1,18 +1,30 @@
 /**** GERAL ****/
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap');
 
+:root {
+    --btn-and-links: #b5121b;
+    --red-shadows: #6f0b11;
+    --title: #ffffff;
+    --subtitles: #d9d9d9af;
+    --light-bg: #333333;
+    --dark-bg: #000000;
+}
+
 * {
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    outline: none;
+    border: nome;
     text-decoration: none;
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
     background-color: #1d1d1f;
     color: #fff;
 }
-
 
 /**** HEADER ****/
 header nav {
@@ -78,17 +90,14 @@ header #login img {
     padding-left: 20px;
 }
 
-
 #spanLogado {
     display: flex;
     margin: 0;
     justify-content: center;
     position: relative;
-
 }
 
 #userIcon #userBtn {
-
     top: 10%;
     color: white;
     background-color: #B5121B;
@@ -102,37 +111,28 @@ header #login img {
     margin: 0;
     align-items: center;
     justify-content: center;
-
 }
 
 #userIcon:hover #userBtn {
-
     width: 150px;
     border-radius: 0;
     transition: 0.5s;
-
 }
 
 #userIcon:hover .userDropDown {
-
     height: 96px;
     transition: 0.5s;
     transition-delay: 0.5s;
-
 }
 
 .userDropDown a:hover {
-
     background-color: #B5121B;
     transition: 0.3s;
-
 }
 
 #userIcon {
-
     margin: 0px;
     display: inline-block;
-
 }
 
 .userDropDown {
@@ -150,7 +150,6 @@ header #login img {
     transition: 0.3s;
     align-content: center;
     justify-content: center;
-
 }
 
 .novaSenha {
@@ -183,7 +182,6 @@ header #login img {
     transition: background 0.2s, border-color 0.2s;
     text-align: center;
     margin-top: 5px;
-
 }
 
 .userDropDown a {
@@ -211,10 +209,7 @@ header #login img {
     margin-top: 0px;
     margin-bottom: 0px;
     font-size: 15px;
-
 }
-
-
 
 #userIcon:hover .novaSenhaDrop {
 
@@ -381,6 +376,12 @@ header #login img {
     border: none;
     color: #fff;
     cursor: pointer;
+    transition: 1s;
+}
+
+.avancarAssentos:hover {
+    background-color: var(--red-shadows);
+    transition: 1s;
 }
 
 .tituloEscolha::after {
@@ -401,10 +402,71 @@ header #login img {
     background-color: #2a2a2a;
 }
 
+
+
+
+/**** CARD DE PAGAMENTO ****/
+.containerPagamento {
+    min-width: 300px;
+    width: 40vw;
+}
+
+form {
+    background: #333;
+    border-radius: 5px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, .1);
+    padding: 15px;
+}
+
+.inputBox {
+    margin-top: 20px;
+
+}
+
+.inputBox label {
+    display: block;
+    color: #fff;
+    margin: 5px 0px;
+}
+
+.inputBox input,
+.inputBox select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #555;
+    outline: none;
+    background: #444444;
+    color: #fff;
+}
+
+.inputBox select {
+    cursor: pointer;
+    color: #999;
+}
+
+.inputBox input:focus,
+.inputBox select:focus {
+    border: 1px solid #555;
+    color: #fff;
+}
+
+.inputBox input::placeholder {
+    text-transform: none;
+    letter-spacing: 0.5px;
+    color: #999;
+}
+
+.flexbox {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap;
+}
+
+/**** MEDIA QUERIES ****/
 @media (min-width: 320px) {
-    .form {
-        width: 1000px;
-    }
+
 
     #container {
         gap: 0;
@@ -421,7 +483,7 @@ header #login img {
     }
 
     .resumo {
-        width: 48vw;
+        width: 61vw;
     }
 
     .resumoCompra,
@@ -599,70 +661,4 @@ header #login img {
     .assentoEscolhido {
         color: #000;
     }
-}
-
-* {
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    outline: none;
-    border: nome;
-    text-decoration: none;
-    text-transform: uppercase;
-}
-
-
-.containerPagamento {
-    min-width: 300px;
-    width: 40vw;
-}
-
-form {
-    background: #fff;
-    border-radius: 5px;
-    box-shadow: 0 10px 15px rgba(0, 0, 0, .1);
-    padding: 15px;
-}
-
-.inputBox {
-    margin-top: 20px;
-}
-
-.inputBox label {
-    display: block;
-    color: #777;
-    margin: 5px 0px;
-}
-
-.inputBox input,
-.inputBox select {
-    width: 100%;
-    padding: 10px;
-    border-radius: 10px;
-    border: 1px solid #dddddd;
-    outline: none;
-    background: #eeeeee;
-}
-
-.inputBox select {
-    cursor: pointer;
-}
-
-.inputBox input:focus,
-.inputBox select:focus {
-    border: 1px solid #777;
-}
-
-.inputBox input::placeholder {
-    text-transform: none;
-    letter-spacing: 0.5px;
-}
-
-
-.flexbox {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    flex-wrap: wrap;
 }
