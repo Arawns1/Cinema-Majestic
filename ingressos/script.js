@@ -2,7 +2,7 @@ const valorMeia = 18.0
 const valorInteira = 36.0
 const valorHermetius = 24.0
 const valorG5 = 24.0
-const linkPaginaProdutos = "../src/snacksMario.html"
+const linkPaginaProdutos = "../produtos/produto.html"
 
 
 /* Pegando Informações do Session Storage */
