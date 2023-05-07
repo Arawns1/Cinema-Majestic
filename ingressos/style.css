@@ -321,8 +321,6 @@ header #login img {
 .valores {
     display: flex;
     flex-direction: column;
-    padding-right: 10px;
-
 }
 
 .clientesEspeciais {
@@ -332,6 +330,7 @@ header #login img {
     gap: 10px;
     border: 2px solid black;
     border-radius: 8px;
+    min-width: 200px;
 }
 
 .clientesEspeciais img {
@@ -344,9 +343,7 @@ header #login img {
 }
 
 
-#hermetius .valores {
-    padding-right: 10px;
-}
+#hermetius .valores {}
 
 .compraOpcoes {
     display: flex;
@@ -357,7 +354,6 @@ header #login img {
 }
 
 .iconeOpcoes {
-    filter: invert(100);
     width: 35px;
 }
 
@@ -599,6 +595,7 @@ h4 {
     .resumo {
         font-size: 14px;
         width: 55vw;
+        min-width: 350px
     }
 
     .resumoCompra,
@@ -624,16 +621,13 @@ h4 {
         flex-direction: column;
         gap: 20px;
         margin: 20px;
+        min-width: 350px;
     }
 
     .tipo-ingresso select {
         height: 4vh;
         width: 9vh;
         margin-left: 20px;
-    }
-
-    .clientesEspeciais {
-        min-width: 200px;
     }
 
     .clientesEspeciais img {
