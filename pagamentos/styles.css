@@ -362,7 +362,7 @@ header #login img {
 }
 
 #totalValor {
-    margin-top: 40px;
+    margin-top: 0px;
 }
 
 .telaFilme,
@@ -558,4 +558,22 @@ form {
     .infoFilme {
         font-size: 14px;
     }
+}
+
+.tipoIngresso h3{
+
+    padding-bottom: 5px;
+
+}
+.tipoProduto h3{
+
+    padding-bottom: 5px;
+    
+}
+
+.tipoIngresso {
+    background: #444444;
+}
+.tipoProduto {
+    background: #444444;
 }
