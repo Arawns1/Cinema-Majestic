@@ -130,8 +130,6 @@ main {
   border-color: var(--red-shadows);
 }
 
-.ingressos {}
-
 .ingressos span {
   font-size: 14px;
 }
