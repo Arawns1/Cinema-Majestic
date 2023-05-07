@@ -6,7 +6,10 @@ var objFilmeEscolhido = JSON.parse(sessionStorage.getItem("filmeEscolhido"))
 var objAssentoEscolhido = JSON.parse(sessionStorage.getItem("assentos"))
 var objIngressos = JSON.parse(sessionStorage.getItem("Ingressos"))
 var objProdutos = JSON.parse(sessionStorage.getItem("produtos"))
+var usuarioLogadoSession = JSON.parse(sessionStorage.getItem("user"))
+var usuarioLogadoStorage = JSON.parse(localStorage.getItem(usuarioLogadoSession.email))
 /* Insere informações do filme no resumo */
+
 console.log("ss")
 document.querySelector(".resumo").innerHTML = `
 

@@ -135,3 +135,7 @@ document.querySelector("#linkMeusIngressos").addEventListener('click', e => {
   window.location.href = "../myTickets/index.html"
 });
 
+document.querySelector("#linkMeusIngressosAnchor").addEventListener('click', e => {
+  window.location.href = "../myTickets/index.html"
+});
+

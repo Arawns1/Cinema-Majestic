@@ -182,7 +182,8 @@ window.addEventListener('load', () => {
 document.querySelector("#linkSair").addEventListener("click", e => {
     e.preventDefault();
     sessionStorage.clear();
-    window.location.reload();
+    window.location.href = "../home/index.html";
+
 })
 /* ------ ADICIONANDO FILMES --------------- */
 function setFormMessage(formElement, type, message) {

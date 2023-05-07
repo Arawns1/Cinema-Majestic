@@ -304,6 +304,12 @@ a:active {
   .containerPosters {
     justify-content: center;
   }
+}
+
+@media (max-width: 600px) {
+  .containerPosters {
+    justify-content: center;
+  }
 
   .carousel-inner {
     height: 40vh;
