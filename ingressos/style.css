@@ -296,6 +296,7 @@ header #login img {
 .tipo-ingresso:hover {
     cursor: pointer;
     border: 2px solid var(--btn-and-links);
+    background-color: #3a3a3a;
     transition: 0.6s;
 }
 
