@@ -244,11 +244,11 @@ const extrato = () => {
 
 document.querySelector(".avancarProdutos").addEventListener("click", e => {
   e.preventDefault();
-  produtosStore.push(["Pipoca", 5, quantidadePipoca]);
-  produtosStore.push(["coca-cola", 3, quantidadeCoca]);
-  produtosStore.push(["mentos", 1, quantidadeMentos]);
-  produtosStore.push(["trento", 2, quantidadeTrento]);
-  produtosStore.push(["Agua", 1.50, quantidadeAgua]);
+  produtosStore.push(["Balde de Pipoca", 5, quantidadePipoca]);
+  produtosStore.push(["Coca-Cola 250ml", 3, quantidadeCoca]);
+  produtosStore.push(["Mentos", 1, quantidadeMentos]);
+  produtosStore.push(["Trento", 2, quantidadeTrento]);
+  produtosStore.push(["Água", 1.50, quantidadeAgua]);
   var produtoFiltrado = produtosStore.filter(e => e[2])
 
   if (sessionStorage.getItem("user") !== null) {

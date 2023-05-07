@@ -271,7 +271,6 @@ header #login img {
 }
 
 .iconeOpcoes {
-    filter: invert(100);
     width: 35px;
 }
 
@@ -631,20 +630,22 @@ form {
     }
 }
 
-.tipoIngresso h3{
+.tipoIngresso h3 {
 
     padding-bottom: 5px;
 
 }
-.tipoProduto h3{
+
+.tipoProduto h3 {
 
     padding-bottom: 5px;
-    
+
 }
 
 .tipoIngresso {
     background: #444444;
 }
+
 .tipoProduto {
     background: #444444;
 }
