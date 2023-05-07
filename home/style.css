@@ -72,6 +72,7 @@ header #login {
 header #login img {
   width: 40px;
   height: 40px;
+  margin-left: 100px;
   object-fit: cover;
 }
 
@@ -296,11 +297,16 @@ a:active {
   }
 }
 
-@media (max-width: 600px) {
-  #login span {
-    display: none;
+@media (max-width: 800px) {
+  .containerPosters {
+    justify-content: center;
   }
+}
 
+@media (max-width: 600px) {
+  .containerPosters {
+    justify-content: center;
+  }
   .carousel-inner {
     height: 40vh;
     width: 100%;
@@ -354,6 +360,15 @@ a:active {
   }
 }
 
+@media (max-width: 500px) {
+  .containerPosters {
+    justify-content: center;
+  }
+  .poster {
+    max-width: 100%;
+  }
+}
+
 #login {
   min-width: 150px;
   align-items: center;
@@ -392,7 +407,6 @@ a:active {
   height: 50px;
   border: none;
   border-radius: 50px;
-  margin: 0;
   align-items: center;
   justify-content: center;
 
