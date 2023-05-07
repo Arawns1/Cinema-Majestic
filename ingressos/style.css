@@ -23,6 +23,8 @@ body {
 }
 
 
+
+
 /**** HEADER ****/
 header nav {
     background: #000000;
@@ -287,7 +289,7 @@ header #login img {
     align-items: center;
     border: 1px solid var(--light-bg);
     border-radius: 6px;
-    padding: 30px;
+    padding: 20px 20px;
     transition: 0.6s;
 }
 
@@ -319,7 +321,8 @@ header #login img {
 .valores {
     display: flex;
     flex-direction: column;
-    padding-right: 15px;
+    padding-right: 10px;
+
 }
 
 .clientesEspeciais {
@@ -334,6 +337,15 @@ header #login img {
 .clientesEspeciais img {
     width: 48px;
     height: 48px;
+}
+
+#hermetius {
+    border-color: #1b356a;
+}
+
+
+#hermetius .valores {
+    padding-right: 10px;
 }
 
 .compraOpcoes {
@@ -386,7 +398,6 @@ header #login img {
 }
 
 .resumo {
-    padding-bottom: 20px;
     width: 80vw;
     border: 1px solid black;
     background-color: #333;
@@ -406,7 +417,7 @@ header #login img {
 }
 
 .resumoCompra {
-    margin-top: 30px;
+    margin-top: 0px;
     display: flex;
     flex-direction: column;
     font-size: 15px;
@@ -436,9 +447,100 @@ header #login img {
     margin-top: 15px;
 }
 
-#totalValor {
-    margin-top: 40px;
+#assentosEscolhidos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
 }
+
+#assentos {
+    display: flex;
+    gap: 5px;
+
+}
+
+#assentos span {
+    background-color: var(--red-shadows);
+    padding: 3px;
+    border-radius: 3px;
+    border-color: var(--red-shadows);
+}
+
+.resumoCompra::after {
+    content: "";
+    height: 1px;
+    width: 100%;
+    margin-top: 20px;
+    display: block;
+    background-color: #2a2a2a;
+}
+
+#totalValor {
+    font-size: 18px;
+    font-weight: 700;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding-top: 0 !important;
+}
+
+
+/* ---- BOOTSTAP RESET E MODAL ---- */
+h2,
+h3,
+h4 {
+    font-style: normal !important;
+    font-size: 1.1em !important;
+    font-weight: 700;
+}
+
+.modal-header {
+    gap: 20px;
+    align-items: center;
+}
+
+.modal-backdrop {
+    background-color: #000;
+}
+
+.modal-content {
+    background-color: #333 !important;
+    color: #fff;
+}
+
+.btn-primary {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: #B5121B;
+    --bs-btn-border-color: #B5121B;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #B5121B;
+    --bs-btn-hover-border-color: #6f0b11;
+    --bs-btn-focus-shadow-rgb: 49, 132, 253;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #6f0b11;
+    --bs-btn-active-border-color: #6f0b11;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #fff;
+    --bs-btn-disabled-bg: #B5121B;
+    --bs-btn-disabled-border-color: #B5121B;
+}
+
+.btn-primary:hover {
+    background-color: #6f0b11;
+    border-color: #6f0b11;
+}
+
+.btn-secondary {
+    background-color: #777;
+}
+
+.btn-close {
+    filter: invert(100) !important;
+}
+
+/* ---- FIM BOOTSTAP RESET E MODAL ---- */
 
 .telaFilme,
 .audioFilme {
@@ -480,35 +582,42 @@ header #login img {
 }
 
 @media (min-width: 320px) {
-
     #container {
         gap: 0;
         flex-direction: column;
         align-items: center;
     }
+
     .compra {
         width: 100%;
     }
+
     .iconeOpcoes {
         width: 30px;
     }
+
     .resumo {
         font-size: 14px;
         width: 55vw;
     }
+
     .resumoCompra,
     #totalValor,
     .resumoFilme {
         padding: 10px;
     }
+
     .resumoFilme {
         gap: 10px;
     }
+
+
     .compraOpcoes {
         margin-top: 20px;
         gap: 10px;
         font-family: 11px
     }
+
     .selecao {
         width: 80%;
         display: flex;
@@ -516,14 +625,26 @@ header #login img {
         gap: 20px;
         margin: 20px;
     }
+
     .tipo-ingresso select {
         height: 4vh;
         width: 9vh;
         margin-left: 20px;
     }
+
+    .clientesEspeciais {
+        min-width: 200px;
+    }
+
+    .clientesEspeciais img {
+        width: 48px;
+        height: 48px;
+    }
+
     .tituloEscolha {
         margin-top: 40px;
     }
+
     .legenda {
         margin-top: 20px;
     }
@@ -540,9 +661,11 @@ header #login img {
         width: 1px;
         height: 1px;
     }
+
     .aquisicoes {
         font-size: 14px;
     }
+
     .avancarAssentos {
         margin-top: 20px;
         width: 100%;
@@ -550,13 +673,10 @@ header #login img {
 }
 
 @media (min-width: 768px) {
-
-
     #container {
         gap: 0;
         flex-direction: column;
         align-items: center;
-
     }
 
     .corredor {
@@ -602,6 +722,7 @@ header #login img {
     .assento {
         color: #fff;
     }
+
     .tela {
         margin-top: 50px;
     }
@@ -639,6 +760,11 @@ header #login img {
         gap: 0;
         justify-content: space-between;
         font-size: 15px;
+    }
+
+    .clientesEspeciais img {
+        width: 48px;
+        height: 48px;
     }
 
     .tituloEscolha {
