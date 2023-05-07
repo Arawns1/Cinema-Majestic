@@ -387,15 +387,15 @@ header #login img {
     border-color: var(--red-shadows);
 }
 
-.ingressos {
+.ingressos span {
+    font-size: 14px;
+}
+
+.ingressoRow {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
-}
-
-.ingressos span {
-    font-size: 14px;
+    margin: 5px 0px;
 }
 
 .telaFilme,

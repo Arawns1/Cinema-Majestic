@@ -56,14 +56,16 @@ function addAssentos() {
 
 var valorTotalFinal = 0;
 function mostrarIngressos() {
+    var valorTotal = 0;
     let ingressos = ``
-    let subTotal = 0
     objIngressos.forEach(ingresso => {
-        ingressos += `<span> ${ingresso[1] + "x " + ingresso[0].toUpperCase()}</span>`
-        subTotal += parseInt(ingresso[1]) * parseInt(ingresso[2]);
-        ingressos += `<span> ${"R$ " + subTotal.toFixed(2)} </span> `
+        ingressos += `<div class="ingressoRow">
+      <span> ${ingresso[1] + "x " + ingresso[0].toUpperCase()}</span>
+      <span> ${"R$ " + (ingresso[2]).toFixed(2)} </span>
+      </div>`
+        valorTotal += parseInt(ingresso[1]) * parseInt(ingresso[2]);
     })
-    valorTotalFinal = subTotal
+    valorTotalFinal = valorTotal
     return ingressos
 }
 
