@@ -1,4 +1,4 @@
-
+const linkPaginaPagamento = "../pagamentos/index.html"
 /* Pegando Informações do Session Storage */
 var objFilmeEscolhido = JSON.parse(sessionStorage.getItem("filmeEscolhido"))
 var objAssentoEscolhido = JSON.parse(sessionStorage.getItem("assentos"))
@@ -259,7 +259,7 @@ document.querySelector(".avancarProdutos").addEventListener("click", e => {
 
   if (sessionStorage.getItem("user") !== null) {
     sessionStorage.setItem("produtos", JSON.stringify(produtoFiltrado))
-    window.location.href = "../pagamentos/index.html"
+    window.location.href = linkPaginaPagamento
   }
 
 });
