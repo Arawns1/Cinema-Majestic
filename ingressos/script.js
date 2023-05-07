@@ -1,6 +1,11 @@
+const valorMeia = 18.0
+const valorInteira = 36.0
+const valorHermetius = 24.0
+const valorG5 = 24.0
+const linkPaginaProdutos = "../src/ingresso.html"
+
 
 /* Pegando Informações do Session Storage */
-
 var objFilmeEscolhido = JSON.parse(sessionStorage.getItem("filmeEscolhido"))
 var objAssentoEscolhido = JSON.parse(sessionStorage.getItem("assentos"))
 /* Insere informações do filme no resumo */
@@ -24,12 +29,15 @@ document.querySelector(".resumo").innerHTML = `
     <div class="resumoCompra">
     <h3 class="tituloResumo">Resumo</h3>
         <div class="aquisicoes">
-        <p>Assentos escolhidos</p>
-        ${addAssentos()}
+            <div id="assentosEscolhidos">
+            <h4>Assentos escolhidos: </h4>
+         
+                <div id="assentos">
+                ${addAssentos()}
+                </div>
+            </div>
         </div>
     </div>
-
-    <div id="totalValor">Total R$ 00.00</div>
 `
 
 function addAssentos() {
@@ -46,12 +54,7 @@ var selects = document.querySelectorAll(".selecao select")
 
 selects.forEach(select => {
     select.innerHTML += addOptions();
-    select.addEventListener("change", e => {
-        e.preventDefault()
-        // atualizaSelect(select.value, select.id)
-    })
 })
-
 
 function addOptions() {
     let options = `<option value="0"> 0</option>`
@@ -60,6 +63,7 @@ function addOptions() {
     });
     return options
 }
+
 
 var qntdMaxIngressos = objAssentoEscolhido.length;
 var qtdInteira = 0
@@ -82,40 +86,33 @@ document.querySelector("#ingresso-inteiro-hermetius").addEventListener("change",
 document.querySelector("#ingresso-inteiro-g5").addEventListener("change", e => {
     e.preventDefault();
     qtdG5bank = e.target.value
-
 })
+
 
 var button = document.querySelector(".avancarAssentos").addEventListener("click", e => {
     e.preventDefault()
-    var total = parseInt(qtdInteira) + parseInt(qtdMeia) + parseInt(qtdHermetius) + parseInt(qtdG5bank)
+    var qtdTotalIngressos = parseInt(qtdInteira) + parseInt(qtdMeia) + parseInt(qtdHermetius) + parseInt(qtdG5bank)
 
-    let inteira = ["inteira", qtdInteira, 36.0]
-    let meia = ["meia", qtdMeia, 18.0]
-    let hermetius = ["hermetius", qtdHermetius, 24.0]
-    let g5 = ["g5", qtdG5bank, 24.0]
+    let inteira = ["inteira", qtdInteira, valorInteira]
+    let meia = ["meia", qtdMeia, valorMeia, valorFinal]
+    let hermetius = ["hermetius", qtdHermetius, valorHermetius]
+    let g5 = ["g5", qtdG5bank, valorG5, valorFinal]
 
-    var ingressos = [inteira, meia, hermetius, g5, total]
+    var ingressos = [inteira, meia, hermetius, g5, qtdTotalIngressos]
 
-    if (total > qntdMaxIngressos) {
+    if (qtdTotalIngressos > qntdMaxIngressos) {
         alert("Quantidade de assentos maior que o escolhido!")
+    }
+    else if (qtdTotalIngressos < qntdMaxIngressos) {
+        alert("Quantidade de assentos menor que o escolhido!")
     }
     else {
         let ingressosFiltered = ingressos.filter(e => e[1])
+        console.log(ingressos)
+        console.log(ingressosFiltered)
         sessionStorage.setItem("Ingressos", JSON.stringify(ingressosFiltered))
     }
 
-    if (sessionStorage.getItem("user") !== null) {
-        var nomeFilme = JSON.parse(sessionStorage.getItem("assentos"));
+    window.location.href = linkPaginaProdutos
 
-        if (nomeFilme[0] == "Super Mario Bros: O Filme") {
-            window.location.href = "../src/snacksMario.html"
-        }
-        if (nomeFilme[0] == "Guardiões da Galáxia Vol. 3") {
-            window.location.href = "../src/snacksGuardioesDaGalaxia.html"
-        }
-
-        if (nomeFilme[0] == "Cavaleiros do Zodíaco - Saint Seiya: O Começo") {
-            window.location.href = "../src/snacksCavaleirosDoZodiaco.html"
-        }
-    }
 })

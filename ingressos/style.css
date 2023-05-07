@@ -396,7 +396,6 @@ header #login img {
 }
 
 .resumo {
-    padding-bottom: 20px;
     width: 80vw;
     border: 1px solid black;
     background-color: #333;
@@ -446,8 +445,43 @@ header #login img {
     margin-top: 15px;
 }
 
+#assentosEscolhidos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#assentos {
+    display: flex;
+    gap: 5px;
+
+}
+
+#assentos span {
+    background-color: var(--red-shadows);
+    padding: 3px;
+    border-radius: 3px;
+    border-color: var(--red-shadows);
+}
+
+.resumoCompra::after {
+    content: "";
+    height: 1px;
+    width: 100%;
+    margin-top: 20px;
+    display: block;
+    background-color: #2a2a2a;
+}
+
 #totalValor {
-    margin-top: 40px;
+    font-size: 18px;
+    font-weight: 700;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding-top: 0 !important;
 }
 
 .telaFilme,
