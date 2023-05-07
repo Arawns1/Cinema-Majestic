@@ -17,7 +17,7 @@ body {
   background-color: rgb(0, 150, 7);
 
 }
- 
+
 /*Container que engloba todo o Body*/
 .containerAllan {
   height: 100vh;
@@ -50,6 +50,9 @@ body {
   width: 55%;
   height: 55%;
 }
+
+/*----------------------------------------------------------*/
+
 
 /*Para Alinhar o Card em Relação aos Produtos*/
 
@@ -86,7 +89,8 @@ main {
   background-color: #333;
 
 }
-/*Butão Avançar Produtos*/
+
+/*Botão Avançar Produtos*/
 .avancarProdutos {
   height: 50px;
   background-color: #b5121b;
@@ -95,7 +99,9 @@ main {
   cursor: pointer;
 }
 
-/*Para Alinhar o Estrato-------------*/
+/*-------------------------------------------------------------------*/
+
+/*Para Alinhar o Extrato-------------*/
 
 #pr {
 
@@ -161,7 +167,8 @@ input[type="number"] {
   justify-content: center;
 }
 
-/*Para centralizat a div Produtos*/
+
+/*Para centralizar a div Produtos*/
 #containProdutos {
   display: flex;
   width: 100%;
@@ -183,6 +190,8 @@ input[type="number"] {
   .resumoAllan {
     width: 100%;
     font-size: 14px;
+
+    padding: 15px;
   }
 
   .avancarProdutos {
