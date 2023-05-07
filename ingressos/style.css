@@ -670,6 +670,17 @@ h4 {
         margin-top: 20px;
         width: 100%;
     }
+
+    #logo {
+        margin-left: 20px;
+        width: 150px;
+        height: 80px;
+    }
+
+    #logo img {
+        width: 100%;
+        height: 100%;
+    }
 }
 
 @media (min-width: 768px) {
@@ -730,6 +741,8 @@ h4 {
     .iconeOpcoes {
         width: 35px;
     }
+
+
 }
 
 @media (min-width: 1200px) {
