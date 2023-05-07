@@ -6,7 +6,7 @@ var slideMovies = [
         movieTitle: 'Guardiões da Galáxia: Volume 3',
         rating: 4.5,
         synopsis: "Agora já conhecidos como os Guardiões da Galáxia, os guerreiros viajam ao longo do cosmos e lutam para manter sua nova família unida. Enquanto isso tentam desvendar os mistérios da verdadeira paternidade de Peter Quill (Chris Pratt)",
-        trailerURL: 'https://www.youtube.com/embed/ZLKMAtut5AQ',
+        trailerURL: 'https://www.youtube.com/embed/tqot0Ws2wFs',
         posterURL: 'https://th.bing.com/th/id/OIP.iPUFfQpueQXnhlkdltQxZgHaK9?pid=ImgDet&rs=1',
     },
     {
