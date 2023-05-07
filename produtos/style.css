@@ -130,15 +130,17 @@ main {
   border-color: var(--red-shadows);
 }
 
-.ingressos {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-}
+.ingressos {}
 
 .ingressos span {
   font-size: 14px;
+}
+
+.ingressoRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 5px 0px;
 }
 
 /*Botão Avançar Produtos*/

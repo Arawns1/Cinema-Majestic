@@ -77,8 +77,10 @@ function mostrarIngressos() {
   var valorTotal = 0;
   let ingressos = ``
   objIngressos.forEach(ingresso => {
-    ingressos += `<span> ${ingresso[1] + "x " + ingresso[0].toUpperCase()}</span>`
-    ingressos += `<span> ${"R$ " + ingresso[2]} </span> `
+    ingressos += `<div class="ingressoRow">
+    <span> ${ingresso[1] + "x " + ingresso[0].toUpperCase()}</span>
+    <span> ${"R$ " + (ingresso[2]).toFixed(2)} </span>
+    </div>`
     valorTotal += parseInt(ingresso[1]) * parseInt(ingresso[2]);
   })
   valorTotalFinal = valorTotal
