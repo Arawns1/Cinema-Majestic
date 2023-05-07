@@ -5,7 +5,15 @@
     margin: 0;
     padding: 0;
     text-decoration: none;
-    box-sizing: content-box;
+}
+
+:root {
+    --btn-and-links: #b5121b;
+    --red-shadows: #6f0b11;
+    --title: #ffffff;
+    --subtitles: #d9d9d9af;
+    --light-bg: #333333;
+    --dark-bg: #000000;
 }
 
 body {
@@ -13,6 +21,8 @@ body {
     background-color: #1d1d1f;
     color: #fff;
 }
+
+
 
 
 /**** HEADER ****/
@@ -43,10 +53,6 @@ header nav li {
     font-size: 18px;
 }
 
-header nav li span {
-    margin: 20px;
-}
-
 header #login img {
     width: 40px;
     height: 40px;
@@ -68,6 +74,10 @@ header #login img {
     color: white;
     text-decoration: none;
     cursor: pointer;
+}
+
+.logoCinema {
+    width: 120px;
 }
 
 #logo {
@@ -250,7 +260,7 @@ header #login img {
 #container {
     width: 70vw;
     margin: auto;
-    margin-top: 30px;
+    margin-top: 70px;
     padding-bottom: 50px;
     display: flex;
     flex-direction: row;
@@ -258,10 +268,84 @@ header #login img {
 }
 
 .compra {
-    margin-top: 20px;
+    margin-top: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.selecao {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 20px;
+}
+
+
+.tipo-ingresso {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid var(--light-bg);
+    border-radius: 6px;
+    padding: 20px 20px;
+    transition: 0.6s;
+}
+
+.tipo-ingresso:hover {
+    cursor: pointer;
+    border: 2px solid var(--btn-and-links);
+    transition: 0.6s;
+}
+
+.tipo-ingresso select {
+    background-color: #777;
+    border-radius: 20px;
+    text-align: center;
+    color: #111;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.tipo-ingresso select:hover {
+    cursor: pointer;
+}
+
+
+.valores .tipo {
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.valores {
+    display: flex;
+    flex-direction: column;
+    padding-right: 10px;
+
+}
+
+.clientesEspeciais {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 10px;
+    border: 2px solid black;
+    border-radius: 8px;
+}
+
+.clientesEspeciais img {
+    width: 48px;
+    height: 48px;
+}
+
+#hermetius {
+    border-color: #1b356a;
+}
+
+
+#hermetius .valores {
+    padding-right: 10px;
 }
 
 .compraOpcoes {
@@ -269,98 +353,6 @@ header #login img {
     justify-content: center;
     font-size: 12px;
     gap: 18px;
-    font-weight: bold;
-}
-
-.legenda {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-}
-
-.legendaTitulo {
-    padding-top: 30px;
-    font-weight: bold;
-}
-
-.legendaTitulo::after {
-    content: "";
-    display: block;
-    height: 1px;
-    background-color: #2a2a2a;
-    margin-top: 3px;
-    width: 100%;
-}
-
-.legendaOpcoes {
-    display: flex;
-    margin-top: 20px;
-    justify-content: space-evenly;
-    font-size: 14px;
-    align-items: center;
-    width: 100%;
-    padding-bottom: 10px;
-}
-
-.assento,
-.legDisp,
-.legSel,
-.legOcup {
-    display: flex;
-    width: 5px;
-    height: 5px;
-    background-color: #b5121b;
-    align-items: center;
-    justify-content: center;
-    padding: 10px;
-    border-top-left-radius: 50%;
-    border-top-right-radius: 50%;
-    font-size: 10px;
-    color: #b5121b;
-}
-
-.legSel {
-    background-color: #a3a3a3;
-}
-
-.legOcup {
-    background-color: #6f0b11;
-}
-
-.assento:hover {
-    cursor: pointer;
-    color: white;
-}
-
-.assentoEscolhido {
-    background-color: #a3a3a3;
-}
-
-.assentos {
-    display: flex;
-    min-width: 340px;
-    max-width: 340px;
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: space-between;
-    padding: 5px;
-}
-
-.sala {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 35px;
-    margin-top: 50px;
-}
-
-.corredor {
-    display: none;
-    flex-direction: column;
-    font-size: 12px;
-    height: 370px;
-    justify-content: space-between;
     font-weight: bold;
 }
 
@@ -406,10 +398,8 @@ header #login img {
 }
 
 .resumo {
-    padding-bottom: 20px;
     width: 80vw;
     border: 1px solid black;
-    margin-top: 50px;
     background-color: #333;
 }
 
@@ -427,7 +417,7 @@ header #login img {
 }
 
 .resumoCompra {
-    margin-top: 30px;
+    margin-top: 0px;
     display: flex;
     flex-direction: column;
     font-size: 15px;
@@ -457,47 +447,53 @@ header #login img {
     margin-top: 15px;
 }
 
+#assentosEscolhidos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#assentos {
+    display: flex;
+    gap: 5px;
+
+}
+
+#assentos span {
+    background-color: var(--red-shadows);
+    padding: 3px;
+    border-radius: 3px;
+    border-color: var(--red-shadows);
+}
+
+.resumoCompra::after {
+    content: "";
+    height: 1px;
+    width: 100%;
+    margin-top: 20px;
+    display: block;
+    background-color: #2a2a2a;
+}
+
 #totalValor {
-    margin-top: 40px;
+    font-size: 18px;
+    font-weight: 700;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding-top: 0 !important;
 }
 
-.telaFilme,
-.audioFilme {
-    background-color: #b5121b;
-    padding: 5px;
-    color: #efefef;
-}
 
-.avancarAssentos {
-    height: 50px;
-    background-color: #b5121b;
-    border: none;
-    color: #fff;
-    cursor: pointer;
-}
-
-.tituloEscolha::after {
-    content: "";
-    height: 1px;
-    width: 100%;
-    margin-top: 10px;
-    display: block;
-    background-color: #2a2a2a;
-}
-
-.tituloResumo::after {
-    content: "";
-    height: 1px;
-    width: 100%;
-    margin-top: 3px;
-    display: block;
-    background-color: #2a2a2a;
-}
-
-#x-mark {
-    color: #c20f0f !important;
-    scale: 2;
-    margin-left: 10px;
+/* ---- BOOTSTAP RESET E MODAL ---- */
+h2,
+h3,
+h4 {
+    font-style: normal !important;
+    font-size: 1.1em !important;
+    font-weight: 700;
 }
 
 .modal-header {
@@ -544,6 +540,46 @@ header #login img {
     filter: invert(100) !important;
 }
 
+/* ---- FIMBOOTSTAP RESET E MODAL ---- */
+
+.telaFilme,
+.audioFilme {
+    background-color: #b5121b;
+    padding: 5px;
+    color: #efefef;
+}
+
+.avancarAssentos {
+    height: 50px;
+    background-color: #b5121b;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.8s;
+}
+
+.avancarAssentos:hover {
+    filter: brightness(0.7);
+    transition: 0.8s;
+}
+
+.tituloEscolha::after {
+    content: "";
+    height: 1px;
+    width: 100%;
+    margin-top: 10px;
+    display: block;
+    background-color: #2a2a2a;
+}
+
+.tituloResumo::after {
+    content: "";
+    height: 1px;
+    width: 100%;
+    margin-top: 3px;
+    display: block;
+    background-color: #2a2a2a;
+}
 
 @media (min-width: 320px) {
     #container {
@@ -561,8 +597,8 @@ header #login img {
     }
 
     .resumo {
-        width: 80vw;
         font-size: 14px;
+        width: 55vw;
     }
 
     .resumoCompra,
@@ -575,24 +611,40 @@ header #login img {
         gap: 10px;
     }
 
+
     .compraOpcoes {
         margin-top: 20px;
         gap: 10px;
         font-family: 11px
     }
 
-    .sala {
-        margin-top: 0;
-        scale: 85%;
+    .selecao {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        margin: 20px;
+    }
+
+    .tipo-ingresso select {
+        height: 4vh;
+        width: 9vh;
+        margin-left: 20px;
+    }
+
+    .clientesEspeciais {
+        min-width: 200px;
+    }
+
+    .clientesEspeciais img {
+        width: 48px;
+        height: 48px;
     }
 
     .tituloEscolha {
         margin-top: 40px;
-        font-size: 16px !important;
-        font-weight: 700;
     }
 
-    .tela,
     .legenda {
         margin-top: 20px;
     }
@@ -610,11 +662,6 @@ header #login img {
         height: 1px;
     }
 
-    .assento {
-        color: #fff;
-        font-size: 12px;
-    }
-
     .aquisicoes {
         font-size: 14px;
     }
@@ -623,15 +670,13 @@ header #login img {
         margin-top: 20px;
         width: 100%;
     }
-
-    .assentoEscolhido {
-        color: #000;
-    }
 }
 
 @media (min-width: 768px) {
-    .compra {
-        width: 80vw;
+    #container {
+        gap: 0;
+        flex-direction: column;
+        align-items: center;
     }
 
     .corredor {
@@ -654,8 +699,9 @@ header #login img {
         margin-top: 20px;
     }
 
+
     .resumo {
-        width: 50vw;
+        width: 55vw;
     }
 
     .legenda {
@@ -677,10 +723,6 @@ header #login img {
         color: #fff;
     }
 
-    .assentoEscolhido {
-        color: #000;
-    }
-
     .tela {
         margin-top: 50px;
     }
@@ -696,27 +738,21 @@ header #login img {
         justify-content: center;
         flex-direction: row;
         gap: 100px;
-    }
+        align-items: flex-start;
 
-    .assento {
-        color: #b5121b;
+        #container {
+            align-items: center;
+            justify-content: center;
+        }
     }
 
     .compra {
         width: 50%;
     }
 
-    .sala {
-        width: 340px;
-    }
-
-    .corredor {
-        display: flex;
-
-    }
-
     .resumo {
         width: 100%;
+
     }
 
     .compraOpcoes {
@@ -724,6 +760,11 @@ header #login img {
         gap: 0;
         justify-content: space-between;
         font-size: 15px;
+    }
+
+    .clientesEspeciais img {
+        width: 48px;
+        height: 48px;
     }
 
     .tituloEscolha {
@@ -740,10 +781,5 @@ header #login img {
 
     .lateral {
         width: 30%;
-        margin-top: -100px;
-    }
-
-    .assentoEscolhido {
-        color: #000;
     }
 }

@@ -124,9 +124,15 @@ body {
 .form_link:hover{
     text-decoration: underline;   
 }
-
-.logo {
+#logo {
     display: flex;
-    justify-content: center;
-    padding-bottom: 20px;
-}
+    justify-content: center;    
+    height: 80px;
+    padding-bottom: 10px;
+  }
+  
+  #logo img {
+
+    height: 100%;
+  }
+  

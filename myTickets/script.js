@@ -1,34 +1,7 @@
-const tickets = [
-    {
-        img: "https://www.cafecomfilme.com.br/media/k2/items/cache/873d536679c7dd70570264f8804d062a_XL.jpg?t=20230226_234138",
-        film: "Os Cavaleiros do Zodíaco",
-        date: "05/05/2023 - 22:00",
-        adress: "Petrópolis - RJ",
-        orderNumber: "23",
-        card: "Cartão G5 Black - Crédito",
-        totalValue: "100,00"
-    },
+var usuarioLogadoSession = JSON.parse(sessionStorage.getItem("user"))
+var usuarioLogadoStorage = JSON.parse(localStorage.getItem(usuarioLogadoSession.email))
 
-    {
-        img: "https://www.shoppinganaliafranco.com.br/sites/saf/files/cinema/super-mario-bros__1.jpg",
-        film: "Super Mario Bros.",
-        date: "07/05/2023 - 18:30",
-        adress: "Petrópolis - RJ",
-        orderNumber: "222",
-        card: "Cartão G5 Black - Crédito",
-        totalValue: "200,00"
-    },
-
-    {
-        img: "https://sm.ign.com/t/ign_br/screenshot/default/guardioes-galaxia-vol-3-4_vqg1.600.jpg",
-        film: "Guardiões da Galáxia Vol 3.",
-        date: "10/05/2023 - 17:45",
-        adress: "Petrópolis - RJ",
-        orderNumber: "40",
-        card: "Cartão G5 Black - Crédito",
-        totalValue: "150,00"
-    }
-]
+const tickets = usuarioLogadoStorage.meusTickets || []
 
 const main = document.querySelector(".ticketsContainer");
 let htmlTickets = "";
