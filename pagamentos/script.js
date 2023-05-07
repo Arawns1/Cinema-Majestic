@@ -6,6 +6,8 @@ var objFilmeEscolhido = JSON.parse(sessionStorage.getItem("filmeEscolhido"))
 var objAssentoEscolhido = JSON.parse(sessionStorage.getItem("assentos"))
 var objIngressos = JSON.parse(sessionStorage.getItem("Ingressos"))
 var objProdutos = JSON.parse(sessionStorage.getItem("produtos"))
+var usuarioLogadoSession = JSON.parse(sessionStorage.getItem("user"))
+var usuarioLogadoStorage = JSON.parse(localStorage.getItem(usuarioLogadoSession.email))
 /* Insere informações do filme no resumo */
 console.log("ss")
 document.querySelector(".resumo").innerHTML = `
@@ -95,5 +97,53 @@ document.querySelector(".avancarAssentos").addEventListener("click", e => {
     let cardCVV = window.btoa(document.querySelector("#cvv-input").value)
     let infoPagamentos = [cardOwner, cardCPF, cardNumber, cardMonth, cardYear, cardCVV]
     sessionStorage.setItem("Pagamento", JSON.stringify(infoPagamentos))
+    atualizarHistoricoIngressos(usuarioLogadoStorage.meusTickets)
     window.location.href = linkPaginaConclusao
 });
+
+function atualizarHistoricoIngressos(meusTicketsHistorico){
+    var valorTotalIngresso = JSON.parse(sessionStorage.getItem("Ingressos"))
+    var produtos = JSON.parse(sessionStorage.getItem("produtos"))
+    var assentos = JSON.parse(sessionStorage.getItem("assentos"))
+    var filme = JSON.parse(sessionStorage.getItem("filmeEscolhido"))
+    let historicoTickets = []
+
+    if ( meusTicketsHistorico == null || meusTicketsHistorico.length == 0 ){
+        historicoTickets = []
+    } else {
+        historicoTickets = meusTicketsHistorico
+    }
+    
+    var valorFinalIngressos = 0
+    var valorFinalProdutos = 0
+
+    valorTotalIngresso.forEach(ingresso => {
+        valorFinalIngressos += (parseFloat(ingresso[1]) * parseFloat(ingresso[2]))
+    })
+
+    if (produtos != null || produtos.length == 0) {
+        for (var i = 0; i < produtos.length; i++) {
+            valorFinalProdutos += parseFloat(produtos[i][2]) + parseFloat(produtos[i][1])
+        }
+    }
+
+    historicoTickets.push({
+        img: filme.posterURL,
+        film: filme.movieTitle,
+        date: "03/05/2023 - 18:30",
+        adress: "Petrópolis - RJ",
+        orderNumber: historicoTickets.length+1,
+        card: "G5 Bank",
+        totalValue: valorFinalIngressos
+    })
+
+    var userUpdated = {
+        email: usuarioLogadoStorage.email,
+        nome: usuarioLogadoStorage.nome,
+        senha: usuarioLogadoStorage.senha,
+        sobrenome: usuarioLogadoStorage.sobrenome,
+        meusTickets: historicoTickets
+    }
+
+    localStorage.setItem(usuarioLogadoSession.email, JSON.stringify(userUpdated))
+}
