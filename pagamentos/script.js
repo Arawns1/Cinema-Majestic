@@ -94,6 +94,20 @@ document.querySelector(".avancarAssentos").addEventListener("click", e => {
     let cardYear = document.querySelector("#ano").value
     let cardCVV = window.btoa(document.querySelector("#cvv-input").value)
     let infoPagamentos = [cardOwner, cardCPF, cardNumber, cardMonth, cardYear, cardCVV]
-    sessionStorage.setItem("Pagamento", JSON.stringify(infoPagamentos))
-    window.location.href = linkPaginaConclusao
+
+
+    let temVazio = false;
+    for (info of infoPagamentos) {
+        if (info === '') {
+            temVazio = true;
+            break;
+        }
+    }
+    if (!temVazio) {
+        sessionStorage.setItem("Pagamento", JSON.stringify(infoPagamentos))
+        window.location.href = linkPaginaConclusao
+    } else {
+        alert("Preencha suas informações de pagamento")
+    }
+
 });
