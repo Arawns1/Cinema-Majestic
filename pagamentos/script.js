@@ -10,7 +10,6 @@ var usuarioLogadoSession = JSON.parse(sessionStorage.getItem("user"))
 var usuarioLogadoStorage = JSON.parse(localStorage.getItem(usuarioLogadoSession.email))
 /* Insere informações do filme no resumo */
 
-console.log("ss")
 document.querySelector(".resumo").innerHTML = `
 
 <div class="resumoFilme">
