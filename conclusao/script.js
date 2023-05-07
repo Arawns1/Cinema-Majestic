@@ -7,13 +7,17 @@ var gerarIngresso = document.querySelector("#imprimirIngresso").addEventListener
     
     var divProdutos = document.querySelector("#produtos")
     var spanAssentos = document.querySelector("#assentos")
+    var tituloFilme = document.querySelector("#nomeFilme")
     var valorTotal = 0
     var valorTotalIngresso = document.querySelector("#valorTotal")
     var produtos = JSON.parse(sessionStorage.getItem("produtos"))
     var assentos = JSON.parse(sessionStorage.getItem("assentos"))
+    var filme = JSON.parse(sessionStorage.getItem("filmeEscolhido"))
 
-    /* pegar informações do filme */
 
+    /* pega o nome do filme */
+
+    tituloFilme.innerHTML = `${filme.movieTitle}`
 
     /* pega os produtos */
 
@@ -81,5 +85,9 @@ document.querySelector(".novaSenha").addEventListener('mouseleave', e => {
   novaSenha.classList.remove("novaSenhaDrop");
   inputSenha.value = "";
   inputConfirmaSenha.value = "";
+});
+
+document.querySelector("#linkMeusIngressos").addEventListener('click', e => {
+  window.location.href = "../myTickets/index.html"
 });
 

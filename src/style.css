@@ -13,31 +13,14 @@ body {
   background-color: #000000;
 }
 
-#topo {
-  display: flex;
-
-  height: 100%;
-  background-color: #000000;
-  justify-content: space-between;
-}
-
-#logo {
-  margin-left: 20px;
-  width: 230px;
-  height: 80px;
-}
-
-#logo img {
-  width: 100%;
-  height: 100%;
-}
-
 #corpo {
   background-color: rgb(0, 150, 7);
 
 }
 
+/*Container que engloba todo o Body*/
 .containerAllan {
+  height: 100vh;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -70,6 +53,9 @@ body {
 
 /*----------------------------------------------------------*/
 
+
+/*Para Alinhar o Card em Relação aos Produtos*/
+
 .containProdutosLateral {
 
   width: 70vw;
@@ -88,7 +74,7 @@ main {
   flex-direction: column;
   background-color: #1d1d1f;
 }
-
+/* Card Lateral*/
 .lateralAllan {
   display: flex;
   flex-direction: column;
@@ -104,6 +90,7 @@ main {
 
 }
 
+/*Botão Avançar Produtos*/
 .avancarProdutos {
   height: 50px;
   background-color: #b5121b;
@@ -111,7 +98,10 @@ main {
   color: #fff;
   cursor: pointer;
 }
+
 /*-------------------------------------------------------------------*/
+
+/*Para Alinhar o Extrato-------------*/
 
 #pr {
 
@@ -129,12 +119,13 @@ span {
 
 input[type="number"] {
   background-color: #333333;
-  width: 100%;
+  width: 70%;
   padding: 5px;
   border: 1px solid #ccc;
   border-radius: 4px;
 
 }
+/* Para a pagina iniciar sem o 0*/
 
 .ExtratoPipocahidden {
   display: none;
@@ -176,6 +167,8 @@ input[type="number"] {
   justify-content: center;
 }
 
+
+/*Para centralizar a div Produtos*/
 #containProdutos {
   display: flex;
   width: 100%;
@@ -184,6 +177,7 @@ input[type="number"] {
 
 }
 
+/*Responsividade*/
 @media (min-width: 320px) {
   .containProdutosLateral {
     gap: 0;
@@ -196,6 +190,7 @@ input[type="number"] {
   .resumoAllan {
     width: 100%;
     font-size: 14px;
+
     padding: 15px;
   }
 
@@ -205,7 +200,7 @@ input[type="number"] {
   }
 
   .lateralAllan {
-    width: 300px;
+    width: 100%;
 
   }
 }
