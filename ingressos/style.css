@@ -342,9 +342,6 @@ header #login img {
     border-color: #1b356a;
 }
 
-
-#hermetius .valores {}
-
 .compraOpcoes {
     display: flex;
     justify-content: center;
@@ -391,10 +388,10 @@ header #login img {
 .lateral {
     display: flex;
     flex-direction: column;
+    min-width: 400px;
 }
 
 .resumo {
-    width: 80vw;
     border: 1px solid black;
     background-color: #333;
 }
@@ -594,8 +591,6 @@ h4 {
 
     .resumo {
         font-size: 14px;
-        width: 55vw;
-        min-width: 350px
     }
 
     .resumoCompra,
@@ -608,12 +603,16 @@ h4 {
         gap: 10px;
     }
 
+    .lateral {
+        min-width: 350px;
+    }
 
     .compraOpcoes {
         margin-top: 20px;
         gap: 10px;
         font-family: 11px
     }
+
 
     .selecao {
         width: 80%;
@@ -784,9 +783,5 @@ h4 {
 
     .infoFilme {
         font-size: 14px;
-    }
-
-    .lateral {
-        width: 30%;
     }
 }
