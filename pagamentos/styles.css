@@ -85,13 +85,13 @@ header #login img {
     margin-left: 20px;
     width: 230px;
     height: 80px;
-  }
-  
-  #logo img {
+}
+
+#logo img {
     width: 100%;
     height: 100%;
-  }
-  
+}
+
 
 #spanLogado {
     display: flex;
@@ -245,16 +245,17 @@ header #login img {
 #container {
     width: 70vw;
     margin: auto;
-    margin-top: 30px;
+    margin-top: 60px;
     padding-bottom: 50px;
     display: flex;
     flex-direction: row;
     gap: 150px;
+    justify-content: center;
+    align-items: center;
 
 }
 
 .compra {
-    margin-top: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -299,15 +300,17 @@ header #login img {
 .lateral {
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
 }
 
 .resumo {
     padding-bottom: 20px;
     width: 80vw;
     border: 1px solid black;
-    margin-top: 50px;
     background-color: #333;
 }
+
 .tituloResumo::after {
     content: "";
     height: 1px;
@@ -365,12 +368,52 @@ header #login img {
     margin-top: 0px;
 }
 
+#assentosEscolhidos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#assentos {
+    display: flex;
+    gap: 5px;
+}
+
+#assentos span {
+    background-color: var(--red-shadows);
+    padding: 3px;
+    border-radius: 3px;
+    border-color: var(--red-shadows);
+}
+
+.ingressos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ingressos span {
+    font-size: 14px;
+}
+
 .telaFilme,
 .audioFilme {
     background-color: #b5121b;
     padding: 5px;
     color: #efefef;
 }
+
+.productRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    margin: 10px 0px;
+}
+
 .avancarAssentos {
     height: 50px;
     background-color: #b5121b;
@@ -379,30 +422,36 @@ header #login img {
     cursor: pointer;
     transition: 1s;
 }
+
 .avancarAssentos:hover {
     background-color: var(--red-shadows);
     transition: 1s;
 }
+
 /**** CARD DE PAGAMENTO ****/
 .containerPagamento {
     min-width: 300px;
     width: 40vw;
 }
+
 form {
     background: #333;
     border-radius: 5px;
     box-shadow: 0 10px 15px rgba(0, 0, 0, .1);
     padding: 15px;
 }
+
 .inputBox {
     margin-top: 20px;
 
 }
+
 .inputBox label {
     display: block;
     color: #fff;
     margin: 5px 0px;
 }
+
 .inputBox input,
 .inputBox select {
     width: 100%;
@@ -413,20 +462,25 @@ form {
     background: #444444;
     color: #fff;
 }
+
 .inputBox select {
     cursor: pointer;
     color: #999;
 }
+
 .inputBox input:focus,
 .inputBox select:focus {
     border: 1px solid #555;
     color: #fff;
 }
+
 .inputBox input::placeholder {
     text-transform: none;
     letter-spacing: 0.5px;
     color: #999;
+    text-align: left;
 }
+
 .flexbox {
     display: flex;
     justify-content: space-between;
@@ -436,10 +490,16 @@ form {
 
 /**** MEDIA QUERIES ****/
 @media (min-width: 320px) {
+
     #container {
-        gap: 0;
+        gap: 30px;
         flex-direction: column;
         align-items: center;
+        width: 40vw;
+    }
+
+    .containerPagamento {
+        min-width: 300px;
     }
 
     .compra {
@@ -451,7 +511,8 @@ form {
     }
 
     .resumo {
-        width: 61vw;
+        width: 300px;
+        padding-top: 20px;
     }
 
     .resumoCompra,
@@ -459,14 +520,16 @@ form {
     .resumoFilme {
         padding: 10px;
     }
+
     .resumoFilme {
         gap: 10px;
     }
+
     .compraOpcoes {
-        margin-top: 20px;
         gap: 20px;
         font-family: 11px
     }
+
     .legenda {
         margin-top: 20px;
     }
@@ -476,6 +539,7 @@ form {
         display: flex;
         gap: 10px;
     }
+
     .aquisicoes {
         font-size: 14px;
     }
@@ -485,15 +549,19 @@ form {
         width: 100%;
     }
 }
+
 @media (min-width: 768px) {
+
     .compra {
         width: 46vw;
     }
+
     .compraOpcoes {
         justify-content: space-evenly;
         gap: 0;
         width: 100%;
     }
+
     .resumo {
         width: 40vw;
     }
@@ -516,6 +584,7 @@ form {
     .assento {
         color: #fff;
     }
+
     .tela {
         margin-top: 50px;
     }
@@ -526,9 +595,10 @@ form {
 }
 
 @media (min-width: 1200px) {
+
     #container {
         width: 70vw;
-        justify-content: center;
+        align-items: flex-start;
         flex-direction: row;
         gap: 100px;
     }
@@ -540,6 +610,7 @@ form {
     .compra {
         width: 50%;
     }
+
     .resumo {
         width: 100%;
     }

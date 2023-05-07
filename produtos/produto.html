@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Snacks</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="../assentos/style.css">
+  <script src="../assentos/script.js" defer> </script>
+  <script src="../home/script.js" defer></script>
+  <script src="./script.js" defer></script>
+</head>
+
+<body>
+  <div id="containerAllan">
+    <header>
+      <nav>
+        <ul>
+          <li tabindex="1" id="logo">
+            <a href="../home/index.html">
+              <img src="../images/logoBranca.png" alt="logo do site">
+            </a>
+          </li>
+          <li tabindex="2" id="login">
+            <span id="spanLogin"><a href="/login/login.html" class="spanLink"><img src="../images/login.png"
+                  alt="Ícone de Login"></a></span>
+            <span id="spanLogado" class="spanLoginHidden">
+              <div id="userIcon">
+                <button id="userBtn">PL</button>
+                <div class="userDropDown">
+                  <a href="#" id="linkAlterarSenha">Alterar Senha</a>
+                  <a href="#" id="linkSair">Sair</a>
+                </div>
+                <div class="novaSenha">
+                  <input type="password" id="inputSenha" placeholder="Nova Senha">
+                  <input type="password" id="inputConfirmaSenha" placeholder="Repita a Senha">
+                  <div class="form_message form_message_success form_message_error"></div>
+                  <button id="novaSenhaBtn">Salvar</button>
+                </div>
+              </div>
+            </span>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+
+      <div class="containProdutosLateral">
+
+        <div id="containProdutos">
+
+          <div class="compraOpcoes">
+            <div class="opcao">
+              <img class="iconeOpcoes" src="../assentos/assets/chair.png" alt="ícone assento">
+              <span>Assentos</span>
+            </div>
+            <div class="opcao">
+              <img class="iconeOpcoes" src="../assentos/assets/icons8-bilhete-100.png" alt="ícone ingressos">
+              <span>Ingressos</span>
+            </div>
+            <div class="opcaoAtiva">
+              <img class="iconeOpcoes" src="../assentos/assets/icons8-pipoca-100.png" alt="ícone produtos">
+              <span>Produtos</span>
+            </div>
+            <div class="opcao">
+              <img class="iconeOpcoes" src="../assentos/assets/icons8-parte-traseira-de-cartão-de-banco-100.png"
+                alt="ícone pagamento">
+              <span>Pagamento</span>
+            </div>
+            <div class="opcao">
+              <img class="iconeOpcoes" src="../assentos/assets/icons8-selecionado-192.png" alt="ícone conclusão">
+              <span>Conclusão</span>
+            </div>
+          </div>
+
+          <div>
+            <div id="produtos"> </div>
+          </div>
+
+        </div>
+
+
+        <div class="lateralAllan">
+          <div class="resumoAllan">
+
+
+            <div class="resumoCompra">
+            </div>
+
+            <div id="extrato">
+
+              <div id="pr" class="prhidden">
+
+                <div class="ExtratoPipoca">
+                  <span>Pipoca R$:</span>
+
+                  <span id="pPipoca"></span>
+                </div>
+                <div class="ExtratoCoca">
+                  <span>Coca-Cola R$:</span>
+                  <span id="pCoca"></span>
+                </div>
+                <div class="ExtratoMentos">
+                  <span>Mentos R$:</span>
+                  <span id="pMentos"></span>
+                </div>
+                <div class="ExtratoTrento">
+                  <span>Trento R$:</span>
+                  <span id="pTrento"></span>
+                </div>
+                <div class="ExtratoAgua">
+                  <span>Água R$: </span>
+                  <span id="pAgua"></span>
+                </div>
+
+
+                <div>
+                  <div id="totalValor">Total R$: <span id="total"></span></div>
+
+                </div>
+
+              </div>
+
+
+            </div>
+
+          </div>
+
+          <button class="avancarProdutos">Avançar</button>
+
+        </div>
+
+      </div>
+
+    </main>
+  </div>
+</body>
+
+</html>

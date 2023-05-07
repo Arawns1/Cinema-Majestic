@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <script src="../home/script.js" defer></script>
+    <link rel="stylesheet" href="../produtos/style.css">
     <script src="./script.js" defer></script>
     <title>🎬 Majestic Cinema - Pagamento</title>
 </head>
@@ -17,7 +17,7 @@
             <ul>
                 <li tabindex="1" id="logo">
                     <a href="../home/index.html">
-                        <img src="../images/logoBranca.png"  alt="logo do site">
+                        <img src="../images/logoBranca.png" alt="logo do site">
                     </a>
                 </li>
                 <li tabindex="2" id="login">
@@ -27,7 +27,6 @@
                         <div id="userIcon">
                             <button id="userBtn">PL</button>
                             <div class="userDropDown">
-                                <a href="#" id="linkMeusIngressos">Meus Ingressos</a>
                                 <a href="#" id="linkAlterarSenha">Alterar Senha</a>
                                 <a href="#" id="linkSair">Sair</a>
                             </div>
@@ -71,11 +70,6 @@
                         <span>Conclusão</span>
                     </div>
                 </div>
-
-
-
-
-
                 <div class="containerPagamento">
                     <form action="">
                         <div class="inputBox">
@@ -86,9 +80,9 @@
                             <label>CPF do titular</label>
                             <input type="text" maxlenght="16" class="cpfNumber" placeholder="000.000.000-00">
                         </div>
-                        <div class="inputBox cardNumber">
+                        <div class="inputBox">
                             <label>Número do cartão</label>
-                            <input type="text" maxlenght="16" placeholder="0000.0000.0000.0000">
+                            <input type="text" maxlenght="16" id="cardNumber" placeholder="0000.0000.0000.0000">
                         </div>
                         <div class="flexbox ">
                             <div class="inputBox mes">
@@ -139,41 +133,6 @@
             </div>
             <div class="lateral">
                 <div class="resumo">
-                    <div class="resumoFilme">
-                        <img src="https://sm.ign.com/ign_br/screenshot/default/foevbcsayamvqpf-1675462826997_2ck5.jpg"
-                            alt="poster filme" class="imagemFilme">
-
-                        <div class="infoFilme">
-                            <div class="nomeFilme">Super Mario Bros: O Filme</div>
-                            <div class="tipoFilme">
-                                <div class="audioFilme">Dublado</div>
-                                <div class="telaFilme">2D</div>
-                            </div>
-                            <div class="sessaoFilme">📅 03/05/2023 - 18:30</div>
-                            <div class="localFilme">📍 Petrópolis - RJ</div>
-                        </div>
-                    </div>
-                    <div class="resumoCompra">
-                        <h3 class="tituloResumo">Resumo</h3>
-                        <div class="aquisicoes">
-                            <div class="tipoIngresso">
-                                <h3>Ingressos</h3>
-                                <h4 class="inteira"></h4>
-                                <h4 class="meia"></h4>
-                                <h4 class="hermetius"></h4>
-                                <h4 class="g5"></h4>
-                            </div>
-                            <div class="tipoProduto">
-                                <h3>Snaks</h3>
-                                <h4 class="pipoca"></h4>
-                                <h4 class="coca-cola"></h4>
-                                <h4 class="mentos"></h4>
-                                <h4 class="trento"></h4>
-                                <h4 class="agua"></h4>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="totalValor"></div>
                 </div>
                 <button class="avancarAssentos">Avançar</button>
             </div>
