@@ -2,7 +2,7 @@ const valorMeia = 18.0
 const valorInteira = 36.0
 const valorHermetius = 24.0
 const valorG5 = 24.0
-const linkPaginaProdutos = "../src/ingresso.html"
+const linkPaginaProdutos = "../src/snacksMario.html"
 
 
 /* Pegando Informações do Session Storage */
@@ -94,25 +94,29 @@ var button = document.querySelector(".avancarAssentos").addEventListener("click"
     var qtdTotalIngressos = parseInt(qtdInteira) + parseInt(qtdMeia) + parseInt(qtdHermetius) + parseInt(qtdG5bank)
 
     let inteira = ["inteira", qtdInteira, valorInteira]
-    let meia = ["meia", qtdMeia, valorMeia, valorFinal]
+    let meia = ["meia", qtdMeia, valorMeia]
     let hermetius = ["hermetius", qtdHermetius, valorHermetius]
-    let g5 = ["g5", qtdG5bank, valorG5, valorFinal]
+    let g5 = ["g5", qtdG5bank, valorG5]
 
     var ingressos = [inteira, meia, hermetius, g5, qtdTotalIngressos]
 
     if (qtdTotalIngressos > qntdMaxIngressos) {
-        alert("Quantidade de assentos maior que o escolhido!")
+        let myModal = new bootstrap.Modal(document.getElementById('modalAssentoMaior'), {});
+        myModal.show();
     }
     else if (qtdTotalIngressos < qntdMaxIngressos) {
-        alert("Quantidade de assentos menor que o escolhido!")
+        let myModal = new bootstrap.Modal(document.getElementById('modalAssentoMenor'), {});
+        myModal.show();
+
     }
     else {
         let ingressosFiltered = ingressos.filter(e => e[1])
         console.log(ingressos)
         console.log(ingressosFiltered)
         sessionStorage.setItem("Ingressos", JSON.stringify(ingressosFiltered))
+        window.location.href = linkPaginaProdutos
     }
 
-    window.location.href = linkPaginaProdutos
+
 
 })

@@ -1,5 +1,5 @@
 const linkPaginaLogin = "../login/login.html"
-const linkPaginaIngressos = "../ingressos/mario.html"
+const linkPaginaIngressos = "../ingressos/ingresso.html"
 
 /* Pegando Informações do Session Storage */
 
