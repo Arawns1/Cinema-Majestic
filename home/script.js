@@ -124,7 +124,7 @@ window.addEventListener('load', () => {
         //Verifica se é maior que 5
         if (movie.rating >= 5) {
             for (let i = 0; i < 5; i++) {
-                stars += `<li><img src="assets/black-star-silhouette.png" alt="estrela_rating"></li>`
+                stars += `<li><img src="../icons/black-star-silhouette.webp" alt="estrela_rating"></li>`
             }
             stars += `<li><span id="rate"> ${(movie.rating).toFixed(1)} </span></li>`
             return stars
@@ -132,7 +132,7 @@ window.addEventListener('load', () => {
         //Verifica se a avaliação termina com 0
         if ((movie.rating * 10) % 5 == 0 && (movie.rating * 10) % 2 == 0) {
             for (let i = 0; i < movie.rating; i++) {
-                stars += `<li><img src="assets/black-star-silhouette.png" alt="estrela_rating"></li>`
+                stars += `<li><img src="../icons/black-star-silhouette.webp" alt="estrela_rating"></li>`
             }
             stars += `<li><span id="rate"> ${(movie.rating).toFixed(1)} </span></li>`
             return stars
@@ -140,9 +140,9 @@ window.addEventListener('load', () => {
         //Verifica de Termina com 5
         if ((movie.rating * 10) % 5 == 0 && (movie.rating * 10) % 2 != 0) {
             for (let i = 1; i <= movie.rating; i++) {
-                stars += `<li><img src="assets/black-star-silhouette.png" alt="estrela_rating"></li>`
+                stars += `<li><img src="../icons/black-star-silhouette.webp" alt="estrela_rating"></li>`
             }
-            stars += `<li><img src="assets/black-star-silhouette.png" style="clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%)" alt="estrela_rating"></li>`
+            stars += `<li><img src="../icons/black-star-silhouette.webp" style="clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%)" alt="estrela_rating"></li>`
             stars += `<li><span id="rate"> ${(movie.rating).toFixed(1)} </span></li>`
             return stars
         }

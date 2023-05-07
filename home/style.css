@@ -165,7 +165,6 @@ a:active {
 .ratings li img {
   width: 30px;
   height: 100%;
-  filter: invert(100);
 }
 
 .ratings li span {
