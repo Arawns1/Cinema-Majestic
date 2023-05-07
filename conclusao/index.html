@@ -2,95 +2,100 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="style.css">
-    <script src="./script.js" defer></script>
-    <script src="../home/script.js"></script>
-    <title></title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="./script.js" defer></script>
+  <script src="../home/script.js"></script>
+  <title></title>
 </head>
 
 <body>
-    
-    <header>
-        
-        <nav>
-            <ul>
-              <li tabindex="1" id="logo">
-                <a href="../home/index.html">
-                    <img src="../images/logoBranca.png" alt="logo do site">
-                </a>
-              </li>
-              <li tabindex="2" id="login">        
-                <span id="spanLogin" ><a href="/login/login.html" class="spanLink"><img src="../images/login.png" alt="Ícone de Login"></a></span>
-                <span id="spanLogado" class="spanLoginHidden">
-                  <div id="userIcon">            
-                    <button id="userBtn">PL</button>
-                    <div class="userDropDown">
-                      <a href="#" id="linkMeusIngressos">Meus Ingressos</a>
-                      <a href="#" id="linkAlterarSenha">Alterar Senha</a>
-                      <a href="#" id="linkSair">Sair</a>
-                    </div>
-                    <div class="novaSenha" >
-                      <input type="password" id="inputSenha" placeholder="Nova Senha">
-                      <input type="password" id="inputConfirmaSenha" placeholder="Repita a Senha">
-                      <div class="form_message form_message_success form_message_error"></div>
-                      <button id="novaSenhaBtn">Salvar</button>
-                    </div>
-                  </div>          
-                </span>
-              </li>
-            </ul>
-          </nav>
 
-    </header>
+  <header>
 
-    <main class="main">
-        <img class="check-image" src="images/check.png" alt="">
-        <p class="mensagem-compra">Compra realizada com sucesso!</p>
-        <button class="botoes" id="imprimirIngresso">Imprimir ingresso</button>
-        <button class="botoes" id="voltarMenu">Voltar ao menu</button>
-    </main>
-
-    <div id="container"> 
-        <div id="ingresso">
-
-            <img src="../images/logoPreta.png" alt="logo cinema" id="logoIngresso">
-            <h3 id="nomeFilme"></h3>
-            
-            <div id="infoSessao">
-
-                <div id="tipoFilme">
-                    <span id="audioFilme">Dublado</span>
-                    <span id="imagemFilme">2D</span>
-                </div>
-                <span id="dataSessao">03/05/2023 - 18:30</span>
-                <span id="localSessao">Petrópolis - RJ</span>
+    <nav>
+      <ul>
+        <li tabindex="1" id="logo">
+          <a href="../home/index.html">
+            <img src="../images/logoBranca.png" alt="logo do site">
+          </a>
+        </li>
+        <li tabindex="2" id="login">
+          <span id="spanLogin"><a href="/login/login.html" class="spanLink"><img src="../images/login.png"
+                alt="Ícone de Login"></a></span>
+          <span id="spanLogado" class="spanLoginHidden">
+            <div id="userIcon">
+              <button id="userBtn">PL</button>
+              <div class="userDropDown">
+                <a href="#" id="linkMeusIngressos">Meus Ingressos</a>
+                <a href="#" id="linkAlterarSenha">Alterar Senha</a>
+                <a href="#" id="linkSair">Sair</a>
+              </div>
+              <div class="novaSenha">
+                <input type="password" id="inputSenha" placeholder="Nova Senha">
+                <input type="password" id="inputConfirmaSenha" placeholder="Repita a Senha">
+                <div class="form_message form_message_success form_message_error"></div>
+                <button id="novaSenhaBtn">Salvar</button>
+              </div>
             </div>
+          </span>
+        </li>
+      </ul>
+    </nav>
 
-            <div id="infoAssentos">
-                <h4 id="tituloAssentos">ASSENTOS</h4>
-                <span id="assentos"></span>
-            </div>
+  </header>
 
-            <div id="infoPedido">
-                <h4 id="tituloProdutos">PRODUTOS</h4>
+  <main class="main">
+    <img class="check-image" src="images/check.png" alt="">
+    <p class="mensagem-compra">Compra realizada com sucesso!</p>
+    <button class="botoes" id="imprimirIngresso">Imprimir ingresso</button>
+    <button class="botoes" id="voltarMenu">Voltar ao menu</button>
+  </main>
 
-                <div id="produtos"></div>
-            </div>
+  <div id="container">
+    <div id="ingresso">
 
-            <h4 id="valorTotal"></h4>
+      <img src="../images/logoPreta.png" alt="logo cinema" id="logoIngresso">
+      <h3 id="nomeFilme"></h3>
 
-            <img src="./qrcode.png" alt="qr code do ingresso" id="qrcode">
-        
+      <div id="infoSessao">
+
+        <div id="tipoFilme">
+          <span id="audioFilme">Dublado</span>
+          <span id="imagemFilme">2D</span>
         </div>
-    </div>  
-    
+        <span id="dataSessao">03/05/2023 - 18:30</span>
+        <span id="localSessao">Petrópolis - RJ</span>
+      </div>
+
+      <div id="infoAssentos">
+        <h4 id="tituloAssentos">ASSENTOS</h4>
+        <span id="assentos"></span>
+      </div>
+
+      <div id="infoIngressos">
+
+      </div>
+
+      <div id="infoPedido">
+        <h4 id="tituloProdutos">PRODUTOS</h4>
+
+        <div id="produtos"></div>
+      </div>
+
+      <div id="valorTotal"></div>
+
+      <img src="./qrcode.png" alt="qr code do ingresso" id="qrcode">
+
+    </div>
+  </div>
+
 </body>
 
 </html>
