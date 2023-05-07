@@ -35,23 +35,18 @@ document.querySelector(".resumoAllan").innerHTML = `
             <div id ="extrato" >
               <div id="pr" class="prhidden">
                 <div class="extratoProduto ExtratoPipoca">
-                  <span>Pipoca:</span>
                   <span id="pPipoca"></span>
                 </div>
                 <div class="extratoProduto ExtratoCoca">
-                  <span>Coca-Cola:</span>
                   <span id="pCoca"></span>
                 </div>
                 <div class="extratoProduto ExtratoMentos">
-                  <span>Mentos:</span>
                   <span id="pMentos"></span>
                 </div>
                 <div class="extratoProduto ExtratoTrento">
-                  <span>Trento:</span>
                   <span id="pTrento"></span>
                 </div>
                 <div class="extratoProduto ExtratoAgua">
-                  <span>Água: </span>
                   <span id="pAgua"></span>
                 </div>
               </div>
@@ -99,31 +94,31 @@ var produtos = [
   {
     nome: 'Pipoca',
     preco: 5.0,
-    imagem: 'pipoca.png'
+    imagem: './assets/pipoca.webp'
   },
 
   {
     nome: 'coca-cola',
     preco: 3.0,
-    imagem: 'coca-removebg-preview.png'
+    imagem: './assets/coca-removebg-preview.webp'
   },
   {
     nome: 'mentos',
     preco: 1.0,
-    imagem: 'mentos.png'
+    imagem: './assets/mentos.webp'
 
   },
   {
 
     nome: 'trento',
     preco: 2.0,
-    imagem: 'trento.png'
+    imagem: './assets/trento.webp'
   },
 
   {
     nome: 'Agua',
     preco: 1.5,
-    imagem: 'agua.png'
+    imagem: './assets/agua.webp'
   },
 
 ]
@@ -133,7 +128,6 @@ produtos.forEach(produto => {
 
   const quadro = document.createElement("div");
   quadro.classList.add("produto");
-  quadro.classList.add(produto.nome + "Card")
 
   const img = document.createElement("img");
   img.src = produto.imagem;
@@ -188,7 +182,7 @@ const extrato = () => {
   console.log(quantidadePipoca)
   let pPipoca = 5 * quantidadePipoca
   if (pPipoca > 0) {
-    document.getElementById("pPipoca").innerText = "R$" + pPipoca.toFixed(2)
+    document.getElementById("pPipoca").innerText = quantidadePipoca + "x Balde de Pipoca - R$" + pPipoca.toFixed(2)
     document.querySelector(".ExtratoPipoca").classList.remove("ExtratoPipocahidden")
     document.querySelector("#pr").classList.remove("prhidden");
 
@@ -202,7 +196,7 @@ const extrato = () => {
   quantidadeCoca = document.getElementById("coca-cola").value
   let pCoca = 3 * quantidadeCoca
   if (pCoca > 0) {
-    document.getElementById("pCoca").innerText = "R$ " + pCoca.toFixed(2)
+    document.getElementById("pCoca").innerText = quantidadeCoca + "x  Coca-Cola 250ml - R$ " + pCoca.toFixed(2)
     document.querySelector(".ExtratoCoca").classList.remove("ExtratoCocahidden")
     document.querySelector("#pr").classList.remove("prhidden");
     console.log(document.getElementById("coca-cola").value)
@@ -214,7 +208,7 @@ const extrato = () => {
   quantidadeMentos = document.getElementById("mentos").value
   let pMentos = 1 * quantidadeMentos
   if (pMentos > 0) {
-    document.getElementById("pMentos").innerText = "R$ " + pMentos.toFixed(2)
+    document.getElementById("pMentos").innerText = quantidadeMentos + "x  Mentos - R$ " + pMentos.toFixed(2)
     document.querySelector(".ExtratoMentos").classList.remove("ExtratoMentoshidden")
     document.querySelector("#pr").classList.remove("prhidden");
   }
@@ -225,7 +219,7 @@ const extrato = () => {
   quantidadeTrento = document.getElementById("trento").value
   let pTrento = 2 * quantidadeTrento
   if (pTrento > 0) {
-    document.getElementById("pTrento").innerText = "R$ " + pTrento.toFixed(2)
+    document.getElementById("pTrento").innerText = quantidadeTrento + "x Trento - R$ " + pTrento.toFixed(2)
     document.querySelector(".ExtratoTrento").classList.remove("ExtratoTrentohidden")
     document.querySelector("#pr").classList.remove("prhidden");
   }
@@ -235,7 +229,7 @@ const extrato = () => {
   quantidadeAgua = document.getElementById("Agua").value
   let pAgua = 1.50 * quantidadeAgua
   if (pAgua > 0) {
-    document.getElementById("pAgua").innerText = "R$ " + pAgua.toFixed(2)
+    document.getElementById("pAgua").innerText = quantidadeAgua + "x  Água - R$ " + pAgua.toFixed(2)
     document.querySelector(".ExtratoAgua").classList.remove("ExtratoAguahidden")
     document.querySelector("#pr").classList.remove("prhidden");
   }
@@ -250,11 +244,11 @@ const extrato = () => {
 
 document.querySelector(".avancarProdutos").addEventListener("click", e => {
   e.preventDefault();
-  produtosStore.push(["Pipoca", 5, quantidadePipoca]);
-  produtosStore.push(["coca-cola", 3, quantidadeCoca]);
-  produtosStore.push(["mentos", 1, quantidadeMentos]);
-  produtosStore.push(["trento", 2, quantidadeTrento]);
-  produtosStore.push(["Agua", 1.50, quantidadeAgua]);
+  produtosStore.push(["Balde de Pipoca", 5, quantidadePipoca]);
+  produtosStore.push(["Coca-Cola 250ml", 3, quantidadeCoca]);
+  produtosStore.push(["Mentos", 1, quantidadeMentos]);
+  produtosStore.push(["Trento", 2, quantidadeTrento]);
+  produtosStore.push(["Água", 1.50, quantidadeAgua]);
   var produtoFiltrado = produtosStore.filter(e => e[2])
 
   if (sessionStorage.getItem("user") !== null) {

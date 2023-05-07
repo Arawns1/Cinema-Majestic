@@ -365,7 +365,6 @@ header #login img {
 }
 
 .iconeOpcoes {
-    filter: invert(100);
     width: 35px;
 }
 
@@ -627,6 +626,9 @@ header #login img {
     .assentoEscolhido {
         color: #000;
     }
+
+
+
 }
 
 @media (min-width: 768px) {
@@ -746,4 +748,5 @@ header #login img {
     .assentoEscolhido {
         color: #000;
     }
+
 }

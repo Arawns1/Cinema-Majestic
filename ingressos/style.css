@@ -296,6 +296,7 @@ header #login img {
 .tipo-ingresso:hover {
     cursor: pointer;
     border: 2px solid var(--btn-and-links);
+    background-color: #3a3a3a;
     transition: 0.6s;
 }
 
@@ -321,8 +322,6 @@ header #login img {
 .valores {
     display: flex;
     flex-direction: column;
-    padding-right: 10px;
-
 }
 
 .clientesEspeciais {
@@ -332,6 +331,7 @@ header #login img {
     gap: 10px;
     border: 2px solid black;
     border-radius: 8px;
+    min-width: 200px;
 }
 
 .clientesEspeciais img {
@@ -343,11 +343,6 @@ header #login img {
     border-color: #1b356a;
 }
 
-
-#hermetius .valores {
-    padding-right: 10px;
-}
-
 .compraOpcoes {
     display: flex;
     justify-content: center;
@@ -357,7 +352,6 @@ header #login img {
 }
 
 .iconeOpcoes {
-    filter: invert(100);
     width: 35px;
 }
 
@@ -395,10 +389,10 @@ header #login img {
 .lateral {
     display: flex;
     flex-direction: column;
+    min-width: 400px;
 }
 
 .resumo {
-    width: 80vw;
     border: 1px solid black;
     background-color: #333;
 }
@@ -598,7 +592,6 @@ h4 {
 
     .resumo {
         font-size: 14px;
-        width: 55vw;
     }
 
     .resumoCompra,
@@ -611,6 +604,9 @@ h4 {
         gap: 10px;
     }
 
+    .lateral {
+        min-width: 350px;
+    }
 
     .compraOpcoes {
         margin-top: 20px;
@@ -618,22 +614,20 @@ h4 {
         font-family: 11px
     }
 
+
     .selecao {
         width: 80%;
         display: flex;
         flex-direction: column;
         gap: 20px;
         margin: 20px;
+        min-width: 350px;
     }
 
     .tipo-ingresso select {
         height: 4vh;
         width: 9vh;
         margin-left: 20px;
-    }
-
-    .clientesEspeciais {
-        min-width: 200px;
     }
 
     .clientesEspeciais img {
@@ -669,6 +663,17 @@ h4 {
     .avancarAssentos {
         margin-top: 20px;
         width: 100%;
+    }
+
+    #logo {
+        margin-left: 20px;
+        width: 150px;
+        height: 80px;
+    }
+
+    #logo img {
+        width: 100%;
+        height: 100%;
     }
 }
 
@@ -730,6 +735,8 @@ h4 {
     .iconeOpcoes {
         width: 35px;
     }
+
+
 }
 
 @media (min-width: 1200px) {
@@ -777,9 +784,5 @@ h4 {
 
     .infoFilme {
         font-size: 14px;
-    }
-
-    .lateral {
-        width: 30%;
     }
 }
