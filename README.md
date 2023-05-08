@@ -13,4 +13,5 @@
                      <a href=https://github.com/boubeejul>JULIANA BOUBÉE </a> </br>
                      <a href=https://github.com/PauloVitorLessa>PAULO VITOR </a> </br>
                      <a href=https://github.com/if-hammes>LUIS FELIPE </a> </br>
+                     <a href="https://github.com/AllanFerreiraGomes">ALAN FERREIRA </a>
                      
