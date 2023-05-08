@@ -22,37 +22,7 @@
 |---|---|---|---|---|---|---|
 | <img src="https://avatars.githubusercontent.com/u/127354834?v=4">  | <img src="https://avatars.githubusercontent.com/u/127354693?v=4">  | <img src="https://avatars.githubusercontent.com/u/62900084?v=4">  | <img src="https://avatars.githubusercontent.com/u/93846188?v=4">  |  <img src="https://avatars.githubusercontent.com/u/127329662?v=4"> |<img src="https://avatars.githubusercontent.com/u/127352528?v=4">|<img src="https://avatars.githubusercontent.com/u/78815229?v=4">|
 
-
-<div>
-  
-  
-</div>
-<div>
-  
-   
- </div>
- <div>
-  
-  
- </div>
- <div>
-  
- 
- </div>
- <div>
-  
-   
- </div>
-  <div>
-  
-    
- </div>
- <div>
-  
-     
- </div>
-
-                     
+         
                     
                     
                     
