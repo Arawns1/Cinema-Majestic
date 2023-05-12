@@ -10,7 +10,7 @@
  
  <h2> 🔗 Links Úteis </h2>
  <ul>
-  <li> <a href="https://arawns1.github.io/Trabalho-FrontEnd-Serratec-2023.1/home/index.html"> Link para o site funcionando</a></li>
+  <li> <a href="https://arawns1.github.io/Cinema-Majestic/home/index.html"> Link para o site funcionando</a></li>
   <li><a href="https://miro.com/app/board/uXjVMNnEy50=/">Protótipo de Páginas</a></li>
   
   </ul>
